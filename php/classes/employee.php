@@ -1,34 +1,34 @@
 <?php
 /**
- * Class User for sites user base
+ * Class Employee for sites user base
  *
- * This class handles users
+ * This class handles employee
  *
  * @author Charles Sandidge sandidgec@gmail.com
  */
-class User implements JsonSerializable {
+class Employee implements JsonSerializable {
     /**
-     * id for this user; this is the primary key
-     * @var int $userId
+     * id for this employee; this is the primary key
+     * @var int $employeeId
      **/
-    private $userId;
+    private $employeeId;
     /**
      * access level id to identify user groups
      * @var int for accessLevelId
      **/
     private $accessLevelId;
     /**
-     * allows activation of a new user account
+     * allows activation of a new employee account
      * @var string for activation
      **/
     private $activation;
     /**
-     * email for the user
+     * email for the employee
      * @var string for $email
      **/
     private $email;
     /**
-     * first name of the user
+     * first name of the employee
      * @var string for $firstName
      **/
     private $firstName;
@@ -38,12 +38,12 @@ class User implements JsonSerializable {
      **/
     private $hash;
     /**
-     * last name of the user
+     * last name of the employee
      * @var string for $lastName
      **/
     private $lastName;
     /**
-     * phone number of user
+     * phone number of employee
      * @var int $phone
      **/
     private $phone;
@@ -57,10 +57,12 @@ class User implements JsonSerializable {
      * @var string for pasword salt
      **/
     private $salt;
+
     /**
      * User constructor.
-     * @param $newUserId
+     * @param $newEmployeeId
      * @param $newAccessLevelId
+     * @param $newActivation
      * @param $newEmail
      * @param $newFirstName
      * @param $newHash
@@ -68,14 +70,15 @@ class User implements JsonSerializable {
      * @param $newPhone
      * @param $newProfilePath
      * @param $newSalt
-     **/
+     * @throws Exception
+     */
     public function __construct($newUserId, $newAccessLevelId, $newActivation, $newEmail, $newFirstName, $newHash, $newLastName,
                                 $newPhone, $newProfilePath, $newSalt)
     {
         try {
             $this->setUserId($newUserId);
             $this->setAccessLevelId($newAccessLevelId);
-            $this->setActivation($newActivation);
+            $this->setActivation($newActivation)
             $this->setEmail($newEmail);
             $this->setFirstName($newFirstName);
             $this->setHash($newHash);
