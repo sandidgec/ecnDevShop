@@ -111,7 +111,7 @@ class Project implements JsonSerializable
     }
 
     /**
-     * Mutator method for End  Date
+     * Mutator method for End Date
      *
      * @param string Project category $newEndDate
      */
@@ -156,7 +156,7 @@ class Project implements JsonSerializable
             throw(new RangeException($range->getMessage(), 0, $range));
         } catch (Exception $exception) {
 
-            $this->startDate = $startDate;
+            $this->startDate = $newStartDate;
         }
     }
 
