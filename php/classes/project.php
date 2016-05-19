@@ -6,6 +6,13 @@
  *
  * @author Ryam Sam rnsam@asu.edu
  **/
+
+
+require_once("dateValidation.php");
+
+
+
+
 class Project implements JsonSerializable
 {
     /**
@@ -32,14 +39,14 @@ class Project implements JsonSerializable
 
     /**
      * Project constructor.
+     * 
      * @param  int|null $newProjectId
      * @param DateTime $newEndDate
      * @param DateTime $newStartDate
      * @param string $title
-     * @throw InvalidArgumentException
-     * @throw InvalidArgumentException
-     * @throw Range Exception
-     * @throw Exception
+     * @throws InvalidArgumentException
+     * @throws RangeException
+     * @throws Exception 
      */
     public function __construct($newProjectId, $newEndDate, $newStartDate, $title)
     {
@@ -85,7 +92,7 @@ class Project implements JsonSerializable
             $this->projectId = null;
             return;
         }
-        //verify the User is valid
+        //verify the projectId is valid
         $newProjectId = filter_var($newProjectId, FILTER_VALIDATE_INT);
         if (empty($newProjectId) === true) {
             throw (new InvalidArgumentException ("projectId invalid"));
@@ -111,14 +118,16 @@ class Project implements JsonSerializable
     public function setEndDate($newEndDate)
     {
         // verify end date is valid
-        $newEndDate = filter_var($newEndDate, FILTER_SANITIZE_STRING);
-        if (empty($newEndDate) === true) {
-            throw new InvalidArgumentException("end date invalid");
+        try {
+            $newEndDate = validateDate($newEndDate);
+        } catch (InvalidArgumentException $invalidArgument) {
+            throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+        } catch (RangeException $range) {
+            throw(new RangeException($range->getMessage(), 0, $range));
+        } catch (Exception $exception) {
+
+            $this->endDate = $newEndDate;
         }
-        if (strlen($newEndDate) > 32) {
-            throw (new RangeException ("end date name too large"));
-        }
-        $this->endDate = $newEndDate;
     }
 
     /**
@@ -138,12 +147,17 @@ class Project implements JsonSerializable
      */
     public function setStartDate($newStartDate)
     {
-        // verify message is valid
-        $newStartDate = filter_var($newStartDate, FILTER_SANITIZE_STRING);
-        if (empty($newStartDate) === true) {
-            throw new InvalidArgumentException("start date invalid");
+        // verify date is valid
+        try {
+            $newStartDate = validateDate($newStartDate);
+        } catch (InvalidArgumentException $invalidArgument) {
+            throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+        } catch (RangeException $range) {
+            throw(new RangeException($range->getMessage(), 0, $range));
+        } catch (Exception $exception) {
+
+            $this->startDate = $startDate;
         }
-        $this->startDate = $newStartDate;
     }
 
     public function JsonSerialize()
@@ -254,14 +268,14 @@ class Project implements JsonSerializable
 
     /**
      * Inserts Project into mySQL
-     *
+        *
      * Inserts this projectId into mySQL in intervals
-     * @param PDO $pdo connection to
-     **/
+        * @param PDO $pdo connection to
+        **/
     public function insert(PDO &$pdo)
-    {
-        // make sure project doesn't already exist
-        if ($this->projectId !== null) {
+            {
+                // make sure project doesn't already exist
+                if ($this->projectId !== null) {
             throw (new PDOException("existing project"));
         }
         //create query template
