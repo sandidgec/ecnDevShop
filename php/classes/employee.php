@@ -81,11 +81,11 @@ class Employee implements JsonSerializable {
      * @param $newZip
      * @throws Exception
      */
-    public function __construct($newUserId, $newAccessLevelId, $newActivation, $newEmail, $newFirstName, $newHash, $newLastName,
-                                $newPhone, $newProfilePath, $newSalt)
+    public function __construct($newEmployeeId, $newAccessLevelId, $newActivation, $newEmail, $newFirstName, $newHash, $newLastName,
+                                $newPhone, $newProfilePath, $newSalt, $newAddress, $newState, $newZip)
     {
         try {
-            $this->setUserId($newUserId);
+            $this->setEmployeeId($newEmployeeId);
             $this->setAccessLevelId($newAccessLevelId);
             $this->setActivation($newActivation);
             $this->setEmail($newEmail);
@@ -95,7 +95,7 @@ class Employee implements JsonSerializable {
             $this->setPhone($newPhone);
             $this->setProfilePath($newProfilePath);
             $this->setSalt($newSalt);
-            $this->setNewAddress($newAddress);
+            $this->setAddress($newAddress);
             $this->setState($newState);
             $this->setZip ($newZip);
         } catch (InvalidArgumentException $invalidArgument) {
@@ -120,18 +120,18 @@ class Employee implements JsonSerializable {
     /**
      * mutator method for the userId
      *
-     * @param int unique value to represent a user $newUserId
+     * @param int $newEmployeeId unique value to represent a user $newUserId
      * @throws InvalidArgumentException for invalid content
      **/
-    public function setUserId($newUserId) {
+    public function setEmployeeId($newEmployeeId) {
         // base case: if the userId is null,
         // this is a new user without a mySQL assigned id (yet)
         if($newEmployeeId === null) {
             $this->employeeId = null;
             return;
         }
-        //verify the User is valid
-        $newUserId = filter_var($newUserId, FILTER_VALIDATE_INT);
+        //verify the Employee is valid
+        $newEmployeeId = filter_var($newEmployeeId, FILTER_VALIDATE_INT);
         if(empty($newEmployeeId) === true) {
             throw (new InvalidArgumentException ("employeeId invalid"));
         }
@@ -366,13 +366,13 @@ class Employee implements JsonSerializable {
         return ($this->getaddress);
     }
     
-    public function setaddress($newaddress) {
+    public function setAddress($newaddress) {
         //verify profile path is valid
         $newaddress = filter_var($newaddress, FILTER_SANITIZE_STRING);
         if(empty($newaddress) === true) {
             throw new InvalidArgumentException("");
         }
-        if(strlen($newadddresss) > 255) {
+        if(strlen($newaddress) > 255) {
             throw (new RangeException("address content too large"));
         }
         $this->addresss = $newaddress;
@@ -383,7 +383,7 @@ class Employee implements JsonSerializable {
         return ($this->getstate);
     }
 
-    public function setstate($newstate) {
+    public function setState($newstate) {
         //verify profile path is valid
         $newstate = filter_var($newstate, FILTER_SANITIZE_STRING);
         if(empty($newstate) === true) {
@@ -400,7 +400,7 @@ class Employee implements JsonSerializable {
         return ($this->getzip);
     }
 
-    public function setzip($newzip) {
+    public function setZip($newzip) {
         //verify profile path is valid
         $newzip = filter_var($newzip, FILTER_SANITIZE_STRING);
         if(empty($newzip) === true) {
@@ -441,7 +441,7 @@ class Employee implements JsonSerializable {
         $parameters = array("accessLevelId" => $this->accessLevelId, "activation" => $this->activation, "email" => $this->email,
             "firstName" => $this->firstName,
             "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone, "profilePath" => $this->profilePath,
-            "salt" => $this->salt, "address" => $this->adress; "state"=> $this->zip)
+            "salt" => $this->salt, "address" => $this->address, "state"=> $this->state, "zip"=> $this->zip);
         $statement->execute($parameters);
         //update null userId with what mySQL just gave us
-        $this->userId = intval($pdo->lastInsert
+        $this->employeeId = intval($pdo->lastInsert
