@@ -4,7 +4,7 @@
  *
  * This class handles employee
  *
- * @author Charles Sandidge sandidgec@gmail.com
+ *
  */
 class Employee implements JsonSerializable {
     /**
@@ -58,6 +58,12 @@ class Employee implements JsonSerializable {
      **/
     private $salt;
 
+    private $address;
+
+    private $state;
+
+    private $zip;
+    
     /**
      * User constructor.
      * @param $newEmployeeId
@@ -70,6 +76,9 @@ class Employee implements JsonSerializable {
      * @param $newPhone
      * @param $newProfilePath
      * @param $newSalt
+     * @param $newAddress
+     * @param $newState
+     * @param $newZip
      * @throws Exception
      */
     public function __construct($newUserId, $newAccessLevelId, $newActivation, $newEmail, $newFirstName, $newHash, $newLastName,
@@ -78,7 +87,7 @@ class Employee implements JsonSerializable {
         try {
             $this->setUserId($newUserId);
             $this->setAccessLevelId($newAccessLevelId);
-            $this->setActivation($newActivation)
+            $this->setActivation($newActivation);
             $this->setEmail($newEmail);
             $this->setFirstName($newFirstName);
             $this->setHash($newHash);
@@ -86,6 +95,9 @@ class Employee implements JsonSerializable {
             $this->setPhone($newPhone);
             $this->setProfilePath($newProfilePath);
             $this->setSalt($newSalt);
+            $this->setNewAddress($newAddress);
+            $this->setState($newState);
+            $this->setZip ($newZip);
         } catch (InvalidArgumentException $invalidArgument) {
             //rethrow the exception to the caller
             throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
@@ -102,8 +114,8 @@ class Employee implements JsonSerializable {
      *
      * @return int value of unique userId
      **/
-    public function getUserId() {
-        return ($this->userId);
+    public function getEmployeeId() {
+        return ($this->employeeId);
     }
     /**
      * mutator method for the userId
@@ -114,16 +126,16 @@ class Employee implements JsonSerializable {
     public function setUserId($newUserId) {
         // base case: if the userId is null,
         // this is a new user without a mySQL assigned id (yet)
-        if($newUserId === null) {
-            $this->userId = null;
+        if($newEmployeeId === null) {
+            $this->employeeId = null;
             return;
         }
         //verify the User is valid
         $newUserId = filter_var($newUserId, FILTER_VALIDATE_INT);
-        if(empty($newUserId) === true) {
-            throw (new InvalidArgumentException ("userId invalid"));
+        if(empty($newEmployeeId) === true) {
+            throw (new InvalidArgumentException ("employeeId invalid"));
         }
-        $this->userId = $newUserId;
+        $this->employeeId = $newEmployeeId;
     }
     /**
      * accessor method for access level of user
@@ -348,6 +360,61 @@ class Employee implements JsonSerializable {
         }
         $this->salt = $newSalt;
     }
+
+
+    public function getaddress() {
+        return ($this->getaddress);
+    }
+    
+    public function setaddress($newaddress) {
+        //verify profile path is valid
+        $newaddress = filter_var($newaddress, FILTER_SANITIZE_STRING);
+        if(empty($newaddress) === true) {
+            throw new InvalidArgumentException("");
+        }
+        if(strlen($newadddresss) > 255) {
+            throw (new RangeException("address content too large"));
+        }
+        $this->addresss = $newaddress;
+    }
+
+
+    public function getstate() {
+        return ($this->getstate);
+    }
+
+    public function setstate($newstate) {
+        //verify profile path is valid
+        $newstate = filter_var($newstate, FILTER_SANITIZE_STRING);
+        if(empty($newstate) === true) {
+            throw new InvalidArgumentException("");
+        }
+        if(strlen($newstate) > 255) {
+            throw (new RangeException("State content too large "));
+        }
+        $this->state = $newstate;
+    }
+
+
+    public function getzip() {
+        return ($this->getzip);
+    }
+
+    public function setzip($newzip) {
+        //verify profile path is valid
+        $newzip = filter_var($newzip, FILTER_SANITIZE_STRING);
+        if(empty($newzip) === true) {
+            throw new InvalidArgumentException("");
+        }
+        if(strlen($newzip) > 255) {
+            throw (new RangeException("zip should be formatted 50555 55"));
+        }
+        $this->state = $newzip;
+    }
+   
+    
+    
+    
     public function JsonSerialize() {
         $fields = get_object_vars($this);
         unset ($fields["salt"]);
@@ -362,19 +429,19 @@ class Employee implements JsonSerializable {
      **/
     public function insert(PDO &$pdo) {
         // make sure user doesn't already exist
-        if($this->userId !== null) {
+        if($this->employeeId !== null) {
             throw (new PDOException("existing user"));
         }
         //create query template
         $query
-            = "INSERT INTO user(accessLevelId, activation, email, firstName, hash, lastName, phone, profilePath, salt)
-        VALUES (:accessLevel, :activation, :email, :firstName, :hash, :lastName, :phone, :profilePath, :salt)";
+            = "INSERT INTO employee(accessLevelId, activation, email, firstName, hash, lastName, phone, profilePath, salt)
+        VALUES (:accessLevel, :activation, :email, :firstName, :hash, :lastName, :phone, :profilePath, :salt, :address, :state, :zip)";
         $statement = $pdo->prepare($query);
         // bind the variables to the place holders in the template
         $parameters = array("accessLevelId" => $this->accessLevelId, "activation" => $this->activation, "email" => $this->email,
             "firstName" => $this->firstName,
             "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone, "profilePath" => $this->profilePath,
-            "salt" => $this->salt);
+            "salt" => $this->salt, "address" => $this->adress; "state"=> $this->zip)
         $statement->execute($parameters);
         //update null userId with what mySQL just gave us
-        $this->userId = intval($pdo->lastInsertI
+        $this->userId = intval($pdo->lastInsert
