@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require_once("lib/head-utils.php"); ?>
+    <?php require_once("head-utils.php"); ?>
+    <title>ECN Dev Shop</title>
 </head>
 
 <nav class="navbar navbar-default">
@@ -56,10 +57,10 @@
 <div id="wall_3" class="image" data-stellar-background-ratio="0.4"  ></div>
 <div id="content_2" class="content">
 
-    <h1><a name="useCs">Use Case</a></h1>
+    <h1><a name="useCs">Use Cases</a></h1>
     <h2>Krieg</h2>
     <p>
-        Meeting different artist at various art events, I hand them my
+        Meeting different artists at various art events, I hand them my
         business card with our website to market our services for web development.
         When the artist arrives to our website, they are greeted with a hero page;
         containing a stylized navbar with links to our different pages (About, Services and Contact).

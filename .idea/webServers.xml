@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="8117b9e2-96c4-4aae-b173-a73e9e7fb08c" name="ecnDevShop" url="http://107.170.234.81">
-        <fileTransfer host="107.170.234.81" port="22" rootFolder="/var/www/html/" accessType="SFTP" password="dfcedfcfdfdcdfd9dfc2dfc5dfdadf98df9adf9bdf9c" username="root">
+      <webServer id="8117b9e2-96c4-4aae-b173-a73e9e7fb08c" name="ecnDevShop" url="http://104.131.171.103">
+        <fileTransfer host="104.131.171.103" port="22" rootFolder="/var/www/html/" accessType="SFTP" password="dfcedfcfdfdcdfd9dfc2dfc5dfdadf98df9adf9bdf9c" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
