@@ -114,6 +114,9 @@ class Project implements JsonSerializable
      * Mutator method for End Date
      *
      * @param string Project category $newEndDate
+     * @throws InvalidArgumentException
+     * @throws RangeException
+     * @throws Exception
      */
     public function setEndDate($newEndDate)
     {
@@ -125,9 +128,9 @@ class Project implements JsonSerializable
         } catch (RangeException $range) {
             throw(new RangeException($range->getMessage(), 0, $range));
         } catch (Exception $exception) {
-
-            $this->endDate = $newEndDate;
+            throw(new Exception($exception->getMessage(), 0, $exception));
         }
+        $this->endDate = $newEndDate;
     }
 
     /**
@@ -144,6 +147,9 @@ class Project implements JsonSerializable
      * Mutator method for Start Date
      *
      * @param string project category $newStartDate
+     * @throws InvalidArgumentException
+     * @throws RangeException
+     * @throws Exception
      */
     public function setStartDate($newStartDate)
     {
@@ -155,9 +161,10 @@ class Project implements JsonSerializable
         } catch (RangeException $range) {
             throw(new RangeException($range->getMessage(), 0, $range));
         } catch (Exception $exception) {
-
-            $this->startDate = $newStartDate;
+            throw(new Exception($exception->getMessage(), 0, $exception));
         }
+
+        $this->startDate = $newStartDate;
     }
 
     public function JsonSerialize()
@@ -245,26 +252,31 @@ class Project implements JsonSerializable
      * @param PDO $pdo pointer to PDO connection, by reference
      * @return mixed| Project
      **/
-    public static function getAllProjects(PDO &$pdo)
-    {
-        // create query template
+    public static function getAllUsers(PDO $pdo) {
+        //create the query template
         $query = "SELECT projectId, endDate, startDate, title FROM project";
         $statement = $pdo->prepare($query);
-        // grab the project from mySQL
-        try {
-            $project = null;
-            $statement->setFetchMode(PDO::FETCH_ASSOC);
-            $row = $statement->fetch();
-            if ($row !== false) {
-                $project = new Project ($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
-            }
-        } catch (Exception $exception) {
-            // if the row couldn't be converted, rethrow it
-            throw(new PDOException($exception->getMessage(), 0, $exception));
-        }
-        return ($project);
-    }
+        // execute
+        $statement->execute();
+        //call the function to build an array of the values
+        $users = null;
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $projectId = new SplFixedArray($statement->rowCount());
+        while(($row = $statement->fetch()) !== false) {
+            try {
+                if($row !== false) {
+                    $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
+                    $projectId[$projectId->key()] = $project;
+                    $projectId->next();
+                }
+            } catch(Exception $exception) {
 
+                throw(new PDOException($exception->getMessage(), 0, $exception));
+            }
+        }
+
+        return $projectId;
+    }
 
     /**
      * Inserts Project into mySQL
