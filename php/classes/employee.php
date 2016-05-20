@@ -1,6 +1,6 @@
 <?php
 /**
- * Class Employee for sites user base
+ * Class Employee for sites employee base
  *
  * This class handles employee
  *
@@ -19,10 +19,20 @@ class Employee implements JsonSerializable
      **/
     private $accessLevelId;
     /**
-     * allows activation of a new employee account
-     * @var string for activation
+     * address of employee
+     * @var int $address1
      **/
-    private $activation;
+    private $address1;
+    /**
+     * address of employee
+     * @var int $address2
+     **/
+    private $address2;
+    /**
+     * city for the employee
+     * @var string for $city
+     **/
+    private $city;
     /**
      * email for the employee
      * @var string for $email
@@ -49,68 +59,62 @@ class Employee implements JsonSerializable
      **/
     private $phone;
     /**
-     * path for a profile pic
-     * @var string of profile picture path
-     **/
-    private $profilePath;
-    /**
      * salt of password w/ hash
-     * @var string for pasword salt
+     * @var string for password salt
      **/
     private $salt;
     /**
-     * salt of password w/ hasgh
-     * @var string for password salt
-     **/
-    private $address;
-    /**
-     * address of employee
-     * @var int $address
+     * state of employee
+     * @var int $state
      **/
     private $state;
     /**
-     * state of employee
-     * @var int $address
+     * status of employee
+     * @var int $status
      **/
-    private $zip;
+    private $status;
     /**
      * zip of employee
-     * @var int $address
+     * @var int $zip
      **/
+    private $zip;
+
 
     /**
      * User constructor.
      * @param $newEmployeeId
      * @param $newAccessLevelId
-     * @param $newActivation
+     * @param $newAddress1
+     * @param $newAddress2
+     * @param $newCity
      * @param $newEmail
      * @param $newFirstName
      * @param $newHash
      * @param $newLastName
      * @param $newPhone
-     * @param $newProfilePath
      * @param $newSalt
-     * @param $newAddress
      * @param $newState
+     * @param $newStatus
      * @param $newZip
      * @throws Exception
      */
-    public function __construct($newEmployeeId, $newAccessLevelId, $newActivation, $newEmail, $newFirstName, $newHash, $newLastName,
-                                $newPhone, $newProfilePath, $newSalt, $newAddress, $newState, $newZip)
+    public function __construct($newEmployeeId, $newAccessLevelId, $newAddress1, $newAddress2, $newEmail, $newCity, $newFirstName, $newHash, $newLastName,
+                                $newPhone, $newSalt, $newState, $newStatus, $newZip)
     {
         try {
             $this->setEmployeeId($newEmployeeId);
             $this->setAccessLevelId($newAccessLevelId);
-            $this->setActivation($newActivation);
+            $this->setAddress1($newAddress1);
+            $this->setAddress2($newAddress2);
+            $this->setCity($newCity);
             $this->setEmail($newEmail);
             $this->setFirstName($newFirstName);
             $this->setHash($newHash);
             $this->setLastName($newLastName);
             $this->setPhone($newPhone);
-            $this->setProfilePath($newProfilePath);
             $this->setSalt($newSalt);
-            $this->setAddress($newAddress);
             $this->setState($newState);
+            $this->setStatus($newStatus);
             $this->setZip($newZip);
         } catch (InvalidArgumentException $invalidArgument) {
             //rethrow the exception to the caller
@@ -125,9 +129,9 @@ class Employee implements JsonSerializable
     }
 
     /**
-     * accessor method for userId
+     * accessor method for employeeId
      *
-     * @return int value of unique userId
+     * @return int value of unique employeeId
      **/
     public function getEmployeeId()
     {
@@ -137,12 +141,12 @@ class Employee implements JsonSerializable
     /**
      * mutator method for the userId
      *
-     * @param int $newEmployeeId unique value to represent a user $newUserId
+     * @param int $newEmployeeId unique value to represent a employee $newEmployeeId
      * @throws InvalidArgumentException for invalid content
      **/
     public function setEmployeeId($newEmployeeId)
     {
-        // base case: if the userId is null,
+        // base case: if the employeeId is null,
         // this is a new user without a mySQL assigned id (yet)
         if ($newEmployeeId === null) {
             $this->employeeId = null;
@@ -157,89 +161,135 @@ class Employee implements JsonSerializable
     }
 
     /**
-     * accessor method for access level of user
+     * accessor method for access level of employee
      *
      * @return mixed
      **/
-    public function getAccessLevelId()
-    {
+    public function getAccessLevelId() {
         return ($this->accessLevelId);
     }
-
     /**
      * Mutator method for access levelId
      *
      * @param $newAccessLevelId int
      * @throws InvalidArgumentException if access level is invalid
      **/
-    public function setAccessLevelId($newAccessLevelId)
-    {
+    public function setAccessLevelId($newAccessLevelId) {
         // verify access level is integer
         $newAccessLevelId = filter_var($newAccessLevelId, FILTER_VALIDATE_INT);
-        if (empty($newAccessLevelId) === true) {
+        if(empty($newAccessLevelId) === true) {
             throw new InvalidArgumentException ("Access Level Invalid");
         }
         $this->accessLevelId = $newAccessLevelId;
     }
 
+
     /**
-     * @return string
+     * accessor method for address line 1
+     *
+     * @return string for address line 1
      **/
-    public function getActivation()
+    public function getAddress1()
     {
-        return ($this->activation);
+        return ($this->address1);
     }
 
     /**
-     * @param $newActivation
-     **/
-    public function setActivation($newActivation)
-    {
-        if ($newActivation === null) {
-            $this->activation = null;
-            return;
+     * Mutator method for Address Line 1
+     * @throws RangeException
+     * @param string $newAddress1 employee address1 $newAddress1
+     */
+    public function setAddress1($newAddress1) {
+
+        $newAddress1 = filter_var($newAddress1, FILTER_SANITIZE_STRING);
+
+        if ( $newAddress1 === false) {
+            throw (new InvalidArgumentException("New Address 1 is invalid"));
         }
-        // verify salt is exactly string of 16
-        if ((ctype_xdigit($newActivation)) === false) {
-            if (empty($newActivation) === true) {
-                throw new InvalidArgumentException ("activation invalid");
-            }
-            if (strlen($newActivation) !== 16) {
-                throw (new RangeException ("Activation not valid"));
-            }
+
+        if (strlen($newAddress1) > 76) {
+            throw (new RangeException ("Address1 content too large"));
         }
-        $this->activation = $newActivation;
+        $this->address1 = $newAddress1;
     }
+
+    /**
+     * accessor method for address line 2
+     *
+     * @return string for address line 2
+     **/
+    public function getAddress2()
+    {
+        return ($this->address2);
+
+    }
+
+
+    /**
+     * Mutator method for Address Line 2
+     *
+     * @param string employee address2 $newAddress2
+     */
+    public function setAddress2($newAddress2) {
+
+        $newAddress2 = filter_var($newAddress2, FILTER_SANITIZE_STRING);
+
+        if ( $newAddress2 === false) {
+            throw (new InvalidArgumentException("New Address 2 is invalid"));
+        }
+
+        if (strlen($newAddress2) > 76) {
+            throw (new RangeException ("Address2 content too large"));
+        }
+        $this->address2 = $newAddress2;
+    }
+
+    /**
+     * Mutator method for city
+     * @throws RangeException
+     * @param string employee city $newCity
+     */
+    public function setCity($newCity) {
+        $newCity = filter_var($newCity, FILTER_SANITIZE_STRING);
+
+        if ( $newCity === false) {
+            throw (new InvalidArgumentException("New City is Invalid"));
+        }
+
+        if (strlen($newCity) > 16) {
+            throw (new RangeException ("City content too large"));
+        }
+        $this->city = $newCity;
+    }
+
 
     /**
      * accessor method for email
      *
-     * @return string of email for user
+     * @return string of email for employee
      **/
-    public function getEmail()
-    {
+    public function getEmail() {
         return ($this->email);
     }
-
     /**
      * Mutator method for Email
      *
-     * @param $newEmail int
+     * @param string $newEmail of employee' email $newEmail
      * @throws InvalidArgumentException if email does not pass sanitization
      * @throws RangeException if email is longer than 64 characters
      **/
-    public function setEmail($newEmail)
-    {
+    public function setEmail($newEmail) {
         // verify email is valid
         $newEmail = filter_var($newEmail, FILTER_SANITIZE_EMAIL);
-        if (empty($newEmail) === true) {
+        if(empty($newEmail) === true) {
             throw new InvalidArgumentException ("user email invalid");
         }
-        if (strlen($newEmail) > 64) {
+        if(strlen($newEmail) > 64) {
             throw(new RangeException ("Email content too large"));
         }
         $this->email = $newEmail;
     }
+
 
     /**
      * accessor method for First Name
@@ -356,33 +406,7 @@ class Employee implements JsonSerializable
         $this->phone = $newPhone;
     }
 
-    /**
-     * accessor for profile path of profile pic
-     *
-     * @return string
-     **/
-    public function getProfilePath()
-    {
-        return ($this->profilePath);
-    }
 
-    /**
-     * Mutator for profile path of profile pic
-     *
-     * @param $newProfilePath
-     **/
-    public function setProfilePath($newProfilePath)
-    {
-        //verify profile path is valid
-        $newProfilePath = filter_var($newProfilePath, FILTER_SANITIZE_STRING);
-        if (empty($newProfilePath) === true) {
-            throw new InvalidArgumentException("profile pic path is invalid");
-        }
-        if (strlen($newProfilePath) > 255) {
-            throw (new RangeException("Profile Path is too large"));
-        }
-        $this->profilePath = $newProfilePath;
-    }
 
     /**
      * accessor method for Salt
@@ -416,60 +440,61 @@ class Employee implements JsonSerializable
     }
 
 
-    public function getAddress()
-    {
-        //verify address is valid
-        return ($this->address);
-    }
-    public function setAddress($newAddress)
-    {
-        //verify profile path is valid
-        $newAddress = filter_var($newAddress, FILTER_SANITIZE_STRING);
-        if (empty($newAddress) === true) {
-            throw new InvalidArgumentException("");
-        }
-        if (strlen($newAddress) > 255) {
-            throw (new RangeException("address content too large"));
-        }
-        $this->address = $newAddress;
-    }
-
-
-    public function getstate()
+    public function getState()
     {
         return ($this->state);
     }
 
-    public function setState($newstate)
+    public function setState($newState)
     {
         //verify profile path is valid
-        $newstate = filter_var($newstate, FILTER_SANITIZE_STRING);
-        if (empty($newstate) === true) {
+        $newState = filter_var($newState, FILTER_SANITIZE_STRING);
+        if (empty($newState) === true) {
             throw new InvalidArgumentException("");
         }
-        if (strlen($newstate) > 255) {
+        if (strlen($newState) > 255) {
             throw (new RangeException("State content too large "));
         }
-        $this->state = $newstate;
+        $this->state = $newState;
     }
 
-
-    public function getzip()
+    public function getStatus()
     {
-        return ($this->getzip());
+        return ($this->status);
     }
 
-    public function setZip($newzip)
+    public function setStatus($newStatus)
     {
         //verify profile path is valid
-        $newzip = filter_var($newzip, FILTER_SANITIZE_STRING);
-        if (empty($newzip) === true) {
+        $newStatus = filter_var($newStatus, FILTER_SANITIZE_STRING);
+        if (empty($newStatus) === true) {
             throw new InvalidArgumentException("");
         }
-        if (strlen($newzip) > 255) {
+        if (strlen($newStatus) > 255) {
+            throw (new RangeException("State content too large "));
+        }
+        $this->status = $newStatus;
+    }
+
+
+
+
+    public function getZip()
+    {
+        return ($this->getZip());
+    }
+
+    public function setZip($newZip)
+    {
+        //verify profile path is valid
+        $newZip = filter_var($newZip, FILTER_SANITIZE_STRING);
+        if (empty($newZip) === true) {
+            throw new InvalidArgumentException("");
+        }
+        if (strlen($newZip) > 255) {
             throw (new RangeException("zip should be formatted 50555 55"));
         }
-        $this->state = $newzip;
+        $this->state = $newZip;
     }
 
 
@@ -491,23 +516,175 @@ class Employee implements JsonSerializable
     {
         // make sure user doesn't already exist
         if ($this->employeeId !== null) {
-            throw (new PDOException("existing user"));
+            throw (new PDOException("existing employee"));
         }
         //create query template
         $query
-            = "INSERT INTO employee(employeeId, accessLevelId, activation, email, firstName, hash, lastName, phone, profilePath, salt, address, state, zip)
-        VALUES (:employee, :accessLevel, :activation, :email, :firstName, :hash, :lastName, :phone, :profilePath, :salt, :address, :state, :zip)";
+            = "INSERT INTRO employee(employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone, salt, state, status, zip)
+        VALUES (:employee, :accessLevel, :address1, :address2, :city, :email, :firstName, :hash, :lastName, :phone, :salt, :state, :status, :zip)";
         $statement = $pdo->prepare($query);
 
         // bind the variables to the place holders in the template
-        $parameters = array("accessLevelId" => $this->accessLevelId, "activation" => $this->activation, "email" => $this->email,
+        $parameters = array("accessLevelId" => $this->accessLevelId,  "address1" => $this->address1,  "address2" => $this->address2, "city" => $this->city, "email" => $this->email,
             "firstName" => $this->firstName,
-            "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone, "profilePath" => $this->profilePath,
-            "salt" => $this->salt, "address" => $this->address, "state" => $this->state, "zip" => $this->zip);
+            "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
+            "salt" => $this->salt, "state" => $this->state, "status" => $this->status, "zip" => $this->zip);
         $statement->execute($parameters);
         //update null userId with what mySQL just gave us
-        $this->employeeId = intval($pdo->lastInsert);
+        $this->employeeId = intval($pdo->lastInsertId ());
 
     }
+    
+    /**
+     * Deletes Employee from mySQL
+     *
+     * Delete PDO to delete employeeId
+     * @param PDO $pdo
+     **/
+    public function delete(PDO &$pdo) {
+        // enforce the user is not null
+        if($this->employeeId === null) {
+            throw(new PDOException("unable to delete a employee that does not exist"));
+        }
+
+        //create query template
+        $query = "DELETE FROM employee WHERE employeeId = :employeeId";
+        $statement = $pdo->prepare($query);
+
+        //bind the member variables to the place holder in the template
+        $parameters = array("employeeId" => $this->employeeId);
+        $statement->execute($parameters);
+    }
+
+    /**
+     * updates Employee in mySQL
+     *
+     * Update PDO to update employee class
+     * @param PDO $pdo pointer to PDO connection, by reference
+     **/
+    public function update(PDO $pdo) {
+
+        // create query template
+        $query = "UPDATE employee SET employeeId = :employeeId, accessLevelId = :accessLevelId, address1 = :address1, address2 = :address2, email = :email,
+        firstName = :firstName, hash = :hash, lastName = :lastName,
+ 		phone = :phone, salt = :salt, state = :state, status = :status, zip = :zip WHERE employeeId = :employeeId";
+        $statement = $pdo->prepare($query);
+
+        // bind the member variables
+        $parameters = array("employeeId" => $this->employeeId, "accessLevel" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2, "city" => $this->city,"email" => $this->email,
+            "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
+            "salt" => $this->salt, "state" => $this->state,"status"=> $this->status, "zip" => $this->zip);
+        
+        $statement->execute($parameters);
+    }
+
+    /**
+     * Get user by employeeId integer
+     *
+     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param int $employeeId for unique employeeId $employeeId
+     * @return mixed|Employee
+     **/
+    public static function getEmployeeByEmployeeId(PDO $pdo, $employeeId) {
+        // sanitize the userId before searching
+        $employeeId = filter_var($employeeId, FILTER_VALIDATE_INT);
+        if($employeeId === false) {
+            throw(new PDOException("employee id is not an integer"));
+        }
+        if($employeeId <= 0) {
+            throw(new PDOException("employee id is not positive"));
+        }
+
+        // create query template
+        $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone
+		,salt , state, status, zip FROM employee WHERE employeeId = :employeeId";
+        $statement = $pdo->prepare($query);
+
+        // bind the user id to the place holder in the template
+        $parameters = array("employeeId" => $employeeId);
+        $statement->execute($parameters);
+
+        // grab the employee from mySQL
+        try {
+            $employee = null;
+            $statement->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $statement->fetch();
+            if($row !== false) {
+                $employee = new Employee ($row["employeeId"], $row["accessLevelId"], $row["address1"], $row["address2"], $row["city"], $row["email"],
+                    $row["firstName"], $row["hash"], $row["lastName"], $row["phone"],
+                    $row["salt"], $row["state"], $row["status"], $row["zip"]);
+            }
+        } catch(Exception $exception) {
+            // if the row couldn't be converted, rethrow it
+            throw(new PDOException($exception->getMessage(), 0, $exception));
+        }
+        return ($employee);
+    }
+
+    /**
+     * get employee by email
+     *
+     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param mixed $email info for $employee
+     * @return null|Employee
+     **/
+    public static function getEmployeeByEmail(PDO $pdo, $email) {
+        // sanitize the email before searching
+        $employee = filter_var($email, FILTER_SANITIZE_EMAIL);
+        if($employee === false) {
+            throw(new PDOException(""));
+        }
+        // create query template
+        $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone, salt, state, status, zip
+        FROM employee WHERE email = :email";
+        $statement = $pdo->prepare($query);
+
+        // bind the user id to the place holder in the template
+        $parameters = array("email" => $email);
+        $statement->execute($parameters);
+
+        // grab the employee from mySQL
+        try {
+            $employee = null;
+            $statement->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $statement->fetch();
+            if($row !== false) {
+                $employee = new Employee ($row["employeeId"], $row["accessLevelId"], $row["activation"], $row["email"],
+                    $row["firstName"], $row["hash"], $row["lastName"], $row["phone"], $row["profilePath"], $row["salt"],$row["address"], $row["state"],$row["zip"]);
+            }
+        } catch(Exception $exception) {
+            // if the row couldn't be converted, rethrow it
+            throw(new PDOException($exception->getMessage(), 0, $exception));
+        }
+        return ($employee);
+    }
+
+    public static function getAllEmployee(PDO $pdo) {
+        //create the query template
+        $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, lastName, phone, salt, state, status, zip FROM employee";
+        $statement = $pdo->prepare($query);
+        // execute
+        $statement->execute();
+        //call the function to build an array of the values
+        $employee = null;
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $employees = new SplFixedArray($statement->rowCount());
+        while(($row = $statement->fetch()) !== false) {
+            try {
+                if($row !== false) {
+                    $employee = new Employee($row["employeeId"], $row["employeeName"], $row["employeeEmail"], $row["dateCreated"]);
+                    $employees[$employees->key()] = $employee;
+                    $employees->next();
+                }
+            } catch(Exception $exception) {
+
+                throw(new PDOException($exception->getMessage(), 0, $exception));
+            }
+        }
+
+        return $employees;
+    }
+    
+
 
 } // end class
