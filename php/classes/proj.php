@@ -13,7 +13,7 @@ require_once("dateValidation.php");
 
 
 
-class Project implements JsonSerializable
+class DevProject implements JsonSerializable
 {
     /**
      *id for a project this is primary key
@@ -116,7 +116,7 @@ class Project implements JsonSerializable
     /**
      * Mutator method for End Date
      *
-     * @param string Project category $newEndDate
+     * @param string DevProject category $newEndDate
      * @throws InvalidArgumentException
      * @throws RangeException
      * @throws Exception
@@ -149,7 +149,7 @@ class Project implements JsonSerializable
     /**
      * Mutator method for Start Date
      *
-     * @param string project category $newStartDate
+     * @param string DevProject category $newStartDate
      * @throws InvalidArgumentException
      * @throws RangeException
      * @throws Exception
@@ -206,8 +206,8 @@ class Project implements JsonSerializable
      * Get project by projectId integer
      *
      * @param PDO $pdo pointer to PDO connection, by reference
-     * @param int project unique projectId $projectId
-     * @return mixed|Project
+     * @param int DevProject unique projectId $projectId
+     * @return mixed|DevProject
      **/
     public static function getProjectByProjectId(PDO $pdo, $projectId)
     {
@@ -235,7 +235,7 @@ class Project implements JsonSerializable
         $row = $statement->fetch();
             try {
                 if ($row !== false) {
-                    $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
+                    $project = new DevProject($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
                     $projectId[$projectId->key()] = $project;
                     $projectId->next();
                 }
@@ -252,7 +252,7 @@ class Project implements JsonSerializable
      * Get all Projects
      *
      * @param PDO $pdo pointer to PDO connection, by reference
-     * @return mixed| Project
+     * @return mixed| DevProject
      **/
     public static function getAllProjects(PDO $pdo) {
         //create the query template
@@ -267,7 +267,7 @@ class Project implements JsonSerializable
         while(($row = $statement->fetch()) !== false) {
             try {
                 if($row !== false) {
-                    $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
+                    $project = new DevProject($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
                     $projects[$projects->key()] = $project;
                     $projects->next();
                 }
