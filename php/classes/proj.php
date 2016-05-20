@@ -1,6 +1,6 @@
 <<?php
 /**
- * Class Project
+ * Class DevProject
  *
  * This class handles projects posted to site
  *

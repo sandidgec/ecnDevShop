@@ -2,14 +2,11 @@
 require_once ("../../devshop.php");
 require_once ("dateValidation.php");
 require_once ("employee.php");
-//require_once ("project.php");
+require_once ("proj.php");
 
 
 
 
-
-
-dsn and options
 $dsn = 'mysql:host=' . $config["hostname"] . ';dbname=' . $config["database"];
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
