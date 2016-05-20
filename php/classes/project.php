@@ -31,6 +31,7 @@ class Project implements JsonSerializable
      * describes start date
      * @var string for the end date of the project
      */
+    
     private $startDate;
 
     /**
@@ -41,14 +42,14 @@ class Project implements JsonSerializable
 
     /**
      * Project constructor.
-     * 
+     *
      * @param  int|null $newProjectId
      * @param DateTime $newEndDate
      * @param DateTime $newStartDate
      * @param string $title
      * @throws InvalidArgumentException
      * @throws RangeException
-     * @throws Exception 
+     * @throws Exception
      */
     public function __construct($newProjectId, $newEndDate, $newStartDate, $title)
     {
