@@ -26,11 +26,13 @@ class Project implements JsonSerializable
      * @var string for cnd date of the project
      */
     private $endDate;
+
     /**
      * describes start date
      * @var string for the end date of the project
      */
     private $startDate;
+
     /**
      * attaches key for user posting projects
      * @var int $title foreign key for userId
@@ -228,9 +230,8 @@ class Project implements JsonSerializable
         //call the function to build an array of the values
         $project = null;
         $statement->setFetchMode(PDO::FETCH_ASSOC);
-        $project = new SplFixedArray($statement->rowCount());
 
-        while (($row = $statement->fetch()) !== false) {
+        $row = $statement->fetch();
             try {
                 if ($row !== false) {
                     $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
@@ -241,7 +242,7 @@ class Project implements JsonSerializable
 
                 throw(new PDOException($exception->getMessage(), 0, $exception));
             }
-        }
+
 
         return $project;
     }
@@ -252,22 +253,22 @@ class Project implements JsonSerializable
      * @param PDO $pdo pointer to PDO connection, by reference
      * @return mixed| Project
      **/
-    public static function getAllUsers(PDO $pdo) {
+    public static function getAllProjects(PDO $pdo) {
         //create the query template
         $query = "SELECT projectId, endDate, startDate, title FROM project";
         $statement = $pdo->prepare($query);
         // execute
         $statement->execute();
         //call the function to build an array of the values
-        $users = null;
+        $projects = null;
         $statement->setFetchMode(PDO::FETCH_ASSOC);
-        $projectId = new SplFixedArray($statement->rowCount());
+        $projects = new SplFixedArray($statement->rowCount());
         while(($row = $statement->fetch()) !== false) {
             try {
                 if($row !== false) {
                     $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
-                    $projectId[$projectId->key()] = $project;
-                    $projectId->next();
+                    $projects[$projects->key()] = $project;
+                    $projects->next();
                 }
             } catch(Exception $exception) {
 
@@ -275,7 +276,7 @@ class Project implements JsonSerializable
             }
         }
 
-        return $projectId;
+        return $projects;
     }
 
     /**
