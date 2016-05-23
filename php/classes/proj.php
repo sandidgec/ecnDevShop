@@ -8,12 +8,15 @@
  **/
 
 
+
 require_once("dateValidation.php");
 
+namespace DevShop;
 
 
 
-class DevProject implements JsonSerializable
+
+class DevProject implements \JsonSerializable
 {
     /**
      *id for a project this is primary key
@@ -44,12 +47,12 @@ class DevProject implements JsonSerializable
      * Project constructor.
      *
      * @param  int|null $newProjectId
-     * @param DateTime $newEndDate
-     * @param DateTime $newStartDate
+     * @param \DateTime $newEndDate
+     * @param \DateTime $newStartDate
      * @param string $title
-     * @throws InvalidArgumentException
-     * @throws RangeException
-     * @throws Exception
+     * @throws \InvalidArgumentException
+     * @throws \RangeException
+     * @throws \Exception
      */
     public function __construct($newProjectId, $newEndDate, $newStartDate, $title)
     {
@@ -59,15 +62,15 @@ class DevProject implements JsonSerializable
             $this->setStartDate($newStartDate);
             $this->setTitle($title);
 
-        } catch (InvalidArgumentException $invalidArgument) {
+        } catch (\InvalidArgumentException $invalidArgument) {
             //rethrow the exception to the caller
-            throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
-        } catch (RangeException $range) {
+            throw(new \InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+        } catch (\RangeException $range) {
             // rethrow the exception to the caller
-            throw (new RangeException($range->getMessage(), 0, $range));
-        } catch (Exception $exception) {
+            throw (new \RangeException($range->getMessage(), 0, $range));
+        } catch (\Exception $exception) {
             // rethrow generic exception
-            throw(new Exception($exception->getMessage(), 0, $exception));
+            throw(new \Exception($exception->getMessage(), 0, $exception));
         }
     }
 
@@ -85,7 +88,7 @@ class DevProject implements JsonSerializable
      * mutator method for the projectId
      *
      * @param int $newProjectId unique value to represent a user $newProjectId
-     * @throws InvalidArgumentException for invalid content
+     * @throws \InvalidArgumentException for invalid content
      **/
     public function setProjectId($newProjectId)
     {
@@ -98,7 +101,7 @@ class DevProject implements JsonSerializable
         //verify the projectId is valid
         $newProjectId = filter_var($newProjectId, FILTER_VALIDATE_INT);
         if (empty($newProjectId) === true) {
-            throw (new InvalidArgumentException ("projectId invalid"));
+            throw (new \InvalidArgumentException ("projectId invalid"));
         }
         $this->projectId = $newProjectId;
     }
@@ -117,21 +120,21 @@ class DevProject implements JsonSerializable
      * Mutator method for End Date
      *
      * @param string DevProject category $newEndDate
-     * @throws InvalidArgumentException
-     * @throws RangeException
-     * @throws Exception
+     * @throws \InvalidArgumentException
+     * @throws \RangeException
+     * @throws \Exception
      */
     public function setEndDate($newEndDate)
     {
         // verify end date is valid
         try {
             $newEndDate = validateDate($newEndDate);
-        } catch (InvalidArgumentException $invalidArgument) {
-            throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
-        } catch (RangeException $range) {
-            throw(new RangeException($range->getMessage(), 0, $range));
-        } catch (Exception $exception) {
-            throw(new Exception($exception->getMessage(), 0, $exception));
+        } catch (\InvalidArgumentException $invalidArgument) {
+            throw(new \InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+        } catch (\RangeException $range) {
+            throw(new \RangeException($range->getMessage(), 0, $range));
+        } catch (\Exception $exception) {
+            throw(new \Exception($exception->getMessage(), 0, $exception));
         }
         $this->endDate = $newEndDate;
     }
@@ -150,21 +153,21 @@ class DevProject implements JsonSerializable
      * Mutator method for Start Date
      *
      * @param string DevProject category $newStartDate
-     * @throws InvalidArgumentException
-     * @throws RangeException
-     * @throws Exception
+     * @throws \InvalidArgumentException
+     * @throws \RangeException
+     * @throws \Exception
      */
     public function setStartDate($newStartDate)
     {
         // verify date is valid
         try {
             $newStartDate = validateDate($newStartDate);
-        } catch (InvalidArgumentException $invalidArgument) {
-            throw(new InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
-        } catch (RangeException $range) {
-            throw(new RangeException($range->getMessage(), 0, $range));
-        } catch (Exception $exception) {
-            throw(new Exception($exception->getMessage(), 0, $exception));
+        } catch (\InvalidArgumentException $invalidArgument) {
+            throw(new \InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+        } catch (\RangeException $range) {
+            throw(new \RangeException($range->getMessage(), 0, $range));
+        } catch (\Exception $exception) {
+            throw(new \Exception($exception->getMessage(), 0, $exception));
         }
 
         $this->startDate = $newStartDate;
@@ -190,14 +193,14 @@ class DevProject implements JsonSerializable
      * Mutator method for title
      *
      * @param $newTitle int
-     * @throws InvalidArgumentException if title is invalid
+     * @throws \InvalidArgumentException if title is invalid
      **/
     public function setTitle($newTitle)
     {
         // verify access level is integer
         $newTitle = filter_var($newTitle, FILTER_VALIDATE_INT);
         if (empty($newTitle) === true) {
-            throw new InvalidArgumentException ("Title Invalid");
+            throw new \InvalidArgumentException ("Title Invalid");
         }
         $this->title = $newTitle;
     }
@@ -205,21 +208,21 @@ class DevProject implements JsonSerializable
     /**
      * Get project by projectId integer
      *
-     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param \PDO $pdo pointer to PDO connection, by reference
      * @param int DevProject unique projectId $projectId
      * @return mixed|DevProject
      **/
-    public static function getProjectByProjectId(PDO $pdo, $projectId)
+    public static function getProjectByProjectId(\PDO $pdo, $projectId)
     {
 
         // sanitize the bulletinId before searching
         $projectId = filter_var($projectId, FILTER_VALIDATE_INT);
 
         if ($projectId === false) {
-            throw(new PDOException("project id is not an integer"));
+            throw(new \PDOException("project id is not an integer"));
         }
         if ($projectId <= 0) {
-            throw(new PDOException("project id is not positive"));
+            throw(new \PDOException("project id is not positive"));
         }
         // create query template
         $query = "SELECT projectId, endDate, startDate, title FROM project WHERE projectId = :projectId";
@@ -230,7 +233,7 @@ class DevProject implements JsonSerializable
 
         //call the function to build an array of the values
         $project = null;
-        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
 
         $row = $statement->fetch();
             try {
@@ -239,9 +242,9 @@ class DevProject implements JsonSerializable
                     $projectId[$projectId->key()] = $project;
                     $projectId->next();
                 }
-            } catch (Exception $exception) {
+            } catch (\Exception $exception) {
 
-                throw(new PDOException($exception->getMessage(), 0, $exception));
+                throw(new \PDOException($exception->getMessage(), 0, $exception));
             }
 
 
@@ -251,10 +254,10 @@ class DevProject implements JsonSerializable
     /**
      * Get all Projects
      *
-     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param \PDO $pdo pointer to PDO connection, by reference
      * @return mixed| DevProject
      **/
-    public static function getAllProjects(PDO $pdo) {
+    public static function getAllProjects(\PDO $pdo) {
         //create the query template
         $query = "SELECT projectId, endDate, startDate, title FROM project";
         $statement = $pdo->prepare($query);
@@ -262,8 +265,8 @@ class DevProject implements JsonSerializable
         $statement->execute();
         //call the function to build an array of the values
         $projects = null;
-        $statement->setFetchMode(PDO::FETCH_ASSOC);
-        $projects = new SplFixedArray($statement->rowCount());
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+        $projects = new \SplFixedArray($statement->rowCount());
         while(($row = $statement->fetch()) !== false) {
             try {
                 if($row !== false) {
@@ -271,9 +274,9 @@ class DevProject implements JsonSerializable
                     $projects[$projects->key()] = $project;
                     $projects->next();
                 }
-            } catch(Exception $exception) {
+            } catch(\Exception $exception) {
 
-                throw(new PDOException($exception->getMessage(), 0, $exception));
+                throw(new \PDOException($exception->getMessage(), 0, $exception));
             }
         }
 
@@ -284,13 +287,13 @@ class DevProject implements JsonSerializable
      * Inserts Project into mySQL
         *
      * Inserts this projectId into mySQL in intervals
-        * @param PDO $pdo connection to
+        * @param \PDO $pdo connection to
         **/
-    public function insert(PDO &$pdo)
+    public function insert(\PDO &$pdo)
             {
                 // make sure project doesn't already exist
                 if ($this->projectId !== null) {
-            throw (new PDOException("existing project"));
+            throw (new \PDOException("existing project"));
         }
         //create query template
         $query
@@ -310,13 +313,13 @@ class DevProject implements JsonSerializable
      * Deletes Project from mySQL
      *
      * Delete PDO to delete projectId
-     * @param PDO $pdo
+     * @param \PDO $pdo
      **/
-    public function delete(PDO &$pdo)
+    public function delete(\PDO &$pdo)
     {
         // enforce the project is not null
         if ($this->projectId === null) {
-            throw(new PDOException("unable to delete a project that does not exist"));
+            throw(new \PDOException("unable to delete a project that does not exist"));
         }
 
         //create query template
@@ -332,9 +335,9 @@ class DevProject implements JsonSerializable
      * updates Message in mySQL
      *
      * Update PDO to update project class
-     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param \PDO $pdo pointer to PDO connection, by reference
      **/
-    public function update(PDO $pdo)
+    public function update(\PDO $pdo)
     {
 
         // create query template
