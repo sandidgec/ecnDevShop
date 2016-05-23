@@ -649,8 +649,8 @@ class Employee implements JsonSerializable
             $statement->setFetchMode(PDO::FETCH_ASSOC);
             $row = $statement->fetch();
             if($row !== false) {
-                $employee = new Employee ($row["employeeId"], $row["accessLevelId"], $row["activation"], $row["email"],
-                    $row["firstName"], $row["hash"], $row["lastName"], $row["phone"], $row["profilePath"], $row["salt"],$row["address"], $row["state"],$row["zip"]);
+                $employee = new Employee ($row["employeeId"], $row["accessLevelId"], $row["address1"], $row["address2"], $row["city"], $row["email"],
+                    $row["firstName"], $row["hash"], $row["lastName"], $row["phone"], $row["salt"], $row["state"], $row["status"],$row["zip"]);
             }
         } catch(Exception $exception) {
             // if the row couldn't be converted, rethrow it
@@ -661,7 +661,7 @@ class Employee implements JsonSerializable
 
     public static function getAllEmployee(PDO $pdo) {
         //create the query template
-        $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, lastName, phone, salt, state, status, zip FROM employee";
+        $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone, salt, state, status, zip FROM employee";
         $statement = $pdo->prepare($query);
         // execute
         $statement->execute();

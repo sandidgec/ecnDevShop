@@ -1,6 +1,6 @@
 <?php
-require_once(dirname(dirname(__DIR__)) . "/classes/autoload.php");
-require_once(dirname(dirname(__DIR__)) . "/lib/xsrf.php");
+require_once(dirname(dirname(__DIR__)) . "/php/api/");
+require_once(dirname(dirname(__DIR__)) . "php/api/Employee/index.php");
 require_once("/etc/apache2/data-design/encrypted-config.php");
 
 // start the session and create a XSRF token
@@ -17,8 +17,8 @@ try {
     // determine which HTTP method was used
     $method = array_key_exists("HTTP_X_HTTP_METHOD", $_SERVER) ? $_SERVER["HTTP_X_HTTP_METHOD"] : $_SERVER["REQUEST_METHOD"];
 
-    // sanitize the userId
-    $userId = filter_input(INPUT_GET, "userId", FILTER_VALIDATE_INT);
+    // sanitize the employeeId
+    $employeeId = filter_input(INPUT_GET, "employeeId", FILTER_VALIDATE_INT);
 
     // sanitize the email
     $email = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
@@ -27,7 +27,7 @@ try {
     // grab the mySQL connection
     $pdo = connectToEncryptedMySql("/etc/apache2/capstone-mysql/invtext.ini");
 
-    // handle all RESTful calls to User today
+    // handle all RESTful calls to Employee today
     // get some or all Employee
     if($method === "GET") {
         // set an XSRF cookie on GET requests
