@@ -514,23 +514,26 @@ class Employee implements JsonSerializable
      **/
     public function insert(PDO &$pdo)
     {
-        // make sure user doesn't already exist
-        if ($this->employeeId !== null) {
-            throw (new PDOException("existing employee"));
-        }
-        //create query template
-        $query
-            = "INSERT INTRO employee(employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone, salt, state, status, zip)
-        VALUES (:employee, :accessLevel, :address1, :address2, :city, :email, :firstName, :hash, :lastName, :phone, :salt, :state, :status, :zip)";
-        $statement = $pdo->prepare($query);
+		 
+			 // make sure user doesn't already exist
+			 if($this->employeeId !== null) {
+				 throw (new PDOException("existing employee"));
+			 }
+			 //create query template
+			 $query
+				 = "INSERT INTO employee(accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone, salt, state, status, zip)
+        VALUES (:accessLevelId, :address1, :address2, :city, :email, :firstName, :hash, :lastName, :phone, :salt, :state, :status, :zip)";
+			 $statement = $pdo->prepare($query);
 
-        // bind the variables to the place holders in the template
-        $parameters = array("employeeId" => $this->employeeId,"accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2,
-            "city" => $this->city, "email" => $this->email, "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
-            "salt" => $this->salt, "state" => $this->state, "status" => $this->status, "zip" => $this->zip);
-        $statement->execute($parameters);
-        //update null userId with what mySQL just gave us
-        $this->employeeId = intval($pdo->lastInsertId ());
+			 // bind the variables to the place holders in the template
+			 $parameters = array("accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2,
+				 "city" => $this->city, "email" => $this->email, "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
+				 "salt" => $this->salt, "state" => $this->state, "status" => $this->status, "zip" => $this->zip);
+			 $statement->execute($parameters);
+
+			 //update null userId with what mySQL just gave us
+			 $this->employeeId = intval($pdo->lastInsertId());
+		 
 
     }
     

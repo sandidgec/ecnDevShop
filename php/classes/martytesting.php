@@ -2,7 +2,7 @@
 
 require_once ("../../devshop.php");
 require_once ("dateValidation.php");
-require_once ("auto.php");
+require_once ("employee.php");
 
 
 
@@ -28,7 +28,13 @@ try {
     echo $exp->getMessage();
 }
 
-$emp->insert($pdo);
+try {
+	$emp->insert($pdo);
+}catch(Exception $e) {
+	echo $e->getMessage();
+}
+
+
 
 
 
