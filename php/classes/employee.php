@@ -14,13 +14,13 @@ class Employee implements JsonSerializable
      **/
     private $employeeId;
     /**
-     * access level id to identify user groups
+     * access level id to identify employee groups
      * @var int for accessLevelId
      **/
     private $accessLevelId;
     /**
      * address of employee
-     * @var int $address1
+     * @var string $address1
      **/
     private $address1;
     /**
@@ -139,7 +139,7 @@ class Employee implements JsonSerializable
     }
 
     /**
-     * mutator method for the userId
+     * mutator method for the employeeId
      *
      * @param int $newEmployeeId unique value to represent a employee $newEmployeeId
      * @throws InvalidArgumentException for invalid content
@@ -321,7 +321,7 @@ class Employee implements JsonSerializable
 
     /**
      * accessor method for Hash
-     * @return string of users password Hash
+     * @return string of employee password Hash
      **/
     public function getHash()
     {
@@ -331,7 +331,7 @@ class Employee implements JsonSerializable
     /**
      * Mutator for Hash -insure it is 128 length string
      *
-     * @param string $newHash of users $newHash
+     * @param string $newHash of employee $newHash
      * @throws InvalidArgumentException if newHash is not valid int
      * @throws RangeException if newHash is not exactly 128 xdigits
      **/
@@ -411,7 +411,7 @@ class Employee implements JsonSerializable
     /**
      * accessor method for Salt
      *
-     * @return string of Salt for user password
+     * @return string of Salt for employee password
      **/
     public function getSalt()
     {
@@ -421,7 +421,7 @@ class Employee implements JsonSerializable
     /**
      * mutator method for Salt
      *
-     * @param string $newSalt of users password salt $newSalt
+     * @param string $newSalt of employee password salt $newSalt
      * @throw InvalidArgumentException if salt is not valid int
      * @throw RangeException if salt is not exactly 64 xdigits
      **/
@@ -447,7 +447,7 @@ class Employee implements JsonSerializable
 
     public function setState($newState)
     {
-        //verify profile path is valid
+        //verify State is valid
         $newState = filter_var($newState, FILTER_SANITIZE_STRING);
         if (empty($newState) === true) {
             throw new InvalidArgumentException("");
@@ -465,13 +465,13 @@ class Employee implements JsonSerializable
 
     public function setStatus($newStatus)
     {
-        //verify profile path is valid
+        //verify status is valid
         $newStatus = filter_var($newStatus, FILTER_SANITIZE_STRING);
         if (empty($newStatus) === true) {
             throw new InvalidArgumentException("");
         }
         if (strlen($newStatus) > 255) {
-            throw (new RangeException("State content too large "));
+            throw (new RangeException("Status content too large "));
         }
         $this->status = $newStatus;
     }
@@ -486,7 +486,7 @@ class Employee implements JsonSerializable
 
     public function setZip($newZip)
     {
-        //verify profile path is valid
+        //verify zip is valid
         $newZip = filter_var($newZip, FILTER_SANITIZE_STRING);
         if (empty($newZip) === true) {
             throw new InvalidArgumentException("");
@@ -507,7 +507,7 @@ class Employee implements JsonSerializable
     }
 
     /**
-     * Inserts User into mySQL
+     * Inserts Employee into mySQL
      *
      * Inserts this userId into mySQL in intervals
      * @param PDO $pdo connection to
@@ -525,9 +525,8 @@ class Employee implements JsonSerializable
         $statement = $pdo->prepare($query);
 
         // bind the variables to the place holders in the template
-        $parameters = array("accessLevelId" => $this->accessLevelId,  "address1" => $this->address1,  "address2" => $this->address2, "city" => $this->city, "email" => $this->email,
-            "firstName" => $this->firstName,
-            "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
+        $parameters = array("employeeId" => $this->employeeId,"accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2,
+            "city" => $this->city, "email" => $this->email, "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
             "salt" => $this->salt, "state" => $this->state, "status" => $this->status, "zip" => $this->zip);
         $statement->execute($parameters);
         //update null userId with what mySQL just gave us
