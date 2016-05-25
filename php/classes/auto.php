@@ -10,7 +10,7 @@ function loadClass($className) {
     $className = preg_replace_callback("/([A-Z])/", function($matches) {
         return("-" . strtolower($matches[0]));
     }, $className);
-    $classFile = __DIR__ . "/" . $className . ".php";
+    $classFile = __DIR__ . "auto.php/" . $className . ".php";
     if(is_readable($classFile) === true && require_once($classFile)) {
         return(true);
     } else {

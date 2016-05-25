@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(dirname(__DIR__)) . "/php/api/");
-require_once(dirname(dirname(__DIR__)) . "php/api/Employee/index.php");
+require_once(dirname(dirname(__DIR__)) . "/php/classes/xsrf.php");
 require_once("/etc/apache2/data-design/encrypted-config.php");
 
 // start the session and create a XSRF token

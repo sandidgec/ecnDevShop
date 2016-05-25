@@ -98,7 +98,7 @@ class Employee implements JsonSerializable
      * @param $newZip
      * @throws Exception
      */
-    public function __construct($newEmployeeId, $newAccessLevelId, $newAddress1, $newAddress2, $newEmail, $newCity, $newFirstName, $newHash, $newLastName,
+    public function __construct($newEmployeeId, $newAccessLevelId, $newAddress1, $newAddress2, $newCity, $newEmail, $newFirstName, $newHash, $newLastName,
                                 $newPhone, $newSalt, $newState, $newStatus, $newZip)
     {
         try {
