@@ -494,7 +494,7 @@ class Employee implements JsonSerializable
         if (strlen($newZip) > 255) {
             throw (new RangeException("zip should be formatted 50555 55"));
         }
-        $this->state = $newZip;
+        $this->zip = $newZip;
     }
 
 
