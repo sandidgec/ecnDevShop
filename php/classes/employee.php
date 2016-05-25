@@ -176,7 +176,7 @@ class Employee implements JsonSerializable
      **/
     public function setAccessLevelId($newAccessLevelId) {
         // verify access level is integer
-        $newAccessLevelId = filter_var($newAccessLevelId, FILTER_VALIDATE_INT);
+        $newAccessLevelId = filter_var($newAccessLevelId, FILTER_SANITIZE_STRING);
         if(empty($newAccessLevelId) === true) {
             throw new InvalidArgumentException ("Access Level Invalid");
         }
