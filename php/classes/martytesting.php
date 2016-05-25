@@ -28,7 +28,7 @@ try {
     echo $exp->getMessage();
 }
 
-
+$emp->insert();
 
 
 
