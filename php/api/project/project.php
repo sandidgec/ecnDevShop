@@ -1,5 +1,4 @@
 <?php
-require_once(dirname(dirname(__DIR__)) . "auto.php");
 require_once(dirname(dirname(__DIR__)) . "xsrf.php");
 // start the session and create a XSRF token
 if(session_status() !== PHP_SESSION_ACTIVE) {

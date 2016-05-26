@@ -9,9 +9,10 @@ DROP TABLE IF EXISTS project;
 
 CREATE TABLE project (
   projectId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-  title VARCHAR(64) NOT NULL,
-  startDate DATE NOT NULL,
   endDate DATE NOT NULL,
+  startDate DATE NOT NULL,
+  title VARCHAR(64) NOT NULL,
+
   PRIMARY KEY (projectId)
 );
 

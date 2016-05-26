@@ -11,12 +11,12 @@
 
 require_once("dateValidation.php");
 
-namespace DevShop;
 
 
 
 
-class DevProject implements \JsonSerializable
+
+class Project implements \JsonSerializable
 {
     /**
      *id for a project this is primary key
@@ -39,7 +39,7 @@ class DevProject implements \JsonSerializable
 
     /**
      * attaches key for user posting projects
-     * @var int $title foreign key for userId
+     * @var int $title foreign key for projectId
      */
     private $title;
 
@@ -49,18 +49,18 @@ class DevProject implements \JsonSerializable
      * @param  int|null $newProjectId
      * @param \DateTime $newEndDate
      * @param \DateTime $newStartDate
-     * @param string $title
+     * @param string $newTitle
      * @throws \InvalidArgumentException
      * @throws \RangeException
      * @throws \Exception
      */
-    public function __construct($newProjectId, $newEndDate, $newStartDate, $title)
+    public function __construct($newProjectId, $newEndDate, $newStartDate, $newTitle)
     {
         try {
             $this->setProjectId($newProjectId);
             $this->setEndDate($newEndDate);
             $this->setStartDate($newStartDate);
-            $this->setTitle($title);
+            $this->setTitle($newTitle);
 
         } catch (\InvalidArgumentException $invalidArgument) {
             //rethrow the exception to the caller
@@ -119,7 +119,7 @@ class DevProject implements \JsonSerializable
     /**
      * Mutator method for End Date
      *
-     * @param string DevProject category $newEndDate
+     * @param string Project category $newEndDate
      * @throws \InvalidArgumentException
      * @throws \RangeException
      * @throws \Exception
@@ -152,7 +152,7 @@ class DevProject implements \JsonSerializable
     /**
      * Mutator method for Start Date
      *
-     * @param string DevProject category $newStartDate
+     * @param string Project category $newStartDate
      * @throws \InvalidArgumentException
      * @throws \RangeException
      * @throws \Exception
@@ -205,57 +205,12 @@ class DevProject implements \JsonSerializable
         $this->title = $newTitle;
     }
 
-    /**
-     * Get project by projectId integer
-     *
-     * @param \PDO $pdo pointer to PDO connection, by reference
-     * @param int DevProject unique projectId $projectId
-     * @return mixed|DevProject
-     **/
-    public static function getProjectByProjectId(\PDO $pdo, $projectId)
-    {
-
-        // sanitize the bulletinId before searching
-        $projectId = filter_var($projectId, FILTER_VALIDATE_INT);
-
-        if ($projectId === false) {
-            throw(new \PDOException("project id is not an integer"));
-        }
-        if ($projectId <= 0) {
-            throw(new \PDOException("project id is not positive"));
-        }
-        // create query template
-        $query = "SELECT projectId, endDate, startDate, title FROM project WHERE projectId = :projectId";
-        $statement = $pdo->prepare($query);
-        // bind the project id to the place holder in the template
-        $parameters = array("projectId" => $projectId);
-        $statement->execute($parameters);
-
-        //call the function to build an array of the values
-        $project = null;
-        $statement->setFetchMode(\PDO::FETCH_ASSOC);
-
-        $row = $statement->fetch();
-            try {
-                if ($row !== false) {
-                    $project = new DevProject($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
-                    $projectId[$projectId->key()] = $project;
-                    $projectId->next();
-                }
-            } catch (\Exception $exception) {
-
-                throw(new \PDOException($exception->getMessage(), 0, $exception));
-            }
-
-
-        return $project;
-    }
-
+  
     /**
      * Get all Projects
      *
      * @param \PDO $pdo pointer to PDO connection, by reference
-     * @return mixed| DevProject
+     * @return mixed| Project
      **/
     public static function getAllProjects(\PDO $pdo) {
         //create the query template
@@ -270,7 +225,7 @@ class DevProject implements \JsonSerializable
         while(($row = $statement->fetch()) !== false) {
             try {
                 if($row !== false) {
-                    $project = new DevProject($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
+                    $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
                     $projects[$projects->key()] = $project;
                     $projects->next();
                 }
@@ -297,12 +252,15 @@ class DevProject implements \JsonSerializable
         }
         //create query template
         $query
-            = "INSERT INTO project(projectId, endDate, startDate, title)" .
-            "VALUES (:projectId, :endDate, :startDate, :title)";
+            = "INSERT INTO project(endDate, startDate, title)
+            VALUES (endDate, :startDate, :title)";
         $statement = $pdo->prepare($query);
+                
+        $eDate = $this->endDate->format("Y-m-d");
+        $sDate = $this->startDate->format("Y-m-d");
 
         // bind the variables to the place holders in the template
-        $parameters = array("projectId" => $this->projectId, "endDate" => $this->endDate, "startDate" => $this->startDate, "title" => $this->title);
+        $parameters = array( "endDate" => $eDate, "startDate" => $sDate, "title" => $this->title);
         $statement->execute($parameters);
 
         //update null projectId with what mySQL just gave us
@@ -339,14 +297,63 @@ class DevProject implements \JsonSerializable
      **/
     public function update(\PDO $pdo)
     {
-
         // create query template
         $query = "UPDATE project SET  endDate = :endDate, startDate = :startDate, title = :title WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
 
+        $eDate = $this->endDate->format("Y-m-d");
+        $sDate = $this->startDate->format("Y-m-d");
+
         // bind the member variables
-        $parameters = array("endDate" => $this->endDate, "startDate" => $this->startDate, "title" => $this->title, "projectId" => $this->projectId);
+        $parameters = array("eDate" => $this->eDate, "sDate" => $this->sDate, "title" => $this->title, "projectId" => $this->projectId);
         $statement->execute($parameters);
 
     }
+
+    /**
+     * Get project by projectId integer
+     *
+     * @param \PDO $pdo pointer to PDO connection, by reference
+     * @param int Project unique projectId $projectId
+     * @return mixed|Project
+     **/
+    public static function getProjectByProjectId(\PDO $pdo, $projectId)
+    {
+
+        // sanitize the bulletinId before searching
+        $projectId = filter_var($projectId, FILTER_VALIDATE_INT);
+
+        if ($projectId === false) {
+            throw(new \PDOException("project id is not an integer"));
+        }
+        if ($projectId <= 0) {
+            throw(new \PDOException("project id is not positive"));
+        }
+        // create query template
+        $query = "SELECT projectId, endDate, startDate, title FROM project WHERE projectId = :projectId";
+        $statement = $pdo->prepare($query);
+        // bind the project id to the place holder in the template
+        $parameters = array("projectId" => $projectId);
+        $statement->execute($parameters);
+
+        //call the function to build an array of the values
+        $project = null;
+        $statement->setFetchMode(\PDO::FETCH_ASSOC);
+
+        $row = $statement->fetch();
+        try {
+            if ($row !== false) {
+                $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
+                $projectId[$projectId->key()] = $project;
+                $projectId->next();
+            }
+        } catch (\Exception $exception) {
+
+            throw(new \PDOException($exception->getMessage(), 0, $exception));
+        }
+
+
+        return $project;
+    }
+
 }// end class
