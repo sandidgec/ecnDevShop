@@ -21,7 +21,7 @@ try {
 }catch (Exception $assignment) {
     echo $assignment->getMessage();
 }
-
+s
 try {
     $assignment->insert($pdo);
 }catch(Exception $a) {
