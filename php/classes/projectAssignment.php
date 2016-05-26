@@ -9,17 +9,17 @@
 class projectAssignment implements JsonSerializable
 {
     /**
-     *id for a Project Assignment this is primary key
+     *id for a Project Assignment this is a key
      * @var int $projectId
      */
     private $projectId;/**
-     *id for a Project Assignment this is primary key
+     *id for a Project Assignment this is key
      * @var int $employeeId
      */
     private $employeeId;
     /**
      * this is for salary
-     * @var int $employAlot foreign key for employAlot
+     * @var float $employAlot for employAlot
      */
     private $employAlot;
 
@@ -70,17 +70,14 @@ class projectAssignment implements JsonSerializable
      **/
     public function setProjectId($newProjectId)
     {
-
         //verify the projectId is valid
         $newProjectId = filter_var($newProjectId, FILTER_VALIDATE_INT);
         if (empty($newProjectId) === true) {
-            throw (new \InvalidArgumentException ("projectId invalid"));
+            throw (new InvalidArgumentException ("projectId invalid"));
         }
-
         if ($newProjectId < 0){
             throw (new RangeException("newProject cannot be less than zero."));
         }
-
         $this->projectId = $newProjectId;
     }
 
@@ -130,7 +127,7 @@ class projectAssignment implements JsonSerializable
     /**
      * mutator method for the employAlot
      *
-     * @param int $newemployAlot value to represent an Employee Allotment $newemployAlot
+     * @param float $newemployAlot value to represent an Employee Allotment $newemployAlot
      * @throws InvalidArgumentException for invalid content
      **/
     public function setEmployAlot($newEmployAlot)
@@ -218,18 +215,9 @@ class projectAssignment implements JsonSerializable
         if($projectId <= 0) {
             throw(new PDOException("project id is not positive"));
         }
-        public static function getProjectAssignmentByEmployeeId (PDO $pdo, $employeeId) {
-        // sanitize the bulletinId before searching
-        $employeeId = filter_var($employeeId, FILTER_VALIDATE_INT);
-        if($employeeId === false) {
-            throw(new PDOException("employee id is not an integer"));
-        }
-        if($employeeId <= 0) {
-            throw(new PDOException("employee id is not positive"));
-        }
 
         // create query template
-        $query = "SELECT project.projectId, employee.EmployeeId, projectAssignment.employAlot  FROM user WHERE projectId = :projectId";
+        $query = "SELECT projectId, employeeId,employAlot  FROM projectAssignment WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("projectId" => $projectId);
@@ -249,6 +237,44 @@ class projectAssignment implements JsonSerializable
         return ($projectId);
     }
 
+    /**
+     * Get projectAssignment by EmployeeId integer
+     *
+     * @param PDO $pdo pointer to PDO connection, by reference
+     * @param int projectAssignment unique employeeId $employeeId
+     * @return mixed|projectAssignment
+     **/
+
+    public static function getProjectAssignmentByEmployeeId (PDO $pdo, $employeeId) {
+        // sanitize the bulletinId before searching
+        $employeeId = filter_var($employeeId, FILTER_VALIDATE_INT);
+        if($employeeId === false) {
+            throw(new PDOException("employee id is not an integer"));
+        }
+        if($employeeId <= 0) {
+            throw(new PDOException("employee id is not positive"));
+        }
+
+        // create query template
+        $query = "SELECT projectId, employeeId,employAlot  FROM projectAssignment WHERE employeeId = :employeeId";
+        $statement = $pdo->prepare($query);
+        // bind the bulletin id to the place holder in the template
+        $parameters = array("employeeId" => $employeeId);
+        $statement->execute($parameters);
+        // grab the bulletin from mySQL
+        try {
+            $projectId = null;
+            $statement->setFetchMode(PDO::FETCH_ASSOC);
+            $row = $statement->fetch();
+            if($row !== false) {
+                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+            }
+        } catch(Exception $exception) {
+            // if the row couldn't be converted, rethrow it
+            throw(new PDOException($exception->getMessage(), 0, $exception));
+        }
+        return ($projectId);
+    }
 
     /**
      * Get all projectAssignment
