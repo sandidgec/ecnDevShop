@@ -596,7 +596,6 @@ class Employee implements JsonSerializable
         if($employeeId <= 0) {
             throw(new PDOException("employee id is not positive"));
         }
-
         // create query template
         $query = "SELECT employeeId, accessLevelId, address1, address2, city, email, firstName, hash, lastName, phone
 		,salt , state, status, zip FROM employee WHERE employeeId = :employeeId";

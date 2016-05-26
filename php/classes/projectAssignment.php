@@ -78,7 +78,7 @@ class projectAssignment implements JsonSerializable
         }
 
         if ($newProjectId < 0){
-            throw (new RangeException("newProject cannot be less than zero."))
+            throw (new RangeException("newProject cannot be less than zero."));
         }
 
         $this->projectId = $newProjectId;
@@ -110,7 +110,7 @@ class projectAssignment implements JsonSerializable
         }
 
         if ($newEmployeeId < 0){
-            throw (new RangeException("newEmployeeId cannot be less than zero."))
+            throw (new RangeException("newEmployeeId cannot be less than zero."));
         }
 
 
@@ -209,7 +209,7 @@ class projectAssignment implements JsonSerializable
      * @param int projectAssignment unique projectId $projectId
      * @return mixed|projectAssignment
      **/
-    public static function getProjectAssignmentByProjectId (PDO $pdo, $prjoectId) {
+    public static function getProjectAssignmentByProjectId (PDO $pdo, $projectId) {
         // sanitize the bulletinId before searching
         $projectId = filter_var($projectId, FILTER_VALIDATE_INT);
         if($projectId === false) {
@@ -229,7 +229,7 @@ class projectAssignment implements JsonSerializable
         }
 
         // create query template
-        $query = "SELECT projectId., employeeId, employAlot FROM user WHERE projectId = :projectId";
+        $query = "SELECT project.projectId, employee.EmployeeId, projectAssignment.employAlot  FROM user WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("projectId" => $projectId);
@@ -258,7 +258,7 @@ class projectAssignment implements JsonSerializable
      **/
     public static function getAllProjectAssignments(PDO &$pdo) {
         // create query template
-        $query = "SELECT projectId, employeId, employAlot FROM projectAssignment";
+        $query = "SELECT projectId, employeeId, employAlot FROM projectAssignment";
         $statement = $pdo->prepare($query);
         // grab the bulletin from mySQL
         try {
@@ -274,4 +274,4 @@ class projectAssignment implements JsonSerializable
         }
         return ($projectId);
     }
-}
+}  //end class
