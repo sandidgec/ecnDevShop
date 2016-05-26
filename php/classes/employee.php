@@ -567,15 +567,15 @@ class Employee implements JsonSerializable
     public function update(PDO $pdo) {
 
         // create query template
-        $query = "UPDATE employee SET employeeId = :employeeId, accessLevelId = :accessLevelId, address1 = :address1, address2 = :address2, email = :email,
+        $query = "UPDATE employee SET accessLevelId = :accessLevelId, address1 = :address1, address2 = :address2, city = :city, email = :email,
         firstName = :firstName, hash = :hash, lastName = :lastName,
  		phone = :phone, salt = :salt, state = :state, status = :status, zip = :zip WHERE employeeId = :employeeId";
         $statement = $pdo->prepare($query);
 
         // bind the member variables
-        $parameters = array("employeeId" => $this->employeeId, "accessLevel" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2, "city" => $this->city,"email" => $this->email,
+        $parameters = array( "accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2, "city" => $this->city,"email" => $this->email,
             "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
-            "salt" => $this->salt, "state" => $this->state,"status"=> $this->status, "zip" => $this->zip);
+            "salt" => $this->salt, "state" => $this->state,"status"=> $this->status, "zip" => $this->zip, "employeeId" => $this->employeeId);
         
         $statement->execute($parameters);
     }
@@ -667,13 +667,13 @@ class Employee implements JsonSerializable
         // execute
         $statement->execute();
         //call the function to build an array of the values
-        $employee = null;
         $statement->setFetchMode(PDO::FETCH_ASSOC);
         $employees = new SplFixedArray($statement->rowCount());
         while(($row = $statement->fetch()) !== false) {
             try {
                 if($row !== false) {
-                    $employee = new Employee($row["employeeId"], $row["employeeName"], $row["employeeEmail"], $row["dateCreated"]);
+                    $employee = new Employee($row["employeeId"], $row["accessLevelId"], $row["address1"],$row["address2"], $row["city"], $row["email"], $row["firstName"],
+                        $row["hash"], $row["lastName"], $row["phone"], $row["salt"], $row["state"],$row["status"], $row["zip"]);
                     $employees[$employees->key()] = $employee;
                     $employees->next();
                 }
