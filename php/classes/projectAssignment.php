@@ -25,9 +25,13 @@ class projectAssignment implements JsonSerializable
 
     /**
      * projectAssignment constructor.
-     * @param $newProjectId
-     * @param $newEmployeeId
-     * @param $newEmployalot
+     *
+     * @param int $newProjectId
+     * @param int $newEmployeeId
+     * @param float $newEmployAlot
+     * @throws InvalidArgumentException
+     * @throws RangeException
+     * @throws  Exception
      */
     public function __construct($newProjectId, $newEmployeeId, $newEmployAlot)
     {
@@ -66,17 +70,17 @@ class projectAssignment implements JsonSerializable
      **/
     public function setProjectId($newProjectId)
     {
-        // base case: if the projectId is null,
-        // this is a new project without a mySQL assigned id (yet)
-        if ($newProjectId === null) {
-            $this->projectId = null;
-            return;
-        }
+
         //verify the projectId is valid
         $newProjectId = filter_var($newProjectId, FILTER_VALIDATE_INT);
         if (empty($newProjectId) === true) {
             throw (new \InvalidArgumentException ("projectId invalid"));
         }
+
+        if ($newProjectId < 0){
+            throw (new RangeException("newProject cannot be less than zero."))
+        }
+
         $this->projectId = $newProjectId;
     }
 
@@ -98,17 +102,18 @@ class projectAssignment implements JsonSerializable
      **/
     public function setEmployeeId($newEmployeeId)
     {
-        // base case: if the employeeId is null,
-        // this is a new user without a mySQL assigned id (yet)
-        if ($newEmployeeId === null) {
-            $this->employeeId = null;
-            return;
-        }
+
         //verify the Employee is valid
         $newEmployeeId = filter_var($newEmployeeId, FILTER_VALIDATE_INT);
         if (empty($newEmployeeId) === true) {
             throw (new InvalidArgumentException ("employeeId invalid"));
         }
+
+        if ($newEmployeeId < 0){
+            throw (new RangeException("newEmployeeId cannot be less than zero."))
+        }
+
+
         $this->employeeId = $newEmployeeId;
     }
 
@@ -130,14 +135,9 @@ class projectAssignment implements JsonSerializable
      **/
     public function setEmployAlot($newEmployAlot)
     {
-        // base case: if the emloyAlot is null,
-        // this is a new Employee Allotment without a mySQL assigned id (yet)
-        if ($newEmployAlot === null) {
-            $this->employAlot = null;
-            return;
-        }
+
         //verify the Employee Allotment is valid
-        $newEmployAlot = filter_var($newEmployAlot, FILTER_VALIDATE_INT);
+        $newEmployAlot = filter_var($newEmployAlot, FILTER_VALIDATE_FLOAT);
         if (empty($newEmployAlot) === true) {
             throw (new InvalidArgumentException ("Employee Allotment invalid"));
         }
@@ -153,10 +153,7 @@ class projectAssignment implements JsonSerializable
      **/
     public function insert(PDO &$pdo)
     {
-        // make sure Project Assignment doesn't already exist
-        if ($this->projectAssignment !== null) {
-            throw (new PDOException("existing Project Assignment"));
-        }
+
         //create query template
         $query
             = "INSERT INTO projectAssignment(employAlot, projectId, employeeId)" .
@@ -167,133 +164,114 @@ class projectAssignment implements JsonSerializable
         $parameters = array("projectId" => $this->projectId, "employeeId" => $this->employeeId, "employAlot" => $this->employAlot);
         $statement->execute($parameters);
 
-        //update null bulletinId with what mySQL just gave us
-        $this->bulletinId = intval($pdo->lastInsertId());
+
     }
 
     /**
-     * Deletes Bulletin from mySQL
+     * Deletes projectAssignment from mySQL
      *
-     * Delete PDO to delete bulletinId
+     * Delete PDO to delete projectId
      * @param PDO $pdo
      **/
     public function delete(PDO &$pdo) {
-        // enforce the bulletin is not null
-        if($this->bulletinId === null) {
-            throw(new PDOException("unable to delete a bulletin that does not exist"));
+        // enforce the projectAssignment is not null
+        if($this->projectId === null) {
+            throw(new PDOException("unable to delete a projectAssignment that does not exist"));
         }
         //create query template
-        $query = "DELETE FROM bulletin WHERE bulletinId = :bulletinId";
+        $query = "DELETE FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
         $statement = $pdo->prepare($query);
+
         //bind the member variables to the place holder in the template
-        $parameters = array("bulletinId" => $this->bulletinId);
+        $parameters = array("projectId" => $this->projectId, "employeeId => $this->employeeId");
         $statement->execute($parameters);
     }
     /**
-     * updates Message in mySQL
+     * updates projectAssignment in mySQL
      *
-     * Update PDO to update bulletin class
+     * Update PDO to update projectAssignment class
      * @param PDO $pdo pointer to PDO connection, by reference
      **/
     public function update(PDO $pdo) {
         // create query template
-        $query = "UPDATE bulletin SET userId = :userId, category = :category, message = :message WHERE bulletinId = :bulletinId";
+        $query = "UPDATE projectAssignment SET projectId = :projectId, employeeId = :employeeId, employAlot = :employAlot WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
+
         // bind the member variables
-        $parameters = array("userId" => $this->userId, "category" => $this->category, "message" => $this->message,
-            "bulletinId" => $this->bulletinId);
+        $parameters = array("projectId" => $this->projectId, "employeeId" => $this->employeeId, "employAlot" => $this->employAlot);
         $statement->execute($parameters);
     }
+
     /**
-     * Get bulletin by bulletinId integer
+     * Get projectAssignment by projectId integer
      *
      * @param PDO $pdo pointer to PDO connection, by reference
-     * @param int for unique bulletinId $bulletinId
-     * @return mixed|Bulletin
+     * @param int projectAssignment unique projectId $projectId
+     * @return mixed|projectAssignment
      **/
-    public static function getBulletinByBulletinId(PDO $pdo, $bulletinId) {
+    public static function getProjectAssignmentByProjectId (PDO $pdo, $prjoectId) {
         // sanitize the bulletinId before searching
-        $bulletinId = filter_var($bulletinId, FILTER_VALIDATE_INT);
-        if($bulletinId === false) {
-            throw(new PDOException("bulletin id is not an integer"));
+        $projectId = filter_var($projectId, FILTER_VALIDATE_INT);
+        if($projectId === false) {
+            throw(new PDOException("project id is not an integer"));
         }
-        if($bulletinId <= 0) {
-            throw(new PDOException("bulletin id is not positive"));
+        if($projectId <= 0) {
+            throw(new PDOException("project id is not positive"));
         }
+        public static function getProjectAssignmentByEmployeeId (PDO $pdo, $employeeId) {
+        // sanitize the bulletinId before searching
+        $employeeId = filter_var($employeeId, FILTER_VALIDATE_INT);
+        if($employeeId === false) {
+            throw(new PDOException("employee id is not an integer"));
+        }
+        if($employeeId <= 0) {
+            throw(new PDOException("employee id is not positive"));
+        }
+
         // create query template
-        $query = "SELECT bulletinId, userId, category, message FROM user WHERE bulletinId = :bulletinId";
+        $query = "SELECT projectId., employeeId, employAlot FROM user WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
-        $parameters = array("bulletinId" => $bulletinId);
+        $parameters = array("projectId" => $projectId);
         $statement->execute($parameters);
         // grab the bulletin from mySQL
         try {
-            $bulletin = null;
+            $projectId = null;
             $statement->setFetchMode(PDO::FETCH_ASSOC);
             $row = $statement->fetch();
             if($row !== false) {
-                $bulletin = new Bulletin ($row["bulletinId"], $row["userId"], $row["category"], $row["message"]);
+                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
             }
         } catch(Exception $exception) {
             // if the row couldn't be converted, rethrow it
             throw(new PDOException($exception->getMessage(), 0, $exception));
         }
-        return ($bulletin);
+        return ($projectId);
     }
+
+
     /**
-     * get bulletin by category
+     * Get all projectAssignment
      *
      * @param PDO $pdo pointer to PDO connection, by reference
-     * @param mixed info for $bulletin
-     * @return null|Bulletin
+     * @return mixed|projectAssignment
      **/
-    public static function getBulletinByCategory(PDO &$pdo, $bulletin) {
-        if($bulletin === false) {
-            throw(new PDOException(""));
-        }
+    public static function getAllProjectAssignments(PDO &$pdo) {
         // create query template
-        $query = "SELECT bulletinId, userId, category, message
-        FROM bulletin WHERE category = :category";
-        $statement = $pdo->prepare($query);
-        // bind the bulletinid to the place holder in the template
-        $parameters = array("category" => $bulletin);
-        $statement->execute($parameters);
-        // grab the bulletin from mySQL
-        try {
-            $bulletin= null;
-            $statement->setFetchMode(PDO::FETCH_ASSOC);
-            $row = $statement->fetch();
-            if($row !== false) {
-                $bulletin = new Bulletin ($row["bulletinId"], $row["userId"], $row["category"], $row["message"]);
-            }
-        } catch(Exception $exception) {
-            // if the row couldn't be converted, rethrow it
-            throw(new PDOException($exception->getMessage(), 0, $exception));
-        }
-        return ($bulletin);
-    }
-    /**
-     * Get all Bulletins
-     *
-     * @param PDO $pdo pointer to PDO connection, by reference
-     * @return mixed|Bulletin
-     **/
-    public static function getAllBulletins(PDO &$pdo) {
-        // create query template
-        $query = "SELECT bulletinId, userId, category, message FROM bulletin";
+        $query = "SELECT projectId, employeId, employAlot FROM projectAssignment";
         $statement = $pdo->prepare($query);
         // grab the bulletin from mySQL
         try {
-            $bulletin = null;
+            $projectId = null;
             $statement->setFetchMode(PDO::FETCH_ASSOC);
             $row = $statement->fetch();
             if($row !== false) {
-                $bulletin = new Bulletin ($row["bulletinId"], $row["userId"], $row["category"], $row["message"]);
+                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
             }
         } catch(Exception $exception) {
             // if the row couldn't be converted, rethrow it
             throw(new PDOException($exception->getMessage(), 0, $exception));
         }
-        return ($bulletin);
+        return ($projectId);
     }
 }
