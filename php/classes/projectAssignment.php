@@ -6,7 +6,7 @@
  *
  * @author Charles Sandidge charles@cultivatingcoders.com
  **/
-class projectAssignment implements JsonSerializable
+class ProjectAssignment implements JsonSerializable
 {
     /**
      *id for a Project Assignment this is a key
@@ -72,7 +72,7 @@ class projectAssignment implements JsonSerializable
     {
         //verify the projectId is valid
         $newProjectId = filter_var($newProjectId, FILTER_VALIDATE_INT);
-        if (empty($newProjectId) === true) {
+        if ($newProjectId === false) {
             throw (new InvalidArgumentException ("projectId invalid"));
         }
         if ($newProjectId < 0){
@@ -102,7 +102,7 @@ class projectAssignment implements JsonSerializable
 
         //verify the Employee is valid
         $newEmployeeId = filter_var($newEmployeeId, FILTER_VALIDATE_INT);
-        if (empty($newEmployeeId) === true) {
+        if ($newEmployeeId === false) {
             throw (new InvalidArgumentException ("employeeId invalid"));
         }
 
@@ -135,7 +135,7 @@ class projectAssignment implements JsonSerializable
 
         //verify the Employee Allotment is valid
         $newEmployAlot = filter_var($newEmployAlot, FILTER_VALIDATE_FLOAT);
-        if (empty($newEmployAlot) === true) {
+        if ($newEmployAlot === false) {
             throw (new InvalidArgumentException ("Employee Allotment invalid"));
         }
         $this->employAlot = $newEmployAlot;
@@ -299,5 +299,12 @@ class projectAssignment implements JsonSerializable
             throw(new PDOException($exception->getMessage(), 0, $exception));
         }
         return ($projectId);
+    }
+
+
+    public function JsonSerialize()
+    {
+        $fields = get_object_vars($this);
+        return ($fields);
     }
 }  //end class
