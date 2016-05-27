@@ -48,3 +48,4 @@ var_dump($proj);
 
 $projs = Project::getAllProjects($pdo);
 var_dump($projs);
+
