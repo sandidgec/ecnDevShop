@@ -34,18 +34,24 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //    echo $e->getMessage();
 //}
 
-$pa = new ProjectAssignment(14, 2, 200.36);
-
-$pa->delete($pdo);
-
+//$pa = new ProjectAssignment(14, 2, 200.36);
+//
+//$pa->delete($pdo);
+//
 $pad = ProjectAssignment::getProjectAssignmentByProjectId ($pdo, 14);
-$pad = ProjectAssignment::getProjectAssignmentByEmployeeId($pdo, 2);
+$p = ProjectAssignment::getProjectAssignmentByEmployeeId($pdo, 2);
 
 var_dump($pad);
+var_dump($p);
 
 
-//$assignmentList = ProjectAssignment::getProjectAssignmentByEmployeeId($pdo, "2");
-//var_dump($assignmentList);
+$assignmentList = ProjectAssignment::getAllProjectAssignments($pdo);
+var_dump($assignmentList);
 
+//$projectassignmentList = ProjectAssignment::getAllProjects($pdo);
+//var_dump($projectassignmentlist);
+//
+//$projectassignmentList = ProjectAssignment::getAllEmployees($pdo);
+//var_dump($projectassignmentlist);
 
 

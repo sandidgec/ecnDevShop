@@ -216,24 +216,30 @@ class ProjectAssignment implements JsonSerializable
         }
 
         // create query template
-        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
+        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE projectId = :projectId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("projectId" => $projectId);
         $statement->execute($parameters);
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+
+       $projectIds = new SplFixedArray($statement->rowCount());
+
         // grab the bulletin from mySQL
-        try {
-            $projectId = null;
-            $statement->setFetchMode(PDO::FETCH_ASSOC);
-            $row = $statement->fetch();
-            if($row !== false) {
-                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+        while(($row = $statement->fetch()) !== false) {
+            try {
+                if ($row !== false) {
+                    $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+                    $projectIds[$projectIds->key()] = $projectId;
+                    $projectIds->next();
+                }
+            } catch (Exception $exception) {
+                // if the row couldn't be converted, rethrow it
+                throw(new PDOException($exception->getMessage(), 0, $exception));
             }
-        } catch(Exception $exception) {
-            // if the row couldn't be converted, rethrow it
-            throw(new PDOException($exception->getMessage(), 0, $exception));
         }
-        return ($projectId);
+
+        return ($projectIds);
     }
 
     /**
@@ -255,24 +261,32 @@ class ProjectAssignment implements JsonSerializable
         }
 
         // create query template
-        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
+        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE employeeId = :employeeId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("employeeId" => $employeeId);
         $statement->execute($parameters);
+
+
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+
+        $projectIds = new SplFixedArray($statement->rowCount());
+
         // grab the bulletin from mySQL
-        try {
-            $projectId = null;
-            $statement->setFetchMode(PDO::FETCH_ASSOC);
-            $row = $statement->fetch();
-            if($row !== false) {
-                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+        while(($row = $statement->fetch()) !== false) {
+            try {
+                if ($row !== false) {
+                    $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+                    $projectIds[$projectIds->key()] = $projectId;
+                    $projectIds->next();
+                }
+            } catch (Exception $exception) {
+                // if the row couldn't be converted, rethrow it
+                throw(new PDOException($exception->getMessage(), 0, $exception));
             }
-        } catch(Exception $exception) {
-            // if the row couldn't be converted, rethrow it
-            throw(new PDOException($exception->getMessage(), 0, $exception));
         }
-        return ($projectId);
+
+        return ($projectIds);
     }
 
     /**
@@ -283,21 +297,28 @@ class ProjectAssignment implements JsonSerializable
      **/
     public static function getAllProjectAssignments(PDO &$pdo) {
         // create query template
-        $query = "SELECT projectId, employeeId, employAlot FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
+        $query = "SELECT projectId, employeeId, employAlot FROM projectAssignment";
         $statement = $pdo->prepare($query);
+        $statement->execute();
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+
+        $projectIds = new SplFixedArray($statement->rowCount());
+
         // grab the bulletin from mySQL
-        try {
-            $projectId = null;
-            $statement->setFetchMode(PDO::FETCH_ASSOC);
-            $row = $statement->fetch();
-            if($row !== false) {
-                $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+        while(($row = $statement->fetch()) !== false) {
+            try {
+                if ($row !== false) {
+                    $projectId = new projectAssignment($row["projectId"], $row["employeeId"], $row["employAlot"]);
+                    $projectIds[$projectIds->key()] = $projectId;
+                    $projectIds->next();
+                }
+            } catch (Exception $exception) {
+                // if the row couldn't be converted, rethrow it
+                throw(new PDOException($exception->getMessage(), 0, $exception));
             }
-        } catch(Exception $exception) {
-            // if the row couldn't be converted, rethrow it
-            throw(new PDOException($exception->getMessage(), 0, $exception));
         }
-        return ($projectId);
+
+        return ($projectIds);
     }
 
 
