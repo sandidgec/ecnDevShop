@@ -152,7 +152,7 @@ class ProjectAssignment implements JsonSerializable
     {
 
         //create query template
-        $query = "INSERT INTO projectAssignment(employAlot, projectId, employeeId)
+        $query = "INSERT INTO projectAssignment(projectId, employeeId, employAlot)
                   VALUES (:projectId, :employeeId, :employAlot)";
         $statement = $pdo->prepare($query);
 
@@ -160,7 +160,7 @@ class ProjectAssignment implements JsonSerializable
         $parameters = array("projectId" => $this->projectId, "employeeId" => $this->employeeId, "employAlot" => $this->employAlot);
         $statement->execute($parameters);
 
-
+        
     }
 
     /**
@@ -171,7 +171,7 @@ class ProjectAssignment implements JsonSerializable
      **/
     public function delete(PDO &$pdo) {
         // enforce the projectAssignment is not null
-        if($this->projectId === null) {
+        if($this->projectId AND $this->employeeId === null) {
             throw(new PDOException("unable to delete a projectAssignment that does not exist"));
         }
         //create query template
@@ -190,7 +190,7 @@ class ProjectAssignment implements JsonSerializable
      **/
     public function update(PDO $pdo) {
         // create query template
-        $query = "UPDATE projectAssignment SET projectId = :projectId, employeeId = :employeeId, employAlot = :employAlot WHERE projectId = :projectId";
+        $query = "UPDATE projectAssignment SET employAlot = :employAlot WHERE projectId = :projectId AND employeeId = :employeeId";
         $statement = $pdo->prepare($query);
 
         // bind the member variables
@@ -216,7 +216,7 @@ class ProjectAssignment implements JsonSerializable
         }
 
         // create query template
-        $query = "SELECT projectId, employeeId,employAlot  FROM projectAssignment WHERE projectId = :projectId";
+        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("projectId" => $projectId);
@@ -255,7 +255,7 @@ class ProjectAssignment implements JsonSerializable
         }
 
         // create query template
-        $query = "SELECT projectId, employeeId,employAlot  FROM projectAssignment WHERE employeeId = :employeeId";
+        $query = "SELECT projectId, employeeId, employAlot  FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
         $statement = $pdo->prepare($query);
         // bind the bulletin id to the place holder in the template
         $parameters = array("employeeId" => $employeeId);
@@ -283,7 +283,7 @@ class ProjectAssignment implements JsonSerializable
      **/
     public static function getAllProjectAssignments(PDO &$pdo) {
         // create query template
-        $query = "SELECT projectId, employeeId, employAlot FROM projectAssignment";
+        $query = "SELECT projectId, employeeId, employAlot FROM projectAssignment WHERE projectId = :projectId AND employeeId = :employeeId";
         $statement = $pdo->prepare($query);
         // grab the bulletin from mySQL
         try {

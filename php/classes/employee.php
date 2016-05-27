@@ -566,19 +566,19 @@ class Employee implements JsonSerializable
      **/
     public function update(PDO $pdo) {
 
-        // create query template
-        $query = "UPDATE employee SET accessLevelId = :accessLevelId, address1 = :address1, address2 = :address2, city = :city, email = :email,
+    // create query template
+    $query = "UPDATE employee SET accessLevelId = :accessLevelId, address1 = :address1, address2 = :address2, city = :city, email = :email,
         firstName = :firstName, hash = :hash, lastName = :lastName,
  		phone = :phone, salt = :salt, state = :state, status = :status, zip = :zip WHERE employeeId = :employeeId";
-        $statement = $pdo->prepare($query);
+    $statement = $pdo->prepare($query);
 
-        // bind the member variables
-        $parameters = array( "accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2, "city" => $this->city,"email" => $this->email,
-            "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
-            "salt" => $this->salt, "state" => $this->state,"status"=> $this->status, "zip" => $this->zip, "employeeId" => $this->employeeId);
-        
-        $statement->execute($parameters);
-    }
+    // bind the member variables
+    $parameters = array( "accessLevelId" => $this->accessLevelId, "address1" => $this->address1, "address2" => $this->address2, "city" => $this->city,"email" => $this->email,
+        "firstName" => $this->firstName, "hash" => $this->hash, "lastName" => $this->lastName, "phone" => $this->phone,
+        "salt" => $this->salt, "state" => $this->state,"status"=> $this->status, "zip" => $this->zip, "employeeId" => $this->employeeId);
+
+    $statement->execute($parameters);
+}
 
     /**
      * Get user by employeeId integer

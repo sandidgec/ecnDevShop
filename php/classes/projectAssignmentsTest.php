@@ -14,24 +14,38 @@ $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 $pdo = new PDO($dsn, $config["username"], $config["password"], $options);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-echo "here";
-
-$pa = new ProjectAssignment(1, 6, 10.55);
-
-var_dump($pa);
-
-try {
-$pa->insert($pdo);
-} catch (Exception $e) {
-    echo $e->getMessage();
-}
+//echo "here";
+//
+//$pa = new ProjectAssignment(14, 2, 200.36);
+//
+//var_dump($pa);
 //
 //try {
-//
+//$pa->insert($pdo);
+//} catch (Exception $e) {
+//    echo $e->getMessage();
 //}
+
+//$pa->setEmployAlot(1984.33);
 //
 //try {
-//    $npa->insert($pdo);
-//}catch(Exception $p) {
-//    echo $p->getMessage();
+//    $pa->update($pdo);
+//}catch (Exception $e) {
+//    echo $e->getMessage();
 //}
+
+$pa = new ProjectAssignment(14, 2, 200.36);
+
+$pa->delete($pdo);
+
+$pad = ProjectAssignment::getProjectAssignmentByProjectId ($pdo, 14);
+$pad = ProjectAssignment::getProjectAssignmentByEmployeeId($pdo, 2);
+
+var_dump($pad);
+
+
+//$assignmentList = ProjectAssignment::getProjectAssignmentByEmployeeId($pdo, "2");
+//var_dump($assignmentList);
+
+
+
