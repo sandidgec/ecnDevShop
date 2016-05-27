@@ -9,7 +9,7 @@
 
 
 
-require_once("dateValidation.php");
+require_once ("dateValidation.php");
 
 
 
@@ -26,20 +26,20 @@ class Project implements \JsonSerializable
 
     /**
      * describes a project end date
-     * @var string for cnd date of the project
+     * @var DateTime $endDate of the project
      */
     private $endDate;
 
     /**
      * describes start date
-     * @var string for the end date of the project
+     * @var DateTime $startDate of the project
      */
-    
+
     private $startDate;
 
     /**
      * attaches key for user posting projects
-     * @var int $title foreign key for projectId
+     * @var string $title foreign key for projectId
      */
     private $title;
 
@@ -107,9 +107,9 @@ class Project implements \JsonSerializable
     }
 
     /**
-     * accessor method for end date
+     * accessor method for endDate
      *
-     * @return string of end date
+     * @return string of endDate
      **/
     public function getEndDate()
     {
@@ -117,9 +117,9 @@ class Project implements \JsonSerializable
     }
 
     /**
-     * Mutator method for End Date
+     * Mutator method for EndDate
      *
-     * @param string Project category $newEndDate
+     * @param mixed DateTime|string Project category $newEndDate
      * @throws \InvalidArgumentException
      * @throws \RangeException
      * @throws \Exception
@@ -129,6 +129,7 @@ class Project implements \JsonSerializable
         // verify end date is valid
         try {
             $newEndDate = validateDate($newEndDate);
+
         } catch (\InvalidArgumentException $invalidArgument) {
             throw(new \InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
         } catch (\RangeException $range) {
@@ -152,7 +153,7 @@ class Project implements \JsonSerializable
     /**
      * Mutator method for Start Date
      *
-     * @param string Project category $newStartDate
+     * @param mixed DateTime|string Project category $newStartDate
      * @throws \InvalidArgumentException
      * @throws \RangeException
      * @throws \Exception
@@ -182,9 +183,9 @@ class Project implements \JsonSerializable
     /**
      * accessor method for title
      *
-     * @return int
+     * @return string
      **/
-    public function getTitle()
+    public function getTitle($newTitle)
     {
         return ($this->title);
     }
@@ -192,27 +193,28 @@ class Project implements \JsonSerializable
     /**
      * Mutator method for title
      *
-     * @param $newTitle int
+     * @param $newTitle string
      * @throws \InvalidArgumentException if title is invalid
      **/
     public function setTitle($newTitle)
     {
-        // verify access level is integer
-        $newTitle = filter_var($newTitle, FILTER_VALIDATE_INT);
+        // verify title is String
+        $newTitle = filter_var($newTitle, FILTER_SANITIZE_STRING);
         if (empty($newTitle) === true) {
             throw new \InvalidArgumentException ("Title Invalid");
         }
         $this->title = $newTitle;
     }
 
-  
+
     /**
      * Get all Projects
      *
      * @param \PDO $pdo pointer to PDO connection, by reference
      * @return mixed| Project
      **/
-    public static function getAllProjects(\PDO $pdo) {
+    public static function getAllProjects(\PDO $pdo)
+    {
         //create the query template
         $query = "SELECT projectId, endDate, startDate, title FROM project";
         $statement = $pdo->prepare($query);
@@ -222,14 +224,14 @@ class Project implements \JsonSerializable
         $projects = null;
         $statement->setFetchMode(\PDO::FETCH_ASSOC);
         $projects = new \SplFixedArray($statement->rowCount());
-        while(($row = $statement->fetch()) !== false) {
+        while (($row = $statement->fetch()) !== false) {
             try {
-                if($row !== false) {
+                if ($row !== false) {
                     $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
                     $projects[$projects->key()] = $project;
                     $projects->next();
                 }
-            } catch(\Exception $exception) {
+            } catch (\Exception $exception) {
 
                 throw(new \PDOException($exception->getMessage(), 0, $exception));
             }
@@ -240,27 +242,27 @@ class Project implements \JsonSerializable
 
     /**
      * Inserts Project into mySQL
-        *
+     *
      * Inserts this projectId into mySQL in intervals
-        * @param \PDO $pdo connection to
-        **/
+     * @param \PDO $pdo connection to
+     **/
     public function insert(\PDO &$pdo)
-            {
-                // make sure project doesn't already exist
-                if ($this->projectId !== null) {
+    {
+        // make sure project doesn't already exist
+        if ($this->projectId !== null) {
             throw (new \PDOException("existing project"));
         }
         //create query template
         $query
             = "INSERT INTO project(endDate, startDate, title)
-            VALUES (endDate, :startDate, :title)";
+              VALUES (:endDate, :startDate, :title)";
         $statement = $pdo->prepare($query);
-                
+
         $eDate = $this->endDate->format("Y-m-d");
         $sDate = $this->startDate->format("Y-m-d");
 
         // bind the variables to the place holders in the template
-        $parameters = array( "endDate" => $eDate, "startDate" => $sDate, "title" => $this->title);
+        $parameters = array("endDate" => $eDate, "startDate" => $sDate, "title" => $this->title);
         $statement->execute($parameters);
 
         //update null projectId with what mySQL just gave us
@@ -305,7 +307,7 @@ class Project implements \JsonSerializable
         $sDate = $this->startDate->format("Y-m-d");
 
         // bind the member variables
-        $parameters = array("eDate" => $this->eDate, "sDate" => $this->sDate, "title" => $this->title, "projectId" => $this->projectId);
+        $parameters = array("endDate" => $eDate, "startDate" => $sDate, "title" => $this->title, "projectId" => $this->projectId);
         $statement->execute($parameters);
 
     }
@@ -337,23 +339,20 @@ class Project implements \JsonSerializable
         $statement->execute($parameters);
 
         //call the function to build an array of the values
-        $project = null;
-        $statement->setFetchMode(\PDO::FETCH_ASSOC);
-
-        $row = $statement->fetch();
         try {
+            $project = null;
+            $statement->setFetchMode(\PDO::FETCH_ASSOC);
+
+            $row = $statement->fetch();
             if ($row !== false) {
                 $project = new Project($row["projectId"], $row["endDate"], $row["startDate"], $row["title"]);
-                $projectId[$projectId->key()] = $project;
-                $projectId->next();
             }
         } catch (\Exception $exception) {
 
             throw(new \PDOException($exception->getMessage(), 0, $exception));
         }
-
-
-        return $project;
+        return ($project);
     }
+
 
 }// end class
