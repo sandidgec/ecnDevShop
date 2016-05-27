@@ -25,3 +25,13 @@ $pa->insert($pdo);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
+//
+//try {
+//
+//}
+//
+//try {
+//    $npa->insert($pdo);
+//}catch(Exception $p) {
+//    echo $p->getMessage();
+//}
