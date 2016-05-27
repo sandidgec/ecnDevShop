@@ -148,13 +148,12 @@ class ProjectAssignment implements JsonSerializable
      * Inserts this projectAssignment into mySQL in intervals
      * @param PDO $pdo connection to
      **/
-    public function insert(PDO &$pdo)
+    public function insert(PDO $pdo)
     {
 
         //create query template
-        $query
-            = "INSERT INTO projectAssignment(employAlot, projectId, employeeId)" .
-            "VALUES (:projectId, :employeeId, :employAlot)";
+        $query = "INSERT INTO projectAssignment(employAlot, projectId, employeeId)
+                  VALUES (:projectId, :employeeId, :employAlot)";
         $statement = $pdo->prepare($query);
 
         // bind the variables to the place holders in the template

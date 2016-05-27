@@ -16,6 +16,12 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 echo "here";
 
-$pa = new ProjectAssignment(null, 1, 4, 10.00);
+$pa = new ProjectAssignment(1, 6, 10.55);
 
 var_dump($pa);
+
+try {
+$pa->insert($pdo);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
