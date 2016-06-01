@@ -1,106 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <?php require_once("head-utils.php"); ?>
-    <title>ECN Dev Shop</title>
+
+    <?php require_once("lib/head-utils.php");?>
+
 </head>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php">Home</a>
+<body class="home page page-id-925 page-template page-template-home page-template-home-php">
+<div class="close-menu">
+    <span></span><span></span>
+</div>
+<div id="disablescroll"></div>
+<div class="links-append-container"></div>
+<ul class="list-unstyled menu-links">
+    <li class="l0"><a href="index.php" class="ourHomeLink">Home</a></li>
+    <li class="l1"><a href="" class="ourWorkLink">Our work</a></li>
+    <li class="l2"><a href="" class="aboutUsLink" data-page="page-about">About us</a></li>
+    <li class="l3"><a href="" class="aboutUsLink" data-page="page-process">Process</a></li>
+    <li class="l4"><a href="">Services</a></li>
+    <li class="l5"><a href="">Contact us</a></li>
+</ul>
+<div id="menuOverlord">
+    <div id="page-overlay"></div>
+    <div id="pageloading">
+        <div class="spinner center-screen">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#missionState">Mission Statement</a></li>
-                <li><a href="#erd">ERD</a></li>
-                <li><a href="#aboutUs">About Us</a></li>
-                <li><a href="#wireFram">Wire Frame</a></li>
-                <li><a href="#useCs">Use Case</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+    </div>
 
-<body>
+    <a href="#" onclick="return false;" class="navicon-button pull-right show-menu" id="menuToggle"><div class="navicon"><span></span><span></span><span></span><span></span><span></span><span></span></div></a>
 
-<div id="wall_1" class="image" data-stellar-background-ratio="0.4" ></div>
-<div id="content_1" class="content">
-    <h1><a name="missionState">Mission Statement</a></h1>
-    <p>
-        Our job is to continually customize our data driven resources and effectively enhance our missions infrastructure.
-        We will develop and encourage personal employee growth, while we implement technical strategies. All the while,
-        We will effectively network to meet our missions needs
-    </p>
-</div>
-<a name="erd"></a>
-<div id="wall_2" class="image" data-stellar-background-ratio="0.4"></div>
-<div id="content_2" class="content" >
-
-    <h1><a name="aboutUs">About Us</a></h1>
-    <p>
-        With the Episcopal church, we are driven to provide web
-        based services to surrounding areas. At the Dev Shop, we make sure to
-        balance work and life, while providing an exciting, creative and
-        sustainable business environment for our team and community.
-    </p>
-</div>
-<a name="wireFram"></a>
-<div id="wall_3" class="image" data-stellar-background-ratio="0.4"  ></div>
-<div id="content_2" class="content">
-
-    <h1><a name="useCs">Use Cases</a></h1>
-    <h2>Krieg</h2>
-    <p>
-        Meeting different artists at various art events, I hand them my
-        business card with our website to market our services for web development.
-        When the artist arrives to our website, they are greeted with a hero page;
-        containing a stylized navbar with links to our different pages (About, Services and Contact).
-        Customer goes to our "Services" pages to see what kind of services we provide.
-        Within the services page are listed services; CSS, PHP, HTML and Javascript.
-        Along with our sevices pages, is a brief description about what developer
-        specializes in that particular service offered.
-    </p>
-    <br>
-    <h2>Ryan</h2>
-    <p>
-        An emerging local produce shop is looking for ways to promote their
-        products. They begin researching ways to bring in more customers and
-        reach out  to potential customers. The business owner locates the
-        Development Web Shop online located in Farmington, New Mexico on
-        the grounds of the Episcopal Church of Navajoland. After searching
-        hours after hours the owner finally finds what he is searching for.
-        Contact information, resumes, and galleries of past projects are available
-        for all. A list of services such as wire-framing, site-mapping,
-        JavaScript, MySQL Database and web designed are presented. The produce
-        shop owner contacts the Development Web Shop and is confident the
-        Development Web Shop is highly capable of developing a website suited
-        for the needs of customers.
-    </p>
-    <br>
-    <h2>Sherri</h2>
-    <p>
-        A developer was on her way to a conference, she stops in at a irish
-        restaurant.  While she was eating,  she overheard a customer talking
-        about developing a customer database for a local church..  she noted
-        the enthusiasm in the tone.  Immediately, after eating, of course.
-        She approached the customer and inquired about what kind of developing
-        methods were involved. the developer was impressed about the idea..and
-        was immediately directed to the website.  She was impressed with the
-        site map and found the answers that she needed. In the morning before
-        she left town she stopped by the church and wrote a check because
-        she believed it was a good cause.
-    </p>
-</div>
+    <div class="top-nav light">
+        <div class="col-lg-6 col-md-4 col-sm-4 col-xs-6">
+            <a href="index.php" id="brightly-logo"><img src="lib/images/cheiiDevShopLogo.png" class="img-responsive light" alt="brightly" style="width:125px;" />
+                <img src="lib/images/cheiiDevShopBlurDark.png" class="img-responsive dark" alt="brightly" style="width:125px;" /><img src="lib/images/cheiiDevShopBlurDark.png" class="img-responsive black" alt="brightly" style="width:250px;" /></a>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-8 col-xs-6">
+            <a href="/contact"><div class="contact-svg"></div></a>
+            <span class="tagline hidden-xs">Cheii's Web & Mobile Development</span>
+        </div>
+    </div>
 
 
-</body>
-</html>
+    <div id="page">
+        <div id="main">
+            <div id="homepage">
+
+                <div class="section">
+                    <div id="section1" class="full-height" style="position:relative;overflow:hidden;">
+                        <div class="container full-height" style="position:relative;">
+                            <div class="center-screen">
+                                <div id="Stage">
+                                    <h1>We&#8217;re Cheii&#8217;s DevShop.</h1>
+                                    <h2>We inspire and promote web & mobile development to the people.</h2>
+                                    <div class="animation-container">
+                                        <div class="knife-container">
+                                            <img src="" alt="" class="">
+                                            <img src="" alt="" class="">
+                                            <img src="" alt="" class="">
+                                            <img src="" alt="" class="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home-links">
+                                    <div class="col-lg-12 hidden-xs">
+
+                                        <ul class="list-unstyled">
+                                            <li><a href="/services/#page-services/business-analysis">Computer&nbsp;Coding&nbsp;&amp;&nbsp;Programming</a></li>
+                                            <li class="home-link-1"><a href="/services/#page-services/software-design-development">Web&nbsp;Design&nbsp;&amp;&nbsp;Development</a></li>
+                                            <li class="home-link-2"><a href="/services/#page-services/web-design-development">Mobile&nbsp;Apps,&nbsp;Design&nbsp;&amp;&nbsp;Development</a></li>
+                                            <!--                                            <li class="home-link-3"><a href="/services/#page-services/brand-and-identity">Brand&nbsp;&amp;&nbsp;Identity&nbsp;/&nbsp;Digital&nbsp;Marketing</a></li>-->
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-container">
+                            <div class="down-icon-e5"><a href="#" class="hi-icon hi-icon-down blue">Next Page</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section about">
+                    <div id="about" class="full-height">
+                        <div class="container full-height" style="position:relative;">
+                            <div class="row vertically-centered">
+                                <div class="hidden-lg col-md-1 col-sm-1 col-xs-1"><p></p></div>
+                                <div class="col-lg-12 col-md-10 col-sm-10 col-xs-10">
+                                    <h1>Creating a brighter future on Navajoland.</h1>
+                                    <p>Determined to provide exellecent mobile and web designs to neighboring communities &amp; businesses.</p>
+                                </div>
+                                <div class="hidden-lg col-md-1 col-sm-1 col-xs-1"><p></p></div>
+                            </div>
+                            <!--
+                            <div class="home-links">
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 rb"><a href="/services">Services</a></div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 rb"><a href="/about-us">About Us</a></div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 rb"><a href="/about-us/#page-process">Our Process</a></div>
+                              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 lb"><a href="/contact/">Contact Us</a></div>
+                            </div> -->
+                        </div>
