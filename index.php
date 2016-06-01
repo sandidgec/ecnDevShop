@@ -50,8 +50,6 @@
 </header>
 
 
-
-
 <div id="carslide" class="container">
     <div class="row" id="takeMeThere">
         <div class="col-sm-12">
