@@ -22,6 +22,17 @@
 
     <div class="container-fluid">
         <div class="row">
+            <div class="col-md-2">
+                <h>NAVIGATION</h>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <p>This is content area for admin</p>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
             <!--side menu-->
             <div class="col-md-2">
                 <h1>Navigation</h1>

@@ -1,107 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php require_once("head-utils.php"); ?>
-    <title>ECN Dev Shop</title>
-</head>
+<html>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.php">Home</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#missionState">Mission Statement</a></li>
-                <li><a href="#erd">ERD</a></li>
-                <li><a href="#aboutUs">About Us</a></li>
-                <li><a href="#wireFram">Wire Frame</a></li>
-                <li><a href="#useCs">Use Case</a></li>
-                <li><a href="#adminPanel">Use Case</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+<head>
+    <?php require_once("lib/head-utils.php");?>
+</head>
 
 <body>
 
-<div id="wall_1" class="image" data-stellar-background-ratio="0.4" ></div>
-<div id="content_1" class="content">
-    <h1><a name="missionState">Mission Statement</a></h1>
-    <p>
-        Our job is to continually customize our data driven resources and effectively enhance our missions infrastructure.
-        We will develop and encourage personal employee growth, while we implement technical strategies. All the while,
-        We will effectively network to meet our missions needs
-    </p>
-</div>
-<a name="erd"></a>
-<div id="wall_2" class="image" data-stellar-background-ratio="0.4"></div>
-<div id="content_2" class="content" >
+<?php require_once("navBar.php");?>
 
-    <h1><a name="aboutUs">About Us</a></h1>
-    <p>
-        With the Episcopal church, we are driven to provide web
-        based services to surrounding areas. At the Dev Shop, we make sure to
-        balance work and life, while providing an exciting, creative and
-        sustainable business environment for our team and community.
-    </p>
-</div>
-<a name="wireFram"></a>
-<div id="wall_3" class="image" data-stellar-background-ratio="0.4"  ></div>
-<div id="content_2" class="content">
+<header>
+    <div id="whereShitgoes" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>What is Cheii's DevShop</h1>
+                <p>
+                    Cheii's DevShop is determined to provide excellent mobile and web designs to neighboring communities
+                    &amp; businesses.
+                </p>
+            </div>
 
-    <h1><a name="useCs">Use Cases</a></h1>
-    <h2>Krieg</h2>
-    <p>
-        Meeting different artists at various art events, I hand them my
-        business card with our website to market our services for web development.
-        When the artist arrives to our website, they are greeted with a hero page;
-        containing a stylized navbar with links to our different pages (About, Services and Contact).
-        Customer goes to our "Services" pages to see what kind of services we provide.
-        Within the services page are listed services; CSS, PHP, HTML and Javascript.
-        Along with our sevices pages, is a brief description about what developer
-        specializes in that particular service offered.
-    </p>
-    <br>
-    <h2>Ryan</h2>
-    <p>
-        An emerging local produce shop is looking for ways to promote their
-        products. They begin researching ways to bring in more customers and
-        reach out  to potential customers. The business owner locates the
-        Development Web Shop online located in Farmington, New Mexico on
-        the grounds of the Episcopal Church of Navajoland. After searching
-        hours after hours the owner finally finds what he is searching for.
-        Contact information, resumes, and galleries of past projects are available
-        for all. A list of services such as wire-framing, site-mapping,
-        JavaScript, MySQL Database and web designed are presented. The produce
-        shop owner contacts the Development Web Shop and is confident the
-        Development Web Shop is highly capable of developing a website suited
-        for the needs of customers.
-    </p>
-    <br>
-    <h2>Sherri</h2>
-    <p>
-        A developer was on her way to a conference, she stops in at a irish
-        restaurant.  While she was eating,  she overheard a customer talking
-        about developing a customer database for a local church..  she noted
-        the enthusiasm in the tone.  Immediately, after eating, of course.
-        She approached the customer and inquired about what kind of developing
-        methods were involved. the developer was impressed about the idea..and
-        was immediately directed to the website.  She was impressed with the
-        site map and found the answers that she needed. In the morning before
-        she left town she stopped by the church and wrote a check because
-        she believed it was a good cause.
-    </p>
+            <div id="photoIcons" class="col-md-4">
+                <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <button type="button" id="learnMoreBtn" class="btn btn-default"><a href="#takeMeThere"> LEARN MORE </a></button>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<div id="carslide" class="container">
+    <div class="row" id="takeMeThere">
+        <div class="col-sm-12">
+            <div id="my-slider" class="carousel slide" data-ride="carousel">
+
+                <!-- indicators dot nov -->
+                <ol class="carousel-indicators">
+                    <li data-target="#my-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#my-slider" data-slide-to="1"></li>
+                    <li data-target="#my-slider" data-slide-to="2"></li>
+                    <li data-target="#my-slider" data-slide-to="3"></li>
+                    <li data-target="#my-slider" data-slide-to="4"></li>
+                    <li data-target="#my-slider" data-slide-to="5"></li>
+                    <li data-target="#my-slider" data-slide-to="6"></li>
+                </ol>
+
+                <!-- wrapper for slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="lib/images/jsgiffy.gif" alt="" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">Intro to Javascript</h1>
+                            <p class="text-center">
+                                <a class="btn btn-lg btn-primary" href="#" role="button">Learn More</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="lib/images/render.gif" alt="javascript" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">More complex codding</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="lib/images/plstrnOn.gif" alt="javascript" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">Hitting the power of JS</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="lib/images/timer.gif" alt="javascript" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">It does require more time to code Java</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="lib/images/jsSwitch.gif" alt="javascript" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">Dope</h1>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="lib/images/jscj.gif" alt="javascript" />
+                        <div class="carousel-caption">
+                            <h1 class="text-center">Javascript controls how your site acts</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- controls for next and prev buttons-->
+                <a class="left carousel-control" href="#my-slider" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#my-slider" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
 </div>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>What is Javascript?</h1>
+            <p>
+                JavaScript is a cross-platform, object-oriented scripting language.
+                It is a small and lightweight language. Inside a host environment
+                (for example, a web browser), JavaScript can be connected to the
+                objects of its environment to provide programmatic control over them.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h1>JavaScript and Java</h1>
+            <p>
+                JavaScript and Java are similar in some ways but fundamentally
+                different in some others. The JavaScript language resembles Java but
+                does not have Java's static typing and strong type checking. JavaScript
+                follows most Java expression syntax, naming conventions and basic control-flow
+                constructs which was the reason why it was renamed from LiveScript to JavaScript.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="lib/js/glideScroll.js"></script>
 
 </body>
+
 </html>
