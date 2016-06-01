@@ -273,6 +273,8 @@ class Project implements \JsonSerializable
      * Delete PDO to delete projectId
      * @param \PDO $pdo
      **/
+    ->execute($parameters);
+    }
     public function delete(\PDO &$pdo)
     {
         // enforce the project is not null
@@ -286,9 +288,7 @@ class Project implements \JsonSerializable
 
         //bind the member variables to the place holder in the template
         $parameters = array("projectId" => $this->projectId);
-        $statement->execute($parameters);
-    }
-
+        $statement
     /**
      * updates Message in mySQL
      *
