@@ -25,6 +25,7 @@
                 <li><a href="#aboutUs">About Us</a></li>
                 <li><a href="#wireFram">Wire Frame</a></li>
                 <li><a href="#useCs">Use Case</a></li>
+                <li><a href="#adminPanel">Use Case</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
