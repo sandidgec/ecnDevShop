@@ -71,6 +71,7 @@ header {
     text-decoration: none;
 }
 
+<<<<<<< Updated upstream
 .btn {
     background: #2ea7f7;
     background-image: -webkit-linear-gradient(top, #2ea7f7, #056aa8);
@@ -91,3 +92,15 @@ header {
     text-decoration: none;
 }
 
+=======
+#side menu {
+    background-color: #3cb0f8;
+    padding: 0%;
+}
+
+#side menu h1 {
+    color: black;
+    margin: 10px 0px;
+    font-size: 25px;
+}
+>>>>>>> Stashed changes
