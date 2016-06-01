@@ -34,7 +34,7 @@ class Project implements \JsonSerializable
      * describes start date
      * @var string for the end date of the project
      */
-    
+
     private $startDate;
 
     /**
@@ -205,7 +205,7 @@ class Project implements \JsonSerializable
         $this->title = $newTitle;
     }
 
-  
+
     /**
      * Get all Projects
      *
@@ -255,7 +255,7 @@ class Project implements \JsonSerializable
             = "INSERT INTO project(endDate, startDate, title)
             VALUES (endDate, :startDate, :title)";
         $statement = $pdo->prepare($query);
-                
+
         $eDate = $this->endDate->format("Y-m-d");
         $sDate = $this->startDate->format("Y-m-d");
 
@@ -273,8 +273,6 @@ class Project implements \JsonSerializable
      * Delete PDO to delete projectId
      * @param \PDO $pdo
      **/
-    ->execute($parameters);
-    }
     public function delete(\PDO &$pdo)
     {
         // enforce the project is not null
@@ -288,7 +286,8 @@ class Project implements \JsonSerializable
 
         //bind the member variables to the place holder in the template
         $parameters = array("projectId" => $this->projectId);
-        $statement
+        $statement ->execute($parameters);
+    }
     /**
      * updates Message in mySQL
      *

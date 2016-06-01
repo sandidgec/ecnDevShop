@@ -1,5 +1,8 @@
 <?php
-require_once(dirname(dirname(__DIR__)) . "xsrf.php");
+//require_once(dirname(dirname(__DIR__)) . "xsrf.php");
+require_once(dirname(dirname(__DIR__)) . "/classes/project.php");
+require_once(dirname(dirname(__DIR__)) . "/classes/dbconnect.php");
+
 // start the session and create a XSRF token
 if(session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
@@ -15,19 +18,23 @@ try {
     // sanitize the projectId
     $projectId = filter_input(INPUT_GET, "projectId", FILTER_VALIDATE_INT);
 
-    // grab the mySQL connection
-    $pdo = connectToEncryptedMySql("/etc/apache2/capstone-mysql/invtext.ini");
+    // Grab the mySQL connection
+    // NOTE: This one is only used for Nginx servers
+    $pdo = establishConn("/usr/share/nginx/ecn_dev_db.ini");
+    // NOTE: This is the one you use for Apache web servers.
+    //$pdo = establishConn("/etc/apache2/capstone-mysql/invtext.ini");
 
     // handle all RESTful calls to Project today
     // get some or all Users
     if($method === "GET") {
         // set an XSRF cookie on GET requests
-        setXsrfCookie("/");
+        //setXsrfCookie("/");
+
         if (empty($projectId) === false) {
             $reply->data = Project::getProjectByProjectId($pdo, $projectId);
 
         } else {
-            $reply->data = Project::getAllProject($pdo);
+            $reply->data = Project::getAllProjects($pdo);
         }
     }
 
@@ -38,7 +45,7 @@ try {
         verifyXsrf();
         $requestContent = file_get_contents("php://input");
         $requestObject = json_decode($requestContent);
-        
+
 
         // delete an existing Project
     } else if($method === "DELETE") {
@@ -83,4 +90,3 @@ else if($method === "DELETE") {
 }
 header("Content-type: application/json");
 echo json_encode($reply);
-
