@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="">about us</a></li>
                 <li><a href="services.php">services</a></li>
-                <li><a href="">our team</a></li>
+                <li><a href="ourTeam.php">our team</a></li>
                 <li><a href="contact.php">contact us</a></li>
 <!--                <li class="dropdown">-->
 <!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Program <span class="caret"></span></a>-->
