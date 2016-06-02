@@ -10,13 +10,17 @@
 
     <?php require_once("navBar2.php");?>
 
-<h1 class="text-center">Contact</h1>
+<div id="photoIcons" class="">
+    <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
+</div>
+
+<h1 id="contact" class="text-center">Contact</h1>
 
 <address class="text-center">
     <strong>Cheii Designs</strong><br>
     1257 Mission Avenue<br>
     Farmington, NM 87499<br>
-    <abbr title="Phone">P:</abbr> (505) 327-7549
+    <abbr title="Phone">Phone</abbr> (505) 327-7549
 </address>
     
 
@@ -36,12 +40,18 @@
     <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>
 </form>
 
-<div id="photoIcons" class="">
-    <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
-</div>
+
 
 </body>
+
+    <style>
+        #contact {
+            margin: 0;
+        }
+    </style>
 
 </header>
 
 <script src="lib/js/glideScroll.js"></script>
+
+

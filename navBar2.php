@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="index.php">
                 Cheii's DevShop
             </a>
         </div>
@@ -18,7 +18,7 @@
                 <li><a href="">about us</a></li>
                 <li><a href="">services</a></li>
                 <li><a href="">our team</a></li>
-                <li><a href="">contact us</a></li>
+                <li><a href="contact.php">contact us</a></li>
 <!--                <li class="dropdown">-->
 <!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Program <span class="caret"></span></a>-->
 <!--                    <ul class="dropdown-menu">-->

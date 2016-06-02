@@ -15,8 +15,8 @@
             <div class="col-md-8">
                 <h1>Cheii's DevShop</h1>
                 <p>
-                    Determined to providing excellent web and mobile designs to neighboring communities
-                    &amp; businesses.
+                    In the Diné culture the Horned Toad is addressed as “grandpa” (cheii). It possesses spiritual power.
+                    When you see one, pick it up and rub it on your chest and say, “I will be in good health and harmony”.
                 </p>
             </div>
 
@@ -28,7 +28,7 @@
 
         <div class="row" id="launchButton">
             <div class="col-md-2 col-md-offset-8">
-                <a href="#takeMeThere"><button type="button" id="learnMoreBtn" class="btn btn-default">LEARN MORE</button></a>
+                <a href="#takeMeThere"><button type="button" id="learnMoreBtn" class="btn btn-default">learn more</button></a>
             </div>
         </div>
     </div>
@@ -66,12 +66,12 @@
     </div>
 </div>
 
-<script src="lib/js/glideScroll.js"></script>
 
 <footer>
     <?php require_once("footer.php");?>
 </footer>
 
+<script src="lib/js/glideScroll.js"></script>
 
 </body>
 

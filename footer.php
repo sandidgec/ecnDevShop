@@ -14,7 +14,7 @@
         </div><a href="" target="_blank"></a>
 
         <div class="col-md-1">
-            <a href="adminPanel.php">
+            <a href="Admin%20Panel/adminPanel.php">
                 <p>admin</p>
             </a>
         </div><a href="" target="_blank"></a>
