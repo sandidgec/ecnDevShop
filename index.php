@@ -24,22 +24,7 @@
                 <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
             </div>
         </div>
-<<<<<<< Updated upstream
-=======
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="#missionState">Mission Statement</a></li>
-                <li><a href="#erd">ERD</a></li>
-                <li><a href="#aboutUs">About Us</a></li>
-                <li><a href="#wireFram">Wire Frame</a></li>
-                <li><a href="#useCs">Use Case</a></li>
-                <li><a href="#adminPanel.php">Admin</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
->>>>>>> Stashed changes
+
 
         <div class="row">
             <div class="col-md-2 col-md-offset-5">

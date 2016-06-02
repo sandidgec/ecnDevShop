@@ -58,8 +58,6 @@ header {
     width: 200px;
 }
 
-
-​
 /*THIS IS FOR THE BUTTON*/
 .btn:hover {
     background: #3cb0fd;
@@ -71,7 +69,6 @@ header {
     text-decoration: none;
 }
 
-<<<<<<< Updated upstream
 .btn {
     background: #2ea7f7;
     background-image: -webkit-linear-gradient(top, #2ea7f7, #056aa8);
@@ -79,8 +76,8 @@ header {
     background-image: -ms-linear-gradient(top, #2ea7f7, #056aa8);
     background-image: -o-linear-gradient(top, #2ea7f7, #056aa8);
     background-image: linear-gradient(to bottom, #2ea7f7, #056aa8);
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
     border-radius: 10px;
     text-shadow: 0px 0px 0px #0073ff;
     -webkit-box-shadow: 0px 8px 13px #666666;
@@ -88,11 +85,11 @@ header {
     box-shadow: 0px 8px 13px #666666;
     color: #ffffff;
     font-size: 30px;
+    font-weight: 500;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
 }
 
-=======
 #side menu {
     background-color: #3cb0f8;
     padding: 0%;
@@ -103,4 +100,3 @@ header {
     margin: 10px 0px;
     font-size: 25px;
 }
->>>>>>> Stashed changes
