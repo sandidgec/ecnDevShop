@@ -29,6 +29,11 @@
 
 </header>
 
+<footer>
+    <?php require_once("footer.php");?>
+</footer>
+
+
 <script src="lib/js/glideScroll.js"></script>
 
 

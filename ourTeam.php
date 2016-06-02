@@ -25,17 +25,25 @@
             </div>
         </div>
 
+        <div id="picture" class="">
+            <img src="/lib/images/groupcohort1_480.jpg" alt="..." class="img-circle">
+        </div>
 
         <div class="row" id="launchButton">
-            <div class="col-md-1 col-md-offset-2">
+            <div class="col-md-6">
                 <a href="contact.php"><button type="button" id="contactBtn" class="btn btn-default">contact us</button></a>
             </div>
         </div>
+
+
     </div>
 </header>
 
 
-
+<footer>
+    <?php require_once("footer.php");?>
+</footer>
+ 
 <script src="lib/js/glideScroll.js"></script>
 
 </body>

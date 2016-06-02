@@ -81,3 +81,7 @@ form {
     background-color: rgba(213, 224, 232, 0.5);
     font-family: Calibri;
 }
+
+.picture {
+    padding-bottom: 20px;
+}
