@@ -80,8 +80,14 @@ form {
 .jumbotron {
     background-color: rgba(213, 224, 232, 0.5);
     font-family: Calibri;
+    font-size: 15px;
 }
 
 .picture {
-    padding-bottom: 20px;
+
+    text-align: center;
+}
+address {
+    font-family: Calibri;
+    font-size: 20px;
 }

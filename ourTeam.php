@@ -20,17 +20,17 @@
                 </p>
             </div>
 
-            <div id="photoIcons" class="col-md-4">
+            <div id="photoIcons" class=".col-md-4">
                 <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
             </div>
         </div>
 
-        <div id="picture" class="">
+        <div id="picture" class="col-md-12 text-center">
             <img src="/lib/images/groupcohort1_480.jpg" alt="..." class="img-circle">
         </div>
 
         <div class="row" id="launchButton">
-            <div class="col-md-6">
+            <div class="col-md-12 text-center">
                 <a href="contact.php"><button type="button" id="contactBtn" class="btn btn-default">contact us</button></a>
             </div>
         </div>
