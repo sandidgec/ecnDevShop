@@ -12,22 +12,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <img src="lib/images/devSite/AWD.png" alt="Arrick" width="300" height="200">
-    </div>
-
-    <div class="col-md-4">
-        <img src="lib/images/devSite/DWD.png" alt="Dana" width="300" height="200">
-    </div>
-
-    <div class="col-md-4">
-        <img src="lib/images/devSite/JWD.png" alt="Jeremiah" width="300" height="200">
-    </div>
-</div>
-
-
-
 
 
 <!---->
