@@ -78,5 +78,6 @@ form {
 }
 
 .jumbotron {
-    background-color: rgba(0, 198, 191, 0.5);
+    background-color: rgba(213, 224, 232, 0.5);
+    font-family: Calibri;
 }
