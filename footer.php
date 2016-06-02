@@ -6,10 +6,10 @@
 
         <div class="col-md-1 col-md-offset-6">
 
-            <a href="" target="_blank">
+            <a href="https://twitter.com/cheiisDevShop" target="_blank">
                 <i class="fa fa-twitter someicons" aria-hidden="true"></i>
 
-            </a><a href="" target="_blank">
+            </a><a href="https://www.facebook.com/cheiidevshop" target="_blank">
                 <i class="fa fa-facebook someicons" aria-hidden="true"></i></a>
         </div><a href="" target="_blank"></a>
 

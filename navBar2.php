@@ -36,10 +36,10 @@
 <!--                        </li>-->
 <!--                    </ul>-->
 <!--                </li>-->
-                <li><a href="" target="_blank">
+                <li><a href="https://twitter.com/cheiisDevShop" target="_blank">
                         <i class="fa fa-twitter someicons" aria-hidden="true"></i>
                     </a></li>
-                <li><a href="" target="_blank">
+                <li><a href="https://www.facebook.com/cheiidevshop" target="_blank">
                         <i class="fa fa-facebook someicons" aria-hidden="true"></i>
                     </a></li>
             </ul>
