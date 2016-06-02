@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <?php require_once("../lib/head-utils.php");?>
-
+    <link rel="stylesheet" type="text/css" href="/Admin%20Panel/style.css">
     <title>Cheii Devshop Admin Panel</title>
 
 
@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="adminPanel.php">CD Admin Panel</a>
+            <a class="navbar-brand logo-container" href="#"><img class="logo" alt="Logo" src="/lib/images/cheiiDevShopLogo120.png"/></a>
         </div>
         <!-- Top Menu Items -->
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
@@ -60,7 +60,7 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Project Panel</h3>
+                            <h3 class="panel-title"><i class="fa fa-folder-open" aria-hidden="true"></i> Project Panel</h3>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -259,6 +259,16 @@
 
 </div>
 <!-- /#wrapper -->
+
+
+<style>
+    .navbar-brand>img {
+        display: block;
+        height: 45px;
+        width: 45px;
+        padding-bottom: 12px;
+    }
+</style>
 
 
 </body>
