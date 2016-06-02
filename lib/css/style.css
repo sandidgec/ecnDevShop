@@ -24,34 +24,6 @@ header {
     padding-top: 100px;
 }
 
-#my-slider {
-    background-size: cover;
-}
-
-#carslide {
-    padding-top: 100px;
-}
-
-.carousel {
-    max-height: 100%;
-    margin-bottom: 60px;
-    height:auto;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-inner > .item > img {
-    top: 0;
-    left: 0;
-    max-height: 300px;
-    width: 100%;
-    margin-right:auto;
-    margin-left:auto;
-    height:auto;
-}
-
 #photoIcons img {
     opacity: 0.6;
     height: 200px;
