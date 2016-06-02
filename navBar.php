@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="pull-right"><a href="#">About Us</a></li>
-                <li class="pull-right"><a href="#">Services</a></li>
+                <li class="pull-right"><a href="services.php">Services</a></li>
                 <li class="pull-right"><a href="#">Our Team</a></li>
                 <li class="pull-right"><a href="contact.php">Contact Us</a></li>
             </ul>
