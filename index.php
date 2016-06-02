@@ -10,7 +10,7 @@
 <?php require_once("navBar2.php");?>
 
 <header>
-    <div id="whereShitgoes" class="container">  
+    <div id="whereShitgoes" class="container">
         <div class="row">
             <div class="col-md-8">
                 <h1>Cheii's DevShop</h1>
@@ -69,7 +69,7 @@
 <script src="lib/js/glideScroll.js"></script>
 
 <footer>
-    footer
+    <?php require_once("footer.php");?>
 </footer>
 
 

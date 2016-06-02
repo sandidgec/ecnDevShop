@@ -87,12 +87,4 @@ header {
     padding-bottom: 25%;
 }
 
-/*THIS IS FOR THE FOOTER*/
-footer {
-    background-color: black;
-    color: aliceblue;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    height: 5vh;
-}
+
