@@ -16,7 +16,7 @@
                 <li class="pull-right"><a href="#">About Us</a></li>
                 <li class="pull-right"><a href="#">Services</a></li>
                 <li class="pull-right"><a href="#">Our Team</a></li>
-                <li class="pull-right"><a href="#">Contact Us</a></li>
+                <li class="pull-right"><a href="contact.php">Contact Us</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
