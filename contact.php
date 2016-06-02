@@ -18,12 +18,7 @@
     Farmington, NM 87499<br>
     <abbr title="Phone">P:</abbr> (505) 327-7549
 </address>
-
-    <div class="text-center">
-        <i class="fa fa-twitter fa-4x" aria-hidden="true"></i>
-        <i class="fa fa-facebook fa-4x" aria-hidden="true"></i>
-    </div>
-
+    
 
     <form class="form-inline">
     <div class="form-group">
