@@ -66,6 +66,8 @@
     </div>
 </div>
 
+<?php require_once ("imageGallery.php");?>
+
 
 <footer>
     <?php require_once("footer.php");?>
