@@ -35,8 +35,6 @@
 </header>
 
 
-
-
 <div id="learn-more" class="container info-content">
     <div class="row">
         <div class="col-md-12 text-center">
