@@ -4,9 +4,9 @@
 <head>
 
     <meta charset="utf-8">
-    <?php require_once("lib/head-utils.php");?>
+    <?php require_once("../lib/head-utils.php");?>
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Cheii Devshop Admin Panel</title>
 
 
 </head>
@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">SB Admin</a>
+            <a class="navbar-brand" href="adminPanel.php">CD Admin Panel</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -291,35 +291,7 @@
                 </div>
             </div>
             <!-- /.row -->
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Area Chart</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-area-chart"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i> Donut Chart</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="morris-donut-chart"></div>
-                            <div class="text-right">
-                                <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -336,28 +308,16 @@
                                     <i class="fa fa-fw fa-comment"></i> Commented on a post
                                 </a>
                                 <a href="#" class="list-group-item">
-                                    <span class="badge">23 minutes ago</span>
-                                    <i class="fa fa-fw fa-truck"></i> Order 392 shipped
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <span class="badge">46 minutes ago</span>
-                                    <i class="fa fa-fw fa-money"></i> Invoice 653 has been paid
+                                    <span class="badge">1 hour ago</span>
+                                    <i class="fa fa-fw fa-user"></i> A new Employee has been added
                                 </a>
                                 <a href="#" class="list-group-item">
                                     <span class="badge">1 hour ago</span>
-                                    <i class="fa fa-fw fa-user"></i> A new user has been added
+                                    <i class="fa fa-folder" aria-hidden="true"></i> A new Project has been added
                                 </a>
                                 <a href="#" class="list-group-item">
                                     <span class="badge">2 hours ago</span>
-                                    <i class="fa fa-fw fa-check"></i> Completed task: "pick up dry cleaning"
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <span class="badge">yesterday</span>
-                                    <i class="fa fa-fw fa-globe"></i> Saved the world
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <span class="badge">two days ago</span>
-                                    <i class="fa fa-fw fa-check"></i> Completed task: "fix error on sales page"
+                                    <i class="fa fa-fw fa-check"></i> Completed project: "Blue Corn Project"
                                 </a>
                             </div>
                             <div class="text-right">
@@ -369,69 +329,107 @@
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Transactions Panel</h3>
+                            <h3 class="panel-title"><i class="fa fa-user" aria-hidden="true"></i> Employee Panel</h3>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-hover table-striped">
                                     <thead>
                                     <tr>
-                                        <th>Order #</th>
-                                        <th>Order Date</th>
-                                        <th>Order Time</th>
-                                        <th>Amount (USD)</th>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Address 1</th>
+                                        <th>Address 2</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Zip</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Email</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>3326</td>
-                                        <td>10/21/2013</td>
-                                        <td>3:29 PM</td>
-                                        <td>$321.33</td>
+                                        <th scope="row">1</th>
+                                        <td>Krieg</td>
+                                        <td>Benally</td>
+                                        <td>3751 Red Maple Road</td>
+                                        <td></td>
+                                        <td>Salt Lake City</td>
+                                        <td>UT</td>
+                                        <td>84107</td>
+                                        <td>4356722236</td>
+                                        <td>Full Time</td>
+                                        <td>kriegbenally@gmail.com</td>
                                     </tr>
                                     <tr>
-                                        <td>3325</td>
-                                        <td>10/21/2013</td>
-                                        <td>3:20 PM</td>
-                                        <td>$234.34</td>
+                                        <th scope="row">2</th>
+                                        <td>Marty</td>
+                                        <td>Buck</td>
+                                        <td>42 Wallaby Way</td>
+                                        <td></td>
+                                        <td>Farmington</td>
+                                        <td>NM</td>
+                                        <td>55555</td>
+                                        <td>5055554633</td>
+                                        <td>Part Time</td>
+                                        <td>marty@marty.com</td>
                                     </tr>
                                     <tr>
-                                        <td>3324</td>
-                                        <td>10/21/2013</td>
-                                        <td>3:03 PM</td>
-                                        <td>$724.17</td>
+                                        <<th scope="row">3</th>
+                                        <td>Ryan</td>
+                                        <td>Sam</td>
+                                        <td>5 miles east mile marker 420</td>
+                                        <td>APT 202</td>
+                                        <td>Farmington</td>
+                                        <td>NM</td>
+                                        <td>55555</td>
+                                        <td>50555554633</td>
+                                        <td>PRN</td>
+                                        <td>ryan@snapchat.com</td>
                                     </tr>
                                     <tr>
-                                        <td>3323</td>
-                                        <td>10/21/2013</td>
-                                        <td>3:00 PM</td>
-                                        <td>$23.71</td>
+                                        <th scope="row">4</th>
+                                        <td>Aarick</td>
+                                        <td>Lameman</td>
+                                        <td>3245 S 700 E</td>
+                                        <td>#507</td>
+                                        <td>Bluff</td>
+                                        <td>UT</td>
+                                        <td>84512</td>
+                                        <td>4355556789</td>
+                                        <td>Terminated</td>
+                                        <td>aarick@aarick.com</td>
                                     </tr>
                                     <tr>
-                                        <td>3322</td>
-                                        <td>10/21/2013</td>
-                                        <td>2:49 PM</td>
-                                        <td>$8345.23</td>
+                                        <th scope="row">5</th>
+                                        <td>Jeremiah</td>
+                                        <td>Johnson</td>
+                                        <td>3665 South Highland Drive</td>
+                                        <td></td>
+                                        <td>Salt Lake </td>
+                                        <td>UT</td>
+                                        <td>84107</td>
+                                        <td>4355552233</td>
+                                        <td>Full Time</td>
+                                        <td>jeremiah@jeremiah.com</td>
                                     </tr>
                                     <tr>
-                                        <td>3321</td>
-                                        <td>10/21/2013</td>
-                                        <td>2:23 PM</td>
-                                        <td>$245.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3320</td>
-                                        <td>10/21/2013</td>
-                                        <td>2:15 PM</td>
-                                        <td>$5663.54</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3319</td>
-                                        <td>10/21/2013</td>
-                                        <td>2:13 PM</td>
-                                        <td>$943.45</td>
+                                        <th scope="row">6</th>
+                                        <td>marieta</td>
+                                        <td>buck</td>
+                                        <td>pop box 2073</td>
+                                        <td></td>
+                                        <td>Window Rock</td>
+                                        <td>AZ</td>
+                                        <td>86515</td>
+                                        <td>9287971419</td>
+                                        <td>Full Time</td>
+                                        <td>marietab1@gmail.com</td>
                                     </tr>
                                     </tbody>
+
                                 </table>
                             </div>
                             <div class="text-right">
