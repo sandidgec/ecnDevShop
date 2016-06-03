@@ -157,3 +157,20 @@ address {
 #contactUsButton {
     padding-top: 33%;
 }
+
+
+/*CIRCLE IMAGE*/
+.img-circle {
+    border-radius: 50%;
+
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+
+/*THIS IS FOR THE SOCIAL ICONS*/
+

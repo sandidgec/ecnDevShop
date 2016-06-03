@@ -16,13 +16,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="services.php">services</a></li>
-                <li><a href="ourTeam.php">our team</a></li>
+<!--                <li><a href="ourTeam.php">our team</a></li>-->
                 <li><a href="contact.php">contact us</a></li>
                 <li><a href="https://twitter.com/cheiisDevShop" target="_blank">
-                        <i class="fa fa-twitter someicons" aria-hidden="true"></i>
+                        <i class="fa fa-twitter someicons" aria-hidden=""></i>
                     </a></li>
                 <li><a href="https://www.facebook.com/cheiidevshop" target="_blank">
-                        <i class="fa fa-facebook someicons" aria-hidden="true"></i>
+                        <i class="fa fa-facebook someicons" aria-hidden=""></i>
                     </a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
