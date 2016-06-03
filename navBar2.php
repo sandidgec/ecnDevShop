@@ -18,23 +18,6 @@
                 <li><a href="services.php">services</a></li>
                 <li><a href="ourTeam.php">our team</a></li>
                 <li><a href="contact.php">contact us</a></li>
-<!--                <li class="dropdown">-->
-<!--                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Program <span class="caret"></span></a>-->
-<!--                    <ul class="dropdown-menu">-->
-<!--                        <li><a href="the-program">About</a></li>-->
-<!--                        <li><a href="careers">Careers</a></li>-->
-<!--                        <li><a href="contact">Contact/Team</a></li>-->
-<!--                        <li><a href="faq">FAQ</a></li>-->
-<!--                        <li><a href="partners">Partners</a></li>-->
-<!---->
-<!--                        <li role="separator" class="divider"></li>-->
-<!--                        <li>-->
-<!--                            <a href="image/cultivating-coders-press-kit.pdf" target="_blank">-->
-<!--                                Press Kit-->
-<!--                            </a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </li>-->
                 <li><a href="https://twitter.com/cheiisDevShop" target="_blank">
                         <i class="fa fa-twitter someicons" aria-hidden="true"></i>
                     </a></li>
