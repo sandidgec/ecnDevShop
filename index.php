@@ -54,8 +54,8 @@
         <div class="col-md-6">
             <h1>Our team</h1>
             <p>
-                Our staff are more than confident to take on any problem that you need solving.  With skill sets ranging
-                to front end customization, back end database knowledge, javascript, css and php.
+                Our team members are well skilled and creative to ensure the highest production quality. From the surrounding four corners, our team members are graduates
+                of Cultivating Coders.
             </p>
         </div>
     </div>
