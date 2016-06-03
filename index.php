@@ -11,6 +11,13 @@
 
 <header>
     <div id="whereShitgoes" class="container">
+
+        <div class="row">
+            <div id="photoIcons" class="col-md-2 col-md-offset-10">
+                <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-8">
                 <h1>Cheii's DevShop</h1>
@@ -19,35 +26,21 @@
                     When you see one, pick it up and rub it on your chest and say, “I will be in good health and harmony”.
                 </p>
             </div>
-
-            <div id="photoIcons" class="col-md-4">
-                <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
-            </div>
         </div>
-
 
         <div class="row" id="launchButton">
             <div class="col-md-2 col-md-offset-8">
-                <a href="#takeMeThere"><button type="button" id="learnMoreBtn" class="btn btn-default">learn more</button></a>
+                <a href="#cheiiShop"><button type="button" id="learnMoreBtn" class="btn btn-default">learn more</button></a>
             </div>
         </div>
+    </div>
+
+
+
     </div>
 </header>
 
 
-<div id="learn-more" class="container info-content">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2 class="h2font2" id="takeMeThere">What is Cheii's DevShop?</h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2 class="h2font2">What services do we provide??</h2>
-        </div>
-    </div>
-</div>
 
 <div class="container" id="cheiiShop">
     <div class="row">
@@ -64,9 +57,9 @@
             </p>
         </div>
     </div>
-</div>
+    <?php require_once ("ourServices.php");?>
 
-<?php require_once ("imageGallery.php");?>
+</div>
 
 
 <footer>

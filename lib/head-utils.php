@@ -9,7 +9,7 @@
       crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
 
-<link rel="icon" href="/lib/images/cheiiDevShopLogo120.ico" type="image/x-icon"/>
+<link rel="icon" href="/lib/images/cheiiDevShopLogo.ico" type="image/x-icon"/>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
