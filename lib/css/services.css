@@ -1,0 +1,91 @@
+body {
+    background-image: url("/lib/images/cheiisSkies.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ /*Muted Texts
+    --------------*/
+.muted {
+    color: rgba(0,0,0,0.75);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+    margin: 25; /* Space out the Bootstrap <hr> more */
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #eee, #ccc);
+}
+
+.featurette-divider-services {
+    margin: 25; /* Space out the Bootstrap <hr> more */
+    border: 0;
+    height: 2.5px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #eee, #ccc);
+    width: 76%;
+}
+
+.featurette {
+    padding-top: 50px; /* Vertically center images part 1: add padding above and below text. */
+    overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+    margin-top: -50px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    vertical-align:middle
+}
+
+.lead {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+    vertical-align:middle
+}
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+}
+
+/* Thin out the marketing headings */
+
+.featurette-section {
+    background-color: rgba(213, 224, 232, 1);
+}
+
+#featurette-jumbotron {
+    background-color: transparent;
+}
+
+.featurette i {
+    font-size: 200px;
+    background: -webkit-linear-gradient(#626464, #eee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+
+}
+
+.pull-left i {
+    font-size: 200px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

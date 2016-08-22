@@ -1,9 +1,6 @@
 <meta charset="UTF-8">
 
-<title>Cheii's DevShop</title>
-
 <link rel="icon" href="/lib/images/cheiiDevShopLogo.ico" type="image/x-icon"/>
-
 
 <!--Jquery CDN-->
 <script src="http://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>

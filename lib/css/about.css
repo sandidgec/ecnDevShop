@@ -1,0 +1,19 @@
+#staffImage {
+    float: right;
+    width: 35%;
+}
+
+#aboutDevShop {
+    margin-top: 5%;
+}
+
+#aboutDevShop p{
+    font-size: 2.25rem;
+}
+
+#standOut {
+    color: #8cd0d7;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
