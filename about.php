@@ -19,37 +19,94 @@
 
         <div class="col-md-9">
 
-            <h1 id="standOut">About Cheii's DevShop</h1>
+            <h1 id="standOut">Meet The Team</h1>
+            <br>
+            <br>
 
-            <figure>
-                <div>
-                    <img id="staffImage" src="lib/images/developers/cheiisDevShopStaff.png">
+
+
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="developers">
+                                    <img src="/lib/images/developers/ryanS.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                    <h1>Ryan Sam</h1>
+                                <br>
+                                    <h2>-Photographer<br>
+                                    -Database set up<br>
+                                    -Developer<br>
+                                    </h2>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>
+            </div>
 
-                </p>
-            </figure>
+            <br>
 
-            <p>Lorem ipsum dolor sit amet, ut usu vitae mandamus gubergren, sed petentium scribentur ex. Ei sed equidem accusam
-                signiferumque, erat inani salutandi ad his. Solum oblique sea no, ius cibo cetero alterum id, an menandri
-                petentium efficiendi his. Vis latine docendi ea, mel at hinc saepe. Consetetur omittantur vix in. Impedit
-                temporibus liberavisse ius eu, his id duis tota.
 
-                Quo cu augue reprehendunt. Pro detracto insolens patrioque cu, mutat incorrupte nec id. Magna voluptatum
-                efficiantur vix in, ea sit harum partiendo vituperata. His dicam quando definitiones et, dolore euismod
-                qualisque eos an. Has ea odio probo democritum, suas equidem accusata ad eam. Vel ut dolore populo, autem
-                copiosae sit no.
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="clergy">
+                                    <img src="/lib/images/developers/gjG.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                    <h1>GJ Gordy</h1>
+                                 <br>
+                                    <h2>-Web Consulting<br>
+                                    -Graphic Designer<br>
+                                    -Developer<br>
+                                    -Writer<br>
+                                    </h2>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
 
-                Noluisse nominati hendrerit qui eu. Cum clita graeci veritus ei, vel cu dicant suscipit scribentur. Diceret
-                veritus nam ne. Dicam tacimates sententiae eam ei, ne autem aperiri vel. Ea his dicit vituperata. Dicit option
-                periculis ea duo, ius accusam forensibus ad.
 
-                At liber graece vel, sea inani luptatum et. Summo omnes mediocrem in mei, pri no aeque aperiam, id est quem
-                insolens. Quo everti postulant eu. Nec ne deleniti elaboraret ullamcorper, in vis impetus blandit.
-
-                Mea omittam evertitur et. Nullam omnium accumsan quo ei, eros posse sed et, velit salutatus ut vix. Qui ex
-                oporteat repudiandae. Feugiat rationibus temporibus vis ea.
-            </p>
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="clergy">
+                                    <img src="/lib/images/developers/martyB.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                    <h1>Marty Buck</h1>
+                                 <br>
+                                    <h2>
+                                    -Database set up<br>
+                                    -Graphic Designer<br>
+                                    -Wire Framing<br>
+                                    -Developer<br>
+                                    </h2>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
