@@ -14,7 +14,7 @@
     <div class="jumbotron">
         <h1 id="contact" class="text-center">Contact Information</h1>
         <address class="text-center">
-            <strong><span id="cheiiAddress">Cheii's DevShop</span></strong><br>
+            <strong><span id="cheiiAddress">Cheii's Web Development</span></strong><br>
             Farmington, NM 87499<br>
             <abbr title="Phone">Phone</abbr> (505) 427-2090
          </address>

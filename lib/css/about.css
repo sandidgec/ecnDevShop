@@ -3,12 +3,20 @@
     width: 35%;
 }
 
-#aboutDevShop {
+#meetTheTeam {
     margin-top: 5%;
+}
+
+#meetTheTeam p{
+    font-size: 2.25rem;
 }
 
 #aboutDevShop p{
     font-size: 2.25rem;
+}
+
+#aboutDevShop {
+    margin-top: 5%;
 }
 
 #standOut {
@@ -28,4 +36,21 @@ h2 {
     font-weight: 200;
     front-size: 1rem;
 }
+
+p {
+    color: floralwhite;
+    font-weight: 200;
+    front-size: 1rem;
+    text-align: center;
+}
+
+#aboutDevShop {
+    background-color: rgba(28, 101,102, .35);
+    color: black;
+    margin-top: 0;
+    border-radius: 20px;
+    border: 1px solid #232323 ;
+}
+
+
 

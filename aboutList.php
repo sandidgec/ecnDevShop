@@ -1,11 +1,11 @@
 <div class="col-md-3">
     <div id="sidebar">
         <nav>
-            <p class="widgettitle"><a href="#">Cheii's DevShop</a></p
+            <p class="widgettitle"><a href="#">Cheii's Web Development</a></p
             <ul>
-                <li class=""><a href="#">About Cheii's DevShop</a></li>
-                <li class=""><a href="#">Mission Statement</a></li>
-                <li class=""><a href="#">Cheii's DevShop</a></li>
+                <li class=""><a href="#">About Cheii's</a></li>
+                <li class=""><a href="#">Our Mission</a></li>
+                <li class=""><a href="#">The Team</a></li>
             </ul>
         </nav>
     </div>
