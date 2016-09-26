@@ -3,7 +3,7 @@
 
 <head>
     <?php require_once("lib/head-utils.php");?>
-    <title>Cheii's Web Development Shop</title>
+    <title>Cheii's Web Development</title>
     <link rel="stylesheet" href="lib/css/services.css">
 </head>
 
@@ -15,7 +15,7 @@
 <div id="content" class="container">
     <div class="row">
         <div class="col-md-8">
-            <h1>Cheii's Web Development Shop</h1>
+            <h1>Cheii's Web Development</h1>
             <h2>In Navajoland</h2>
             <p>
                 In the Diné culture the Horned Toad is addressed as “grandpa” (cheii). It possesses spiritual power.
@@ -164,7 +164,7 @@
         <div class="col-md-6">
             <h1 id="services">What we do</h1>
             <p>
-                We are a web and mobile development shop.  We are the first of its kind on Navajo land.  Come to us and
+                We are a web and mobile development shop.  We are the first of its kind on Navajoland.  Come to us and
                 we will provide you with the best and most up to date development for your mobile and web applications.
             </p>
         </div>

@@ -39,7 +39,7 @@
                                     <h1>Ryan Sam</h1>
                                 <br>
                                     <h2>-Photographer<br>
-                                    -Database set up<br>
+                                    -Server Administrator<br>
                                     -Developer<br>
                                     </h2>
                                 </p>
@@ -66,10 +66,10 @@
                                 <p>
                                     <h1>GJ Gordy</h1>
                                  <br>
-                                    <h2>-Web Consulting<br>
+                                    <h2>-Web Consultant<br>
                                     -Graphic Designer<br>
                                     -Developer<br>
-                                    -Writer<br>
+                                    -Managing Editor<br>
                                     </h2>
                                 </p>
                             </div>
@@ -95,9 +95,9 @@
                                     <h1>Marty Buck</h1>
                                  <br>
                                     <h2>
-                                    -Database set up<br>
+                                    -Client Account Specialist<br>
                                     -Graphic Designer<br>
-                                    -Wire Framing<br>
+                                    -UX Designer<br>
                                     -Developer<br>
                                     </h2>
                                 </p>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Contac</title>
+    <title>Contact</title>
     <?php require_once("lib/head-utils.php");?>
 </head>
 
@@ -12,11 +12,13 @@
 
 <div class="container">
     <div class="jumbotron">
-        <h1 id="contact" class="text-center">Contact Information</h1>
+        <h1 id="contact" class="text-center">Contact Us</h1>
+        <br>
+        <br>
         <address class="text-center">
             <strong><span id="cheiiAddress">Cheii's Web Development</span></strong><br>
-            Farmington, NM 87499<br>
-            <abbr title="Phone">Phone</abbr> (505) 427-2090
+            P.O. Box 720 Farmington, NM 87499<br>
+            <abbr title="Phone">Phone:</abbr> (602) 323-4132
          </address>
 <!--        <form class="form-inline">-->
 <!--            <div class="form-group">-->
