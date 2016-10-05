@@ -11,18 +11,17 @@
 
 <?php require_once("navBar.php");?>
 
-<div class="row">
+<br>
+<br>
 
+<div class="row">
+    
     <div id="meetTheTeam" class="container">
 
 
         <div class="col-md-9">
 
             <h1 id="standOut">Meet The Team</h1>
-            <br>
-            <br>
-
-
 
             <div id="bg">
                 <div id="search-container">
@@ -111,6 +110,9 @@
 
     </div>
 
+    <br>
+    <br>
+
 
         <div id="aboutDevShop" class="container">
 
@@ -133,6 +135,7 @@
     <br>
     <br>
     <br>
+    
 
 </div>
 

@@ -44,6 +44,11 @@
     </div>
 </div>
 
+
+
+<div class="fb-like" data-href="https://www.facebook.com/cheiidevshop/?ref=aymt_homepage_panel" data-width="300 x 300" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+
+
 </body>
 
 <style>
@@ -53,7 +58,8 @@
     body {
         background-image: url("/lib/images/cheiisSkies.png");
         background-size: cover;
-        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-attachment: ;
     }
 
     #cheiiAddress {
@@ -62,6 +68,7 @@
 </style>
 
 <footer>
+
     <?php require_once("footer.php");?>
 </footer>
 
