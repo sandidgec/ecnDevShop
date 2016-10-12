@@ -106,6 +106,34 @@
                 </div>
             </div>
 
+            <br>
+
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="developers">
+                                    <img src="/lib/images/developers/kriegB.png">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                <h1>Krieg Benally</h1>
+                                <br>
+                                <h2>-Photographer<br>
+                                    -Videographer<br>
+                                    -Developer<br>
+                                    -Graphic Designer<br>
+                                </h2>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
