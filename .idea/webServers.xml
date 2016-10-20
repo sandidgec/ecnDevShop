@@ -2,11 +2,12 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="8117b9e2-96c4-4aae-b173-a73e9e7fb08c" name="ecnDevShop" url="http://104.131.171.103">
-        <fileTransfer host="104.131.171.103" port="22" rootFolder="/var/www/html/" accessType="SFTP" password="dfcedfcfdfdcdfd9dfc2dfc5dfdadf98df9adf9bdf9c" username="root">
+      <webServer id="8117b9e2-96c4-4aae-b173-a73e9e7fb08c" name="ecnDevShop" url="http://cheiidevshop.com">
+        <fileTransfer host="cheiidevshop.com" port="22" rootFolder="/var/www/cheiidevshop.com" accessType="SFTP" password="dfc8dfc5dfc5dfdedfc9dfcbdfc7dfdadf98df9adf9bdf9f" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

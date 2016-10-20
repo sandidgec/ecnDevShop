@@ -48,8 +48,8 @@
                 </div>
             </div>
 
-            <br>
 
+            <br>
 
             <div id="bg">
                 <div id="search-container">
@@ -78,7 +78,6 @@
             </div>
             <br>
 
-
             <div id="bg">
                 <div id="search-container">
                     <div id="search-bg"></div>
@@ -105,7 +104,6 @@
                     </div>
                 </div>
             </div>
-
             <br>
 
             <div id="bg">
@@ -135,6 +133,7 @@
             </div>
 
         </div>
+        
 
     </div>
 
@@ -164,7 +163,7 @@
     <br>
     <br>
     
-
+  
 </div>
 
 </body>

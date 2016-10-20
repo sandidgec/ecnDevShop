@@ -10,11 +10,9 @@
 
 <?php require_once("navBar.php");?>
 
-<div class="container">
+<div class="container" id="top">
     <div class="jumbotron">
         <h1 id="contact" class="text-center">Contact Us</h1>
-        <br>
-        <br>
         <address class="text-center">
             <strong><span id="cheiiAddress">Cheii's Web Development</span></strong><br>
             P.O. Box 720 Farmington, NM 87499<br>
@@ -45,16 +43,17 @@
 </div>
 
 
-
 <div class="fb-like" data-href="https://www.facebook.com/cheiidevshop/?ref=aymt_homepage_panel" data-width="300 x 300" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 
 
 </body>
 
 <style>
+
     #contact {
-        margin: 0;
+        margin-bottom: 20px;
     }
+
     body {
         background-image: url("/lib/images/cheiisSkies.png");
         background-size: cover;
