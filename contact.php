@@ -17,7 +17,6 @@
             <strong><span id="cheiiAddress">Cheii's Web Development</span></strong><br>
             P.O. Box 720 Farmington, NM 87499<br>
             <abbr title="Phone">Phone:</abbr> (602) 323-4132
-         </address>
             <abbr title="Email">Email:</abbr> cheiisdevshop@gmail.com
          </address>
 <!--        <form class="form-inline">-->
@@ -74,5 +73,3 @@
 </footer>
 
 <script src="lib/js/glideScroll.js"></script>
-
-
