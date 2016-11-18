@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="ecnDevShop" uploadOnCheckin="8117b9e2-96c4-4aae-b173-a73e9e7fb08c">
-    <serverData>
-      <paths name="ecnDevShop">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
     <option name="myUploadOnCheckinName" value="ecnDevShop" />
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
