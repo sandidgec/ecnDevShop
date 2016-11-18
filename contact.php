@@ -20,6 +20,8 @@
             P.O. Box 720 Farmington, NM 87499<br>
             <abbr title="Phone">Phone:</abbr> (602) 323-4132
          </address>
+            <abbr title="Email">Email:</abbr> cheiisdevshop@gmail.com
+         </address>
 <!--        <form class="form-inline">-->
 <!--            <div class="form-group">-->
 <!--                <label for="exampleInputEmail1"> Name </label>-->
