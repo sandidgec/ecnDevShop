@@ -7,6 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand"  href="index.php"><span></span>Cheii's DevShop</a>
         </div>
@@ -17,6 +18,7 @@
                 <li><a href="portfolio.php">Portfolio</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
+                <li><a href="churchPackages.php">Church Packages</a></li>
                 <li><a href="https://www.facebook.com/cheiidevshop/" target="_blank">
                         <i class="fa fa-facebook someicons" aria-hidden="true"></i>
                     </a></li>
@@ -27,4 +29,3 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
