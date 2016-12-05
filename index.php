@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="lib/css/services.css">
 
     <link rel="stylesheet" href="contact.php" />
+
+    <meta name="google-site-verification" content="jmzbsSiI_fIk7J9VodL1CS3AhZjipUa6IgKBjkqjJu8" />
 </head>
 
 <body>
@@ -31,6 +33,9 @@
             <p>
                 In the Diné culture the Horned Toad is addressed as “grandpa” (cheii). It possesses spiritual power.
                 When you see one, pick it up and rub it on your chest and say, “I will be in good health and harmony”.
+            </p>
+
+            <p>With wisdom and patience, we want to help tell your story.
             </p>
         </div>
 
