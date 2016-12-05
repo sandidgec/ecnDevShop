@@ -30,7 +30,29 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="developers">
-                                    <img src="/lib/images/developers/ryanS.png">
+                                    <img src="/lib/images/developers/groupPhoto.NEF">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                    <h1>The Cheii Team</h1>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="developers">
+                                    <img src="/lib/images/developers/ryanSam.NEF">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
@@ -57,7 +79,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="clergy">
-                                    <img src="/lib/images/developers/gjG.jpg">
+                                    <img src="/lib/images/developers/gjGordy.NEF">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
@@ -85,7 +107,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="clergy">
-                                    <img src="/lib/images/developers/martyB.jpg">
+                                    <img src="/lib/images/developers/martyBuck.jpg">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">

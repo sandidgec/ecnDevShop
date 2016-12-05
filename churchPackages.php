@@ -8,28 +8,22 @@
 </head>
 
 <body>
+  <?php require_once("navBar.php");?>
+  <br>
+  <br>
   <div id="bg">
-      <div id="search-container">
-          <div id="search-bg"></div>
-          <div id="search">
-              <div class="row">
-                  <div class="col-lg-4">
-                      <div class="thumbnail" id="clergy">
-                          <img src="/lib/images/developers/martyB.jpg">
-                      </div>
-                  </div>
+      <div id="packageContainer">
                   <div class="col-lg-8" id="text">
                       <p>
                           <h1>Deacon Packages</h1>
                        <br>
-                      
-                          <h2>-3 Pages (Home, About Us, Contact [navigation bar]) Full Price Pages ($100)<br>
+                          <h2>Three Pages (Home, About Us, Contact [navigation bar]) <br>
                           <h3>Home<br>
                             <h4>Image Carousel<br>
-                            <h4>3 images with links to pages<br>
+                            <h4>Three images with links to pages<br>
 
                           <h3>About Us (About, Welcome, Explore, etc.)<br>
-                            <h4>1 image<br>
+                            <h4>One image<br>
                             <h4>Text about Parish (how we started, who we are, our beliefs, etc.)<br>
 
                           <h3>Contact
@@ -37,10 +31,14 @@
                             <h4>Contact Form<br>
                             <h4>Address, phone, email & social media tags.
 
+                          <h3>Up to three sub pages with 1 image per page and text-If more pages are needed, see price range<br>
+                            <h4>Can be drop down category off on eof the above<br>
+                            <h4>Can choose three or make up your own (donate, calendar, ministries, worshop, etc.)
 
 
 
-                      </p>
+
+
                   </div>
               </div>
           </div>
@@ -52,22 +50,9 @@
       <div id="search-container">
           <div id="search-bg"></div>
           <div id="search">
-              <div class="row">
-                  <div class="col-lg-4">
-                      <div class="thumbnail" id="developers">
-                          <img src="/lib/images/developers/kriegB.png">
-                      </div>
-                  </div>
                   <div class="col-lg-8" id="text">
-                      <p>
-                      <h1>Krieg Benally</h1>
-                      <br>
-                      <h2>-Photographer<br>
-                          -Videographer<br>
-                          -Developer<br>
-                          -Graphic Designer<br>
-                      </h2>
-                      </p>
+
+
                   </div>
               </div>
           </div>
