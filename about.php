@@ -57,7 +57,7 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>Ryan Sam 1</h1>
+                                    <h1>Ryan Sam 12.5</h1>
                                 <br>
                                     <h2>-Photographer<br>
                                     -Server Administrator<br>
