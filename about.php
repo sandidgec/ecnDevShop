@@ -15,7 +15,7 @@
 <br>
 
 <div class="row">
-    
+
     <div id="meetTheTeam" class="container">
 
 
@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>Ryan Sam</h1>
+                                    <h1>Ryan Sam 1</h1>
                                 <br>
                                     <h2>-Photographer<br>
                                     -Server Administrator<br>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <br>
 
             <div id="bg">
@@ -163,8 +163,8 @@
     <br>
     <br>
     <br>
-    
-  
+
+
 </div>
 
 </body>
