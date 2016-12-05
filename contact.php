@@ -44,7 +44,6 @@
     </div>
 </div>
 
-
 <div class="fb-like" data-href="https://www.facebook.com/cheiidevshop/?ref=aymt_homepage_panel" data-width="300 x 300" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 
 
@@ -72,5 +71,6 @@
 
     <?php require_once("footer.php");?>
 </footer>
+
 
 <script src="lib/js/glideScroll.js"></script>

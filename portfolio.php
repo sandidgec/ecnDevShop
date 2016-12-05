@@ -9,10 +9,10 @@
 
 <?php require_once("navBar.php");?>
 
-  div class="container"
+  <div class="container">
 <div class="jumbotron">
        <h1 class="text-center">Our Work</h1>
-       <p class="text-center">Click to view portfolios</p>
+       <p class="text-center">Click to view portfolios Test</p>
  </div>
  </div>
 

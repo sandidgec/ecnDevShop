@@ -48,7 +48,6 @@
                 </div>
             </div>
 
-
             <br>
 
             <div id="bg">
@@ -76,6 +75,7 @@
                     </div>
                 </div>
             </div>
+            
             <br>
 
             <div id="bg">
@@ -104,6 +104,7 @@
                     </div>
                 </div>
             </div>
+
             <br>
 
             <div id="bg">
@@ -133,7 +134,7 @@
             </div>
 
         </div>
-        
+
 
     </div>
 
