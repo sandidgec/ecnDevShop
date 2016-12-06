@@ -1,0 +1,44 @@
+h1 {
+    color: floralwhite;
+    font-weight: 300;
+    front-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: floralwhite;
+    font-weight: 200;
+    front-size: 1rem;
+    text-align: left;
+}
+
+h3 {
+    color: floralwhite;
+    font-weight: 150;
+    front-size: 1rem;
+    text-align: left;
+}
+
+h4 {
+    color: floralwhite;
+    font-weight: 150;
+    front-size: 1rem;
+    text-align: left;
+}
+
+#deaconPackage {
+  background-color: rgba(87, 74, 130, 0.89);
+}
+
+#vicarPackage {
+  background-color: rgba(67, 121, 127, 0.89);
+}
+
+#bishopPackage {
+  background-color: rgba(66, 148, 106, 0.89);
+}
+
+#standOut {
+    color: #8cd0d7;
+    font-weight: 300;
+    font-size: 4rem;
