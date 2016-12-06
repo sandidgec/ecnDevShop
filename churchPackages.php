@@ -97,7 +97,7 @@
 
                                           <h1 id="standOut">Bishop Packages- Diocese (14 Total Pages)</h1>
                                        <br>
-                                          <h2>Eight Pages (Home, About Us, Contact, Find A Church. plus two [navigation bar]) <br>
+                                          <h2>Eight Pages (Home, About Us, Contact, Find A Church, plus two [navigation bar]) <br>
                                           <h3>Home<br>
                                             <h4>-Image Carousel<br>
                                             <h4>-Three to six images with links to pages<br>

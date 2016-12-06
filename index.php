@@ -115,12 +115,16 @@
             <div class="row">
                 <div class="col-md-3">
                     <div>
-                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">Mobile Development<br><span class="muted"></span></h2>
-                    <p class="lead">Bring us your idea's for a mobile app.  We'll bring it to life.
+                    <h2 class="featurette-heading">Professional Email Setup<br><span class="muted"></span></h2>
+                    <p class="lead">The first thing every business owner needs is a professional email address. After you setup
+                        your website, the next most important to do is create a professional branded email address.
+                        In this article, we will show you how to setup professional email address with Google Apps and Gmail.
+                        A professional email is the one that has your business name in it.
+                        For example, john@myphotostudio.com is a professional email address.
                     </p>
                 </div>
             </div>
@@ -157,16 +161,16 @@
             <div class="row">
                 <div class="col-md-3">
                     <div>
-                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">Professional Email Setup<br><span class="muted"></span></h2>
-                    <p class="lead">The first thing every business owner needs is a professional email address. After you setup
-                        your website, the next most important to do is create a professional branded email address.
-                        In this article, we will show you how to setup professional email address with Google Apps and Gmail.
-                        A professional email is the one that has your business name in it.
-                        For example, john@myphotostudio.com is a professional email address.
+                    <h2 class="featurette-heading">ETSY Integration<br><span class="muted"></span></h2>
+                    <p class="lead">Etsy is a marketplace where people around the world connect, both online and offline, to make, sell and buy unique goods.
+                        We can help you set your Etsy account and maintain it.  The heart and soul of Etsy is
+                        our global community: the creative entrepreneurs who use Etsy to sell what they make or curate, the shoppers looking for
+                        things they can’t find anywhere else, the manufacturers who partner with Etsy sellers to help them grow,
+                        and the Etsy employees who maintain and nurture our marketplace.
                     </p>
                 </div>
             </div>
@@ -202,16 +206,14 @@
             <div class="row">
                 <div class="col-md-3">
                     <div>
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">ETSY Integration<br><span class="muted"></span></h2>
-                    <p class="lead">Etsy is a marketplace where people around the world connect, both online and offline, to make, sell and buy unique goods.
-                        We can help you set your Etsy account and maintain it.  The heart and soul of Etsy is
-                        our global community: the creative entrepreneurs who use Etsy to sell what they make or curate, the shoppers looking for
-                        things they can’t find anywhere else, the manufacturers who partner with Etsy sellers to help them grow,
-                        and the Etsy employees who maintain and nurture our marketplace.
+                    <h2 class="featurette-heading">Graphic Design<br><span class="muted"></span></h2>
+                    <p class="lead">Graphic design, also known as communication design, is the art and practice of
+                        planning and projecting ideas and experiences with visual and textual content. The form of the
+                        communication can be physical or virtual, and may include images, words, or graphic forms.
                     </p>
                 </div>
             </div>
@@ -249,42 +251,21 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div>
-                                <i class="fa fa-pencil" aria-hidden="true"></i>
+                                <i class="fa fa-camera" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <h2 class="featurette-heading">Graphic Design<br><span class="muted"></span></h2>
-                            <p class="lead">Graphic design, also known as communication design, is the art and practice of
-                                planning and projecting ideas and experiences with visual and textual content. The form of the
-                                communication can be physical or virtual, and may include images, words, or graphic forms.
+                            <h2 class="featurette-heading">Photography Services<br><span class="muted"></span></h2>
+                            <p class="lead">Photography is the science, art, application and practice of creating durable images
+                                by recording light or other electromagnetic radiation, either electronically by means of an image
+                                sensor, or chemically by means of a light-sensitive material such as photographic film.
+                                This service will help you showcase your work professional on your website.  And we can help with that.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-    <hr class="featurette-divider">
-
-    <div class="container">
-        <div class="featurette">
-            <div class="row">
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">Photography Services<br><span class="muted"></span></h2>
-                    <p class="lead">Photography is the science, art, application and practice of creating durable images
-                        by recording light or other electromagnetic radiation, either electronically by means of an image
-                        sensor, or chemically by means of a light-sensitive material such as photographic film.
-                        This service will help you showcase your work professional on your website.  And we can help with that.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div>
-                        <i class="fa fa-camera" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <hr class="featurette-divider">
 
