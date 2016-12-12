@@ -18,7 +18,22 @@
                 <li><a href="portfolio.php">Portfolio</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
-                <li><a href="churchPackages.php">Church Packages</a></li>
+
+            <ul class="nav navbar-nav navbar-right">
+             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navtext">Church Packages</span><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="deaconPackage.php">Deacon Package</a></li>
+                <li><a href="vicarPackage.php">Vicar Package</a></li>
+                <li><a href="bishopPackage.php">Bishop Package</a></li>
+          <!--  <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>-->
+              </ul>
+             </li>
+
+
                 <li><a href="https://www.facebook.com/cheiidevshop/" target="_blank">
                         <i class="fa fa-facebook someicons" aria-hidden="true"></i>
                     </a></li>
@@ -26,6 +41,7 @@
                         <i class="fa fa-twitter someicons" aria-hidden="true"></i>
                     </a></li>
             </ul>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
