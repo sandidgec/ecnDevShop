@@ -22,23 +22,23 @@
 
                         <h1 id="standOut">Deacon Package- Small Congregation (6 Total Pages)</h1>
                      <br>
-                        <h2>Three Pages (Home, About Us, Contact [navigation bar]) <br>
-                        <h3>Home<br>
-                          <h4>-Image Carousel<br>
-                          <h4>-Three images with links to pages<br>
+                        <h2>In the Deacon's Package you will have three pages on the navigation bar: Home, About Us, and Contact Us. <br>
+                        <h3>Your Home page will be your first page on your website.<br>
+                          <h4>-On your home page, you have the option to have an image slider, those images are horizontal silder slides and usually with a momentum effect.<br>
+                          <h4>-There will be three images with links to pages.<br>
 
-                        <h3>About Us (About, Welcome, Explore, etc.)<br>
-                          <h4>-One image<br>
-                          <h4>-Text about Parish (how we started, who we are, our beliefs, etc.)<br>
+                        <h3>The About Us page helps you describe or idenify your churches attributes.  You can use other titles; Welcome, Explore, etc.<br>
+                          <h4>-On your about page, there will be one image.<br>
+                          <h4>-Text about your Parish, like how we started, who we are, our beliefs, etc.<br>
 
-                        <h3>Contact
-                          <h4>-Map of Church location<br>
-                          <h4>-Contact Form<br>
-                          <h4>-Address, phone, email & social media tags.
+                        <h3>The Contact Us page will help your vistors find your locations and give them options of how to contact you.
+                          <h4>-On your contact page, there will be a map of your church location.<br>
+                          <h4>-Contact Form, where they can enter their contact information to and send to you.<br>
+                          <h4>-Your current address, phone, email & social media tags will be shown for their information.
 
-                        <h3>Up to three sub pages with one image per page and text-If more pages are needed, see price range<br>
-                          <h4>Can be drop down category off one of the above<br>
-                          <h4>Can choose three or make up your own (donate, calendar, ministries, worshop, etc.)
+                        <h3>You will have up to three sub pages with one image per page and text. If more pages are needed, price may range.<br>
+                          <h4>There will be a drop down category off one of the above.<br>
+                          <h4>You can choose three or make up your own: donate, calendar, ministries, worship, etc.
 
                       </div>
                     </div>
