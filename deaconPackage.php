@@ -4,7 +4,7 @@
 <head>
     <title>Deacon Package</title>
     <?php require_once("lib/head-utils.php");?>
-    <link rel="stylesheet" href="lib/css/deaconPackages.css">
+    <link rel="stylesheet" href="lib/css/deaconPackage.css">
 </head>
 
 <body>
