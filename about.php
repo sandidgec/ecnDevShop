@@ -4,6 +4,8 @@
 <head>
     <title>About</title>
     <?php require_once("lib/head-utils.php");?>
+    <link rel="short icon" href="/lib/images/cheiiDevShopLogo120.png"/>
+
     <link rel="stylesheet" href="lib/css/about.css">
 </head>
 
@@ -35,7 +37,7 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>The Cheii Team</h1>
+                                <h1>The Cheii Team</h1>
 
                                 </p>
                             </div>
@@ -57,12 +59,12 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>Ryan Sam</h1>
+                                <h1>Ryan Sam </h1>
                                 <br>
-                                    <h2>-Photographer<br>
+                                <h2>-Photographer<br>
                                     -Server Administrator<br>
                                     -Developer<br>
-                                    </h2>
+                                </h2>
                                 </p>
                             </div>
                         </div>
@@ -84,13 +86,13 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>GJ Gordy</h1>
-                                 <br>
-                                    <h2>-Web Consultant<br>
+                                <h1>GJ Gordy</h1>
+                                <br>
+                                <h2>-Web Consultant<br>
                                     -Graphic Designer<br>
                                     -Developer<br>
                                     -Managing Editor<br>
-                                    </h2>
+                                </h2>
                                 </p>
                             </div>
                         </div>
@@ -112,14 +114,14 @@
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>Marty Buck</h1>
-                                 <br>
-                                    <h2>
+                                <h1>Marty Buck</h1>
+                                <br>
+                                <h2>
                                     -Client Account Specialist<br>
                                     -Graphic Designer<br>
                                     -UX Designer<br>
                                     -Developer<br>
-                                    </h2>
+                                </h2>
                                 </p>
                             </div>
                         </div>
@@ -158,8 +160,7 @@
 
 
 
-    </div>
-
+        </div>
     <br>
     <br>
 

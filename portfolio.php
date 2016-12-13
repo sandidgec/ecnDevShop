@@ -3,6 +3,8 @@
 
 <head>
     <?php require_once("lib/head-utils.php");?>
+    <link rel="short icon" href="/lib/images/cheiiDevShopLogo120.png"/>
+
 </head>
 
 <body>
