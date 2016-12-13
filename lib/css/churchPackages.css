@@ -19,13 +19,6 @@ h3 {
     text-align: left;
 }
 
-h4 {
-    color: floralwhite;
-    font-weight: 150;
-    front-size: 1rem;
-    text-align: left;
-}
-
 #deaconPackage {
   background-color: black;
 }
@@ -35,23 +28,13 @@ h4 {
 }
 
 #bishopPackage {
-  background-color: rgba(66, 148, 106, 0.89);
-}
-
-.row {
   background-color: black;
 }
+
 
 #standOut {
     color: #8cd0d7;
     font-weight: 300;
     font-size: 4rem;
     background-color: rgba(67, 121, 127, 0.89);
-}
-
-img {
-    vertical-align: middle;
-}
-img {
-    border: 0;
 }
