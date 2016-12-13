@@ -19,18 +19,18 @@ h3 {
     text-align: left;
 }
 
-#vicarPackage {
-  background-color: rgba(66, 148, 106, 0.89);
+#deaconPackage {
+  background-color: rgba(5, 5, 5, 0.96);
 }
 
-#bishopPackage {
-  background-color: rgba(66, 148, 106, 0.89);
+.deacon {
+  background-color: rgba(10, 21, 76, 1);
 }
 
 
 #standOut {
+    text-align: center;
     color: #8cd0d7;
     font-weight: 300;
     font-size: 4rem;
-    background-color: rgba(67, 121, 127, 0.89);
 }

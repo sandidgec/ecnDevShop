@@ -4,7 +4,7 @@
 <head>
     <title>Deacon Package</title>
     <?php require_once("lib/head-utils.php");?>
-    <link rel="stylesheet" href="lib/css/churchPackages.css">
+    <link rel="stylesheet" href="lib/css/deaconPackages.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 <br>
 
             <!-- START THE PACKAGES -->
-            <div class="row">
+            <div class="deacon">
 
               <h1 id="standOut">Deacon Package- Small Congregation (6 Total Pages)</h1>
 
@@ -103,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+              </div>
 
                 <br>
                 <br>
