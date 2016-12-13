@@ -27,7 +27,7 @@ h4 {
 }
 
 #deaconPackage {
-  background-color: rgba(87, 74, 130, 0.89);
+  background-color: black;
 }
 
 #vicarPackage {
@@ -42,3 +42,12 @@ h4 {
     color: #8cd0d7;
     font-weight: 300;
     font-size: 4rem;
+    background-color: rgba(67, 121, 127, 0.89);
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
