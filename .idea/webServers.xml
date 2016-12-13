@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="38d912ae-8b40-4323-b04e-85157d2cc4f3" name="ecnDevShop" url="http://107.170.247.47">
-        <fileTransfer host="107.170.247.47" port="22" rootFolder="/var/www/html/ecnDevShop" accessType="SFTP" password="dfcedf99dfdcdfe3dfdedfffdfda" username="root">
+        <fileTransfer host="107.170.247.47" port="22" rootFolder="/var/www/html/cheiis" accessType="SFTP" password="dfcedf99dfdcdfe3dfdedfffdfda" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="developers">
-                                    <img src="/lib/images/developers/groupPhoto.NEF">
+                                    <img src="/lib/images/developers/group1.JPG">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
@@ -52,12 +52,12 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="developers">
-                                    <img src="/lib/images/developers/ryanSam.NEF">
+                                    <img src="/lib/images/developers/ryan1.JPG">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
                                 <p>
-                                    <h1>Ryan Sam 12.5</h1>
+                                    <h1>Ryan Sam</h1>
                                 <br>
                                     <h2>-Photographer<br>
                                     -Server Administrator<br>
@@ -79,7 +79,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="clergy">
-                                    <img src="/lib/images/developers/gjGordy.NEF">
+                                    <img src="/lib/images/developers/gjGordy.JPG">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
@@ -107,7 +107,7 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="thumbnail" id="clergy">
-                                    <img src="/lib/images/developers/martyBuck.NEF">
+                                    <img src="/lib/images/developers/martyBuck.jpg">
                                 </div>
                             </div>
                             <div class="col-lg-8" id="text">
@@ -128,6 +128,32 @@
             </div>
 
             <br>
+            <div id="bg">
+                <div id="search-container">
+                    <div id="search-bg"></div>
+                    <div id="search">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="thumbnail" id="clergy">
+                                    <img src="/lib/images/developers/brighterKreig.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-8" id="text">
+                                <p>
+                                <h1>Krieg Benally</h1>
+                                <br>
+                                <h2>
+                                    -Client Account Specialist<br>
+                                    -Graphic Designer<br>
+                                    -UX Designer<br>
+                                    -Developer<br>
+                                </h2>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
