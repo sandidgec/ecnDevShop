@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div>
-                                    <img src="/lib/images/churchPackages/home.png">
+                                    <img src="/lib/images/churchPackages/home.jpg">
                                 </div>
                             </div>
                             <div class="col-md-9">
