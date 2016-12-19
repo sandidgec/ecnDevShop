@@ -19,6 +19,10 @@ h3 {
     text-align: left;
 }
 
+.legal1 {
+  text-align: center;
+}
+
 #deaconPackage {
   background-color: rgba(0, 0, 0, 0.77);
 }
@@ -26,6 +30,13 @@ h3 {
 #standOut {
     text-align: center;
     color: #8cd0d7;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+#standOut1 {
+    text-align: center;
+    color: #1f9e5e;
     font-weight: 300;
     font-size: 4rem;
 }

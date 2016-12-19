@@ -26,13 +26,15 @@
                     <div class="churchPackages">
                         <div class="row">
 
-                          <p class="lead">
+                          <h2 id="standOut1">Home</h2>
+
+                          <p class="lead1">
                              <h3>In the Deacon's Package you will have three pages on the navigation bar: Home, About Us, and Contact Us.
                           </p>
 
                             <div class="col-md-6">
                                 <div>
-                                    <img src="/lib/images/churchPackages/home.JPG" alt="home" width=500"" height="600">
+                                    <img src="/lib/images/churchPackages/home.JPG" alt="home" width="550" height="600">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -56,9 +58,10 @@
                                 </p>
                             </div>
                             <div class="col-md-6">
-                                <img src="/lib/images/churchPackages/About.JPG" alt="about" width=500"" height="600">
+                                <img src="/lib/images/churchPackages/About.JPG" alt="about" width=550"" height="600">
                           </div>
                     </div>
+                  </div>
                 </div>
                 <br>
                 <div id="deaconPackage" class="container">
@@ -66,7 +69,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div>
-                                    <img src="/lib/images/churchPackages/contact.JPG" alt="contact" width=500"" height="600">
+                                    <img src="/lib/images/churchPackages/contact.JPG" alt="contact" width=550"" height="600">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -87,12 +90,15 @@
                             <div class="col-md-6">
                                 <p class="lead">
                                   <h3>You will have up to three sub pages with one image per page and text. If more pages are needed, price may range.<br>
-                                  <h3>There will be a drop down category off one of the above.<br>
+                                  8765A`-=-09876543+h3>T
+                                  ';LKMJNHGFDSWQA
+
+                                  ere will be a drop down category off one of the above.<br>
                                   <h3>You can choose three or make up your own: donate, calendar, ministries, worship, etc.
                                 </p>
                             </div>
                             <div class="col-md-6">
-                                <img src="/lib/images/churchPackages/Service.JPG" alt="service" width=500"" height="600">
+                                <img src="/lib/images/churchPackages/Service.JPG" alt="service" width=550"" height="600">
                             </div>
                         </div>
                     </div>
