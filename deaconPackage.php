@@ -26,13 +26,13 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div>
-                                    <img src="/lib/images/churchPackages/home.jpg">
+                                    <img src="/lib/images/churchPackages/home.JPG">
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <p class="lead">
                                    <h3>In the Deacon's Package you will have three pages on the navigation bar: Home, About Us, and Contact Us. <br>
-                                   <h3>Your Home page will be your first page on your website.<br>
+                                   <h3>Your Home page will be your first page on your website. <br>
                                    <h3>On your home page, you have the option to have an image slider, those images are horizontal silder slides and usually with a momentum effect.<br>
                                    <h3>There will be three images with links to pages.<br>
                                 </p>
@@ -48,11 +48,11 @@
                                 <p class="lead">
                                   <h3>The About Us page helps you describe or idenify your churches attributes.  You can use other titles; Welcome, Explore, etc.<br>
                                   <h3>On your about page, there will be one image.<br>
-                                  <h3>Text about your Parish, like how we started, who we are, our beliefs, etc.<br>
+                                  <h3>Text about your Parish, like how we started, who we are, our beliefs, etc. <br>
                                 </p>
                             </div>
                             <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/About.jpg">
+                                <img src="/lib/images/churchPackages/About.JPG">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div>
-                                    <img src="/lib/images/churchPackages/contact.jpg">
+                                    <img src="/lib/images/churchPackages/contact.JPG">
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -89,7 +89,7 @@
                                 </p>
                             </div>
                             <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/Service.jpg">
+                                <img src="/lib/images/churchPackages/Service.JPG">
 
                             </div>
                         </div>
