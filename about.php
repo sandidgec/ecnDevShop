@@ -38,7 +38,6 @@
                             <div class="col-lg-8" id="text">
                                 <p>
                                 <h1>The Cheii Team</h1>
-
                                 </p>
                             </div>
                         </div>
