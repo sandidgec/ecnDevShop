@@ -17,21 +17,26 @@
             <!-- START THE PACKAGES -->
             <div class="deacon">
 
-              <h1 id="standOut">Deacon Package- Small Congregation (6 Total Pages)</h1>
-
-              <hr class="featurette-divider">
-
                 <div id="deaconPackage" class="container">
+
+                  <h1 id="standOut">Deacon Package- Small Congregation (6 Total Pages)</h1>
+
+                  <hr class="featurette-divider">
+
                     <div class="churchPackages">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <div>
-                                    <img src="/lib/images/churchPackages/home.jpg">
+                                    <img src="/lib/images/churchPackages/home.JPG" alt="home" width=500"" height="600">
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-6">
+
                                 <p class="lead">
-                                   <h3>In the Deacon's Package you will have three pages on the navigation bar: Home, About Us, and Contact Us. <br>
+                                   <h3>In the Deacon's Package you will have three pages on the navigation bar: Home, About Us, and Contact Us.
+                                </p>
+
+                                <p class="lead">
                                    <h3>Your Home page will be your first page on your website.<br>
                                    <h3>On your home page, you have the option to have an image slider, those images are horizontal silder slides and usually with a momentum effect.<br>
                                    <h3>There will be three images with links to pages.<br>
@@ -44,15 +49,15 @@
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-6">
                                 <p class="lead">
                                   <h3>The About Us page helps you describe or idenify your churches attributes.  You can use other titles; Welcome, Explore, etc.<br>
                                   <h3>On your about page, there will be one image.<br>
                                   <h3>Text about your Parish, like how we started, who we are, our beliefs, etc.<br>
                                 </p>
                             </div>
-                            <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/About.jpg">
+                            <div class="col-md-6">
+                                <img src="/lib/images/churchPackages/About.JPG" alt="about" width=500"" height="600">
                             </div>
                         </div>
                     </div>
@@ -61,12 +66,12 @@
                 <div id="deaconPackage" class="container">
                     <div class="churchPackages">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <div>
-                                    <img src="/lib/images/churchPackages/contact.jpg">
+                                    <img src="/lib/images/churchPackages/contact.JPG" alt="contact" width=500"" height="600">
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-6">
                                 <p class="lead">
                                   <h3>The Contact Us page will help your vistors find your locations and give them options of how to contact you.
                                   <h3>On your contact page, there will be a map of your church location.<br>
@@ -81,15 +86,15 @@
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
-                            <div class="col-md-9">
+                            <div class="col-md-6">
                                 <p class="lead">
                                   <h3>You will have up to three sub pages with one image per page and text. If more pages are needed, price may range.<br>
                                   <h3>There will be a drop down category off one of the above.<br>
                                   <h3>You can choose three or make up your own: donate, calendar, ministries, worship, etc.
                                 </p>
                             </div>
-                            <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/Service.jpg">
+                            <div class="col-md-6">
+                                <img src="/lib/images/churchPackages/Service.JPG" alt="service" width=500"" height="600">
 
                             </div>
                         </div>
