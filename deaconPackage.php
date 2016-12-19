@@ -40,10 +40,7 @@
                         </div>
                     </div>
                 </div>
-
-                <hr class="featurette-divider">
-
-
+                <br>
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
@@ -55,20 +52,18 @@
                                 </p>
                             </div>
                             <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/about.png">
+                                <img src="/lib/images/churchPackages/About.jpg">
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <hr class="featurette-divider">
-
+                <br>
                 <div id="deaconPackage" class="container">
                     <div class="churchPackages">
                         <div class="row">
                             <div class="col-md-3">
                                 <div>
-                                    <img src="/lib/images/churchPackages/contact.png">
+                                    <img src="/lib/images/churchPackages/contact.jpg">
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -82,10 +77,7 @@
                         </div>
                     </div>
                 </div>
-
-
-                <hr class="featurette-divider">
-
+                <br>
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
@@ -97,7 +89,7 @@
                                 </p>
                             </div>
                             <div class="col-md-3">
-                                <img src="/lib/images/churchPackages/service.png">
+                                <img src="/lib/images/churchPackages/Service.jpg">
 
                             </div>
                         </div>
