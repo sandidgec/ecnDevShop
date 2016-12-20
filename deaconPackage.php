@@ -14,7 +14,7 @@
 <br>
 <br>
 
-            <!-- START THE PACKAGES -->
+            <!-- START OF THE PACKAGES -->
             <div class="deacon">
 
                 <div id="deaconPackage" class="container">
@@ -107,7 +107,7 @@
                 <br>
                 <br>
 
-                <!-- /END THE FEATURETTES -->
+                <!-- /END OF THE PACKAGES -->
 
 </body>
 

@@ -23,6 +23,14 @@ h3 {
   background-color: rgba(0, 0, 0, 0.77);
 }
 
+#vicarPackage {
+  background-color: rgba(0, 0, 0, 0.77);
+}
+
+#bishopPackage {
+  background-color: rgba(0, 0, 0, 0.77);
+}
+
 #standOut {
     text-align: center;
     color: #00a8ad;
