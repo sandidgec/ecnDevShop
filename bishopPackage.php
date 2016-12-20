@@ -39,7 +39,7 @@
                       <p class="lead">
                         <h3>Your Home page will be your first page on your website.<br>
                         <h3>On your home page, you have the option to have an image slider, those images are horizontal silder slides and usually with a momentum effect.<br>
-                        <h3>There will be six images with links to pages.<br>
+                        <h3>There will be six images with links to pages. <br>
                       </p>
                   </div>
               </div>
