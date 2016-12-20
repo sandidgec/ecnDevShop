@@ -50,6 +50,9 @@
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
+
+                        <h2 id="standOut1">About</h2>
+
                             <div class="col-md-6">
                                 <p class="lead">
                                   <h3>The About Us page helps you describe or idenify your churches attributes.  You can use other titles; Welcome, Explore, etc.<br>
@@ -67,6 +70,9 @@
                 <div id="deaconPackage" class="container">
                     <div class="churchPackages">
                         <div class="row">
+
+                          <h2 id="standOut1">Contact</h2>
+
                             <div class="col-md-6">
                                 <div>
                                     <img src="/lib/images/churchPackages/contact.JPG" alt="contact" width=550"" height="600">
@@ -87,13 +93,13 @@
                 <div id="deaconPackage" class="container">
                   <div class="churchPackages">
                       <div class="row">
+
+                        <h2 id="standOut1"></h2>
+
                             <div class="col-md-6">
                                 <p class="lead">
                                   <h3>You will have up to three sub pages with one image per page and text. If more pages are needed, price may range.<br>
-                                  8765A`-=-09876543+h3>T
-                                  ';LKMJNHGFDSWQA
-
-                                  ere will be a drop down category off one of the above.<br>
+                                  <br>
                                   <h3>You can choose three or make up your own: donate, calendar, ministries, worship, etc.
                                 </p>
                             </div>
