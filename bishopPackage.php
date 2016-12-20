@@ -31,7 +31,7 @@
               <div class="row">
                   <div class="col-md-6">
                       <div>
-                          <img src="/lib/images/churchPackages/home.JPG" alt="home" width="550" height="600">
+                          <img src="/lib/images/churchPackages/bishops.JPG" alt="bishops" width="550" height="600">
                       </div>
                   </div>
                   <div class="col-md-6">
