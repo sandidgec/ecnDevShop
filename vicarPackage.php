@@ -15,7 +15,7 @@
 <br>
 
 
-        <!-- START OF THE PACKAGES -->
+        <!-- START THE PACKAGES -->
         <div class="vicar">
 
             <div id="vicarPackage" class="container">
@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img src="/lib/images/churchPackages/vicar.JPG" alt="home" width="550" height="600">
+                                <img src="/lib/images/churchPackages/vicar.JPG" alt="vicar" width="550" height="600">
                             </div>
                         </div>
                         <div class="col-md-6">
