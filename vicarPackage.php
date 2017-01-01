@@ -4,7 +4,9 @@
 <head>
     <title>Vicar Package</title>
     <?php require_once("lib/head-utils.php");?>
+    <link rel="short icon" href="/lib/images/cheiiDevShopLogo120.png"/>
     <link rel="stylesheet" href="lib/css/churchPackages.css">
+    
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img src="/lib/images/churchPackages/vicar.JPG" alt="vicar" width="550" height="600">
+                                <img src="/lib/images/churchPackages/vicarHome.JPG" alt="vicar" width="550" height="600">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -58,7 +60,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <img src="/lib/images/churchPackages/About.JPG" alt="about" width=550"" height="600">
+                            <img src="/lib/images/churchPackages/vicarAbout.JPG" alt="about" width=550"" height="600">
                       </div>
                 </div>
               </div>
@@ -69,7 +71,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img src="/lib/images/churchPackages/contact.JPG" alt="contact" width=550"" height="600">
+                                <img src="/lib/images/churchPackages/vicarContact.JPG" alt="contact" width=550"" height="600">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -99,7 +101,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">
-                            <img src="/lib/images/churchPackages/Service.JPG" alt="service" width=550"" height="600">
+                            <img src="/lib/images/churchPackages/vicarContact.JPG" alt="service" width=550"" height="600">
                         </div>
                     </div>
                 </div>
