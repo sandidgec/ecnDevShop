@@ -23,8 +23,8 @@
              <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navtext">Church Packages</span><span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="deaconPackage.php">Deacon Package</a></li>
-                <li><a href="vicarPackage.php">Vicar Package</a></li>
+                <li><a href="deaconPackage.php">Vicar Package</a></li>
+                <li><a href="vicarPackage.php">Rector Package</a></li>
                 <li><a href="bishopPackage.php">Bishop Package</a></li>
           <!--  <li role="separator" class="divider"></li>
                 <li><a href="#">Separated link</a></li>

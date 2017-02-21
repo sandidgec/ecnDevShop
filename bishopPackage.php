@@ -51,9 +51,9 @@
         <div class="churchPackages">
             <div class="row">
                   <div class="col-md-6">
-                      <h2 id="standOut1">About Us Page</h2>
+                      <h2 id="standOut1">Support Us Page</h2>
                       <p class="lead">
-                        <h3>The About Us page helps you describe or idenify your churches attributes.  You can use other titles such as; Welcome, Explore, etc.<br>
+                        <h3>The Support Us page helps you describe or idenify your churches attributes.  You can use other titles such as; Welcome, Explore, etc.<br>
                         <h3>On your about page, there will be one image.<br>
                         <h3>Text about your Parish, like how we started, who we are, our beliefs, etc. <br>
                       </p>

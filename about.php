@@ -164,7 +164,6 @@
     <br>
 
 
-        <div id="aboutDevShop" class="container">
 
             <div class="col-md-9">
 
@@ -181,13 +180,34 @@
                 </p>
 
             </div>
-        </div>
-    <br>
-    <br>
-    <br>
-
-
+    </div>
 </div>
+
+    <br>
+    <br>
+    <br>
+
+
+<div class="row">
+    <div class="col-xs-4 col-xs-offset-2">
+        <div id="shima" class="thumbnail">
+            <a href="https://shima-of-navajoland.myshopify.com/" target="" >
+                <img src="/lib/images/shima2.png">
+            </a>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="" id="link1" >
+            <a href="http://www.ecofnavajoland.org/" target="">
+                <img src="/lib/images/ecnlogo2017Trans.png" width="250px" height="250px">
+            </a>
+        </div>
+    </div>
+</div>
+<h1><center>Our Partners</center></h1>
+
+<br>
+<br>
 
 </body>
 </html>
