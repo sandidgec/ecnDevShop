@@ -31,11 +31,9 @@
             <h1>Cheii's Web Development</h1>
             <h2>In Navajoland</h2>
             <p>
-                In the Diné culture the Horned Toad is addressed as “grandpa” (cheii). It possesses spiritual power.
-                When you see one, pick it up and rub it on your chest and say, “I will be in good health and harmony”.
-            </p>
+                I“Let us help you tell your story.” We respect our clients, understand their needs and wants, and listen. Serving our clients is our highest priority.
 
-            <p>With wisdom and patience, we want to help tell your story.
+            <p>The mission of Cheii’s Web Development Shop is to help our clients communicate who they are and what they stand for through and elegantly designed, visually stunning website that is easy to navigate as well as easy to update. 
             </p>
         </div>
 
