@@ -16,6 +16,40 @@
 <br>
 <br>
 
+  <h1>Our Core Values
+  </h1>
+
+  <br>
+  
+  <p>
+  <h2>To be Client centered:
+  </h2>
+Our tag line is “Let us help you tell your story.” We respect our clients, understand their needs and wants, and listen. Serving our clients is our highest priority.
+To continue to pursue growth and knowledge and share it:
+Cheii’s never stop learning. We look for ways to challenge ourselves to learn, and grow. We spend time watching video tutorials, business lectures and slide presentations. When we collectively teach each other, we all stand to gain from it.
+  <h2>Be Team-Oriented:
+  </h2>
+Great teams are made up of great people. We help each other, we collaborate, and we celebrate our achievements.
+Build a positive team and family spirit:
+Our best ideas are made when we are surrounded by people we care for. Having a positive and inviting attitude inspires everyone around. We share this family spirit with clients and strive to build relationships with everyone we meet and work with.
+  <h2>Humanity:
+  </h2>
+We believe that is our duty to serve our Church’s Mission. A portion of our earnings go to the Church for outreach and ministries.
+  <h2>To Communicate openly and honestly:
+  </h2>
+When interacting with others, we encourage open communication and honesty. This leads to strong relationships built on trust.
+  <h2>To be one with our Navajo Culture:
+  </h2>
+We understand our Navajo culture and share when possible. We understand that culture and technology can go hand in hand.
+  <h2>To care for all of creation:
+  </h2>
+Take care of the company and clients as they were one’s own family. This also means taking care of creation, which is part of our culture. By taking care of creation, we: Reduce, Reuse, and Recycle.
+
+  </p>
+
+<br>
+<br>
+
 <div class="row">
 
     <div id="meetTheTeam" class="container">
