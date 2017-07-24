@@ -28,22 +28,6 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="devSites">
-            <a href="https://www.cultivatingcoders.com/"><img src="lib/images/devSite/cCoders.png"/></a>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="devSites">
-            <a href="http://www.kriegbenally.com/"><img src="lib/images/devSite/KWD2.png"/></a>
-        </div>
-    </div>
-</div>
-
 
 <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />-->
 <script src="js/main.js" type="text/javascript"></script>-->
