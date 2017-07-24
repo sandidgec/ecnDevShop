@@ -90,112 +90,22 @@
 
     <hr class="featurette-divider">
 
-
     <div class="container">
         <div class="featurette">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">Web Application Development<br> <span class="muted"></span></h2>
-                    <p class="lead">Web application development is the creation of application programs that reside on remote
-                        servers and are delivered to the user’s device over the Internet.
+                    <h2 class="featurette-heading">Pow toons Services<br> <span class="muted"></span></h2>
+                    <p class="lead">This is a video software that we can use to make white board like animation. The new craze right now is marketing videos that are in the form of white board animation, cartoon animation with music and voice overs. Most animations are included with the software, but we can also do custom background and people animations. We have an example up online and will make more soon. Clients can choose how they want it to look, how many slides, custom animations, write a script and provide voice overs or we can do voice overs or purchase professional voice overs for a separate price. 
                     </p>
                 </div>
                 <div class="col-md-3">
-                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <i class="fa fa-paint-brush" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
 
-    </div>
+          <hr class="featurette-divider">
 
-    <hr class="featurette-divider">
-
-    <div class="container">
-        <div class="featurette">
-            <div class="row">
-                <div class="col-md-3">
-                    <div>
-                        <i class="fa fa-mobile" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">Mobile Development<br><span class="muted"></span></h2>
-                    <p class="lead">Bring us your idea's for a mobile app.  We'll bring it to life.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-
-    <div class="container">
-        <div class="featurette">
-            <div class="row">
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">E-Commerce Solutions<br> <span class="muted"></span></h2>
-                    <p class="lead">-Ecommerce allows consumers to electronically exchange goods and services with no
-                        barriers of time or distance. Electronic commerce has expanded rapidly over the past five years
-                        and is predicted to continue at this rate, or even accelerate. In the near future the boundaries
-                        between "conventional" and "electronic" commerce will become increasingly blurred as more and
-                        more businesses move sections of their operations onto the Internet.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <i class="fa fa-exchange" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="container">
-        <div class="featurette">
-            <div class="row">
-                <div class="col-md-3">
-                    <div>
-                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">Professional Email Setup<br><span class="muted"></span></h2>
-                    <p class="lead">The first thing every business owner needs is a professional email address. After you setup
-                        your website, the next most important to do is create a professional branded email address.
-                        In this article, we will show you how to setup professional email address with Google Apps and Gmail.
-                        A professional email is the one that has your business name in it.
-                        For example, john@myphotostudio.com is a professional email address.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-
-    <div class="container">
-        <div class="featurette">
-            <div class="row">
-                <div class="col-md-9">
-                    <h2 class="featurette-heading">Membership System<br> <span class="muted"></span></h2>
-                    <p class="lead">Membership software (also known as an association management system) is a computer software
-                        solution which provides associations, clubs and other membership organizations with the functionality
-                        they require to provide their services to their members.  It normally includes storing and editing
-                        member information in a database, creating, renewing, upgrading and downgrading memberships and
-                        communicating with members by email, social media, telephone or post.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                </div>
-            </div>
-        </div>
-
-
-    <hr class="featurette-divider">
 
     <div class="container">
         <div class="featurette">
@@ -305,7 +215,7 @@
                         hosting provider. With Bluehost, you never have to worry about your website being slow even
                         when there is a lot of traffic. Their 24/7 expert support is always there to help when you
                         need it by phone, email, or live chat. They are rated #1 in web hosting for small businesses.<br><br>
-                            
+
                         Hosting for 36 months, free set up, free domain registration, domain privacy protection, free
                         site backup, search engine jumpstart site lock security, unlimited storage, unlimited email storage.
                     </p>
