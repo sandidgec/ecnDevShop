@@ -30,10 +30,9 @@
         <div class="col-md-8">
             <h1>Cheii's Web Development</h1>
             <h2>In Navajoland</h2>
-            <p>
-                I“Let us help you tell your story.” We respect our clients, understand their needs and wants, and listen. Serving our clients is our highest priority.
-
-            <p>The mission of Cheii’s Web Development Shop is to help our clients communicate who they are and what they stand for through and elegantly designed, visually stunning website that is easy to navigate as well as easy to update. 
+            <p>I“Let us help you tell your story.” We respect our clients, understand their needs and wants, and listen. Serving our clients is our highest priority.
+            </p>
+            <p>The mission of Cheii’s Web Development Shop is to help our clients communicate who they are and what they stand for through and elegantly designed, visually stunning website that is easy to navigate as well as easy to update.
             </p>
         </div>
 
