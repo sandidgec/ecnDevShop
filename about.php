@@ -16,11 +16,18 @@
 <br>
 <br>
 
-  <h1>Our Core Values
-  </h1>
+
+<div class="row">
+
+    <div id="meetTheTeam" class="container">
+
+
+        <div class="col-md-10">
+
+            <h1 id="standOut">Our Core Values</h1>
 
   <br>
-  
+
   <p>
   <h2>To be Client centered:
   </h2>
@@ -44,6 +51,10 @@ We understand our Navajo culture and share when possible. We understand that cul
   <h2>To care for all of creation:
   </h2>
 Take care of the company and clients as they were one’s own family. This also means taking care of creation, which is part of our culture. By taking care of creation, we: Reduce, Reuse, and Recycle.
+
+    </div>
+  </div>
+</div>
 
   </p>
 
