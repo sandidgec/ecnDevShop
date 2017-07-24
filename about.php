@@ -169,10 +169,6 @@
 
                 <h1 id="standOut">About Us</h1>
                 <br>
-                <br>
-
-                <p>TESTING
-                </p>
 
                 <br>
 
