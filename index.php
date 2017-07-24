@@ -94,7 +94,7 @@
         <div class="featurette">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">Pow toons Animations Services<br> <span class="muted"></span></h2>
+                    <h2 class="featurette-heading">Pow toons Animations<br> <span class="muted"></span></h2>
                     <p class="lead">This is a video software that we can use to make white board like animation. The new craze right now is marketing videos that are in the form of white board animation, cartoon animation with music and voice overs. Most animations are included with the software, but we can also do custom background and people animations. We have an example up online and will make more soon. Clients can choose how they want it to look, how many slides, custom animations, write a script and provide voice overs or we can do voice overs or purchase professional voice overs for a separate price.
                     </p>
                 </div>

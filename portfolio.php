@@ -28,6 +28,19 @@
     </div>
 </div>
 
+</div>
+</div>
+
+<div class="container">
+   <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+           <div class="portImageLeft">
+               <a href="http://terricreates.com//"><img src="lib/images/devSite/terriCreates.png"></a>
+           </div>
+        </div>
+   </div>
+</div>
+
 
 <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />-->
 <script src="js/main.js" type="text/javascript"></script>-->
