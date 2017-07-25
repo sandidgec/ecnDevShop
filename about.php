@@ -62,9 +62,11 @@
                                 <p>
                                 <h1>Ryan Sam </h1>
                                 <br>
-                                Financial Administrator
-                                Junior Web Developer
-                                Photographer
+                                <h2>
+                                  <li>Financial Administrator
+                                  <li>Junior Web Developer
+                                  <li>Photographer
+                               </h2>
                                 <br>
                                 <h2> Born and raised in Ft. Defiance AZ. With a Bachelor of Science Degree in Criminal Justice and a new-found passion for Web Development.
                                 </h2>
@@ -91,9 +93,11 @@
                                 <p>
                                 <h1>GJ Gordy</h1>
                                 <br>
-                                Multimedia writer
-                                Junior Web Developer
-                                Graphic Designer
+                                <h2>
+                                  <li>Multimedia writer
+                                  <li>Junior Web Developer
+                                  <li>Graphic Designer
+                                </h2>
                                 <br>
                                 <h2> Born in Phoenix AZ and spent most her life in Coal Mine NM and Phoenix AZ. She is a mother of her three-year-old daughter Elizabeth. She has over 10 years of experience in early childhood development in various non-profit organizations and loves web development and the business aspect of the Web Development Shop.
                                 </h2>
@@ -120,9 +124,11 @@
                                 <p>
                                 <h1>Marty Buck</h1>
                                 <br>
-                                Etsy Specialist
-                                Junior Web Developer
-                                Graphic Designer
+                                <h2>
+                                  <li>Etsy Specialist
+                                  <li>Junior Web Developer
+                                  <li>Graphic Designer
+                               </h2>
                                 <br>
                                 <h2> Born in Ft. Defiance and raised in Coal Mine NM. A mother of a four-year daughter named Mackenzie and newborn baby girl name Madison. She is a certified Nursing Assistant who loves the creativity of graphic design in Photoshop.
                                 </h2>
@@ -162,12 +168,12 @@
             </div>
 
 
-
-
+            </div>
+          </div>
         </div>
-    <br>
-    <br>
 
+    <br>
+    <br>
     <br>
     <br>
     <br>
@@ -229,11 +235,7 @@
                 <br>
 
                 <p>
-                    Hello and Welcome to Cheii’s Web Development Shop Website! We are a new, fresh, all Navajo web development company located in beautiful Farmington, NM. The land of Enchantment. In today’s ever- evolving market technology is a MUST for any reputable and/or growing business that is wanting to be competitive in their industry for their clientele. Here at Cheii’s Web Development Shop, we have dedicated staff that has knowledge in all areas of web design services. We strive to provide the best possible results for any and all web based business problems. We want your company to stand out from ALL the rest to make a GREAT first impression to anyone that visits your site.
-                    <br>
-                    <br>
-                    <br>
-                    Cheii’s Web Development, LLC., started right here in Farmington NM. Our Junior Web Developers graduated from the Cultivating Coders boot camp. We stood out as talented individuals and Honor Graduates who are eager to help you stand out from your competitors with eye-catching designs, weather you have an outdated site that needs a re-design or just started your business and need everything from logo design, photography, to full web design. WE CAN HELP YOU! We know that your company’s online presence will directly reflect the number of customers you will have by means of searching for you online as well shopping online or in-store. Contact us now! We are ready and waiting to help make your business stand out with a newly designed website! We have affordable prices, we are local, and we care!
+                    We are an all Navajo Web Development Shop and active members of the Episcopal Church. We each grew up on the Navajo reservation and are cradle Episcopalians. Each of us bring various backgrounds to the table and had to overcome difficult obstacles in our lives. We grew up on the reservation where alcoholism is an epidemic, where children live in homes plagued with domestic violence and the struggle of not knowing where your next meal is coming from because full time work is scarce. We are stronger now and with the help of the church, we strive to build a great company to better the future for our selves, for our families, for our church and our church families. Being a product of The Episcopal Church in Navajoland we strive to become a standalone business by helping other church’s, other businesses, and artists tell the world who they are. In doing so, we also strive to help sustain The Episcopal Church in Navajoland for future generations: To help our people, to preserve our culture, and our way of life.
                 </p>
 
             </div>
