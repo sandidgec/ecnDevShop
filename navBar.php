@@ -11,7 +11,7 @@
             </button>
             <a class="navbar-brand"  href="index.php"><span></span>Cheii's DevShop</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!--Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="index.php#ourServices">Services</a></li>
@@ -26,12 +26,12 @@
                 <li><a href="deaconPackage.php">Vicar Package</a></li>
                 <li><a href="vicarPackage.php">Rector Package</a></li>
                 <li><a href="bishopPackage.php">Bishop Package</a></li>
-          <!--  <li role="separator" class="divider"></li>
+            <li role="separator" class="divider"></li>
                 <li><a href="#">Separated link</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>-->
+                <li><a href="#">One more separated link</a></li>
               </ul>
-             </li>
+            </li>
 
 
                 <li><a href="https://www.facebook.com/cheiidevshop/" target="_blank">

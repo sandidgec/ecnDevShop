@@ -7,6 +7,7 @@ body {
 }
 
 /*THIS IS FOR THE NAVBAR*/
+
 .navbar {
     font-size: 20px;
     margin: 0px;
@@ -14,32 +15,33 @@ body {
 
 .navbar-default {
     border: transparent;
-    background: rgb(125,126,125); /* Old browsers */
-    background: -moz-linear-gradient(left, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
+    background: rgb(39,164,189); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(39,164,189,1) 0%, rgba(39,164,189,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(39,164,189,1) 0%,rgba(39,164,189,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(39,164,189,1) 0%,rgba(39,164,189,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 */
 
 }
 
 .navbar-default .navbar-nav>li>a {
     font-size: 14px;
-    color: #eee;
+    color: #FFFFFF;
     text-shadow: 0px 2px 6px #333;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
-    color: #A9A9A9;
+    color: #27A4BD;
     background-color: transparent;
 }
 
 .navbar-default .navbar-brand {
-    color: #eee;
+    color: #FFFFFF;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #A9A9A9;
+    color: #27A4BD;
 }
+
 
 header {
     background-image: url("/lib/images/cheiisSkies.png");
@@ -76,6 +78,7 @@ header {
     color: black;
     font-weight: 500;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: right;
 }
 
 
@@ -153,7 +156,7 @@ form {
 
 .picture {
 
-    text-align: center;
+    text-align: right;
 }
 address {
     color: black;

@@ -5,6 +5,7 @@
 
 #meetTheTeam {
     margin-top: 5%;
+
 }
 
 #meetTheTeam p{
@@ -15,7 +16,7 @@
     background-color:rgba(28, 101,102, .35);
     margin-top: 0;
     border-radius: 20px;
-    border: 1px solid #232323 ;
+    border: 1px solid #232323;
 
 }
 
@@ -45,11 +46,17 @@ h2 {
     front-size: 1rem;
 }
 
+h3 {
+  color: floralwhite;
+  font-weight: 200;
+  front-size: .50rem;
+}
+
 p {
     color: floralwhite;
     font-weight: 200;
     front-size: 1rem;
-    text-align: center;
+    text-align: right;
 }
 
 #aboutDevShop {
@@ -59,8 +66,3 @@ p {
     border-radius: 20px;
     border: 1px solid #232323 ;
 }
-
-
-
-
-
