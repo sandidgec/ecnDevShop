@@ -21,7 +21,7 @@
           <div class="col-lg-12">
 
 
-                          <h1 id="standOut">Deacon Package- Small Congregation (6 Total Pages)</h1>
+                          <h1 id="standOut">Daughter “Yazhii”- Small (6 Total Pages)</h1>
                        <br>
                           <h2>Three Pages (Home, About Us, Contact [navigation bar]) <br>
                           <h3>Home<br>
@@ -30,10 +30,10 @@
 
                           <h3>About Us (About, Welcome, Explore, etc.)<br>
                             <h4>-One image<br>
-                            <h4>-Text about Parish (how we started, who we are, our beliefs, etc.)<br>
+                            <h4>-Text about us (how we started, who we are, our beliefs, etc.)<br>
 
                           <h3>Contact
-                            <h4>-Map of Church location<br>
+                            <h4>-Map of location<br>
                             <h4>-Contact Form<br>
                             <h4>-Address, phone, email & social media tags.
 
@@ -57,7 +57,7 @@
 
                       <div class="col-lg-12">
 
-                                  <h1 id="standOut">Vicar Packages- Cathedral (8 Total Pages)</h1>
+                                  <h1 id="standOut">Mother “Shi Ma”- Medium (8 Total Pages)</h1>
                                <br>
                                   <h2>Five Pages (Home, About Us, Contact, plus two [navigation bar]) <br>
                                   <h3>Home<br>
@@ -66,10 +66,10 @@
 
                                   <h3>About Us (About, Welcome, Explore, etc.)<br>
                                     <h4>-One image<br>
-                                    <h4>-Text about Parish (how we started, who we are, our beliefs, etc.)<br>
+                                    <h4>-Text about us (how we started, who we are, our beliefs, etc.)<br>
 
                                   <h3>Contact
-                                    <h4>-Map of Church location<br>
+                                    <h4>-Map of location<br>
                                     <h4>-Contact Form<br>
                                     <h4>-Address, phone, email & social media tags.
 
@@ -97,7 +97,7 @@
 
                               <div class="col-lg-12">
 
-                                          <h1 id="standOut">Bishop Packages- Diocese (14 Total Pages)</h1>
+                                          <h1 id="standOut">Grandmother “Ma sani”- Large (14 Total Pages)</h1>
                                        <br>
                                           <h2>Eight Pages (Home, About Us, Contact, Find A Church, plus two [navigation bar]) <br>
                                           <h3>Home<br>
