@@ -9,7 +9,7 @@
 
 <body>
 
-<?php require_once("navBar.php");?>
+<?php require_once("navBar2017.php");?>
 
   <div class="container">
 <div class="jumbotron">

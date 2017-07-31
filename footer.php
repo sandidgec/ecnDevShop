@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row" id="footerRow">
         <div class="col-md-4">
-            <p>Cheii's Web &amp; Mobile Development Shop &copy; 2016</p>
+            <p>Cheii's Web Development Shop &copy; 2017</p>
         </div>
 
         <div class="col-md-1 col-md-offset-6">

@@ -25,7 +25,7 @@
 
 <?php require_once("navBar.php");?>
 
-<div id="content" class="container">
+<div id="content" class="container">...
     <div class="row">
         <div class="col-md-8">
             <h1>Cheii's Web Development</h1>

@@ -24,4 +24,4 @@
           integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
           crossorigin="anonymous"></script>
 
-<link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/lib/css/style.css" />

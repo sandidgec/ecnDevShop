@@ -89,3 +89,8 @@ body {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+ p {
+    text-shadow: 2px 4px 4px #FFFFFF;
+}
+

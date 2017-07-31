@@ -10,17 +10,19 @@
 
 <body>
 
-<?php require_once("navBar.php");?>
+<?php require_once("navBar2017.php");?>
 
 <div class="container" id="top">
     <div class="jumbotron">
         <h1 id="contact" class="text-center">Contact Us</h1>
         <address class="text-center">
             <strong><span id="cheiiAddress">Cheii's Web Development</span></strong><br>
-            P.O. Box 720 Farmington, NM 87499<br>
+            P.O. Box 3684 Farmington, NM 87499<br>
             <abbr title="Phone">Phone:</abbr> (602) 323-4132
             <br>
             <abbr title="Email">Email:</abbr> cheiisdevshop@gmail.com
+            <br>
+            <abbr title="Office">Office</abbr> 1255 Mission Ave, Farmington NM 87401
          </address>
 <!--        <form class="form-inline">-->
 <!--            <div class="form-group">-->
@@ -37,12 +39,26 @@
 <!--            </div>-->
 <!--            <button type="submit" id="submitBtn" class="btn btn-default">Submit</button>-->
 <!--        </form>-->
-    </div>
-</div>
 
-<div id="photoIcons" class="row" style="margin-bottom: 5%">
-    <div class="col-md-2 col-md-offset-5">
-        <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                var uluru = {lat: 36.71583 , lng: -108.227547};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: uluru
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+        </script>
+
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbyxMukLCuLG32oMEAjL9eCiW2otOn9qA&callback=initMap">
+        </script>
+
     </div>
 </div>
 
@@ -52,10 +68,6 @@
 </body>
 
 <style>
-
-    #contact {
-        margin-bottom: 20px;
-    }
 
     body {
         background-image: url("/lib/images/cheiisSkies.png");
@@ -67,6 +79,12 @@
     #cheiiAddress {
         font-size: 2.5rem;
     }
+
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+
 </style>
 
 <footer>
