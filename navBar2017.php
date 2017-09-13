@@ -31,57 +31,87 @@
     height: 2px;
     width: 100%;
     }
+    .logo {
+        padding: 10px 0 0 10px;
+    }
+    .nav {
+        display: inline-block;
+        padding: 0px;
+
+    }
+    #text {
+        padding: 30px 0 0 30px;
+    }
+    #bs-example-navbar-collapse-1 {
+        padding: 20px 0 0 10px;
+    }
+    a {
+        color: white;
+    }
+    .container.teal.borderYtoX {
+        width:400px;
+    }
+    .nav.navbar-nav.navbar-left {
+        width: 800px;
+
+    }
+
+
+
 
 </style>
-    </head>
+    <body>
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed-1" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"  href="index.php"><span></span>Cheii's DevShop</a>
+            <div class="collapse navbar-collapse navbar-pull-left" id="bs-example-navbar-collapse">
+                <div class="container teal borderYtoX">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a class="logo pull-left" href="index.php"><img src="/lib/images/cheiiDevShopLogo120.png"  width="120" height="80">CHEII'S WEB DEVELOPMENT</a>
+                            <span class="name pull-left" id="text"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse navbar-pull-right" id="bs-example-navbar-collapse-1">
             <div class="container teal borderYtoX">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-left">
                 <li><a href="index.php#ourServices">Services</a></li>
                 <li><a href="portfolio.php">Portfolio</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
                 <li><a href="document.php">Forms</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Packages<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="yazhiPackage.php">Little One "Yazhi" Package</a></li>
+                        <li><a href="shimaPackage.php">Mother "Shima" Package</a></li>
+                        <li><a href="masaniPackage.php">Grandmother "Masani" Package</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.facebook.com/cheiidevshop/" target="_blank">
+                    <i class="fa fa-facebook someicons" aria-hidden="true"></i>
+                </a></li>
+                <li><a href="https://twitter.com/cheiisDevShop" target="_blank">
+                    <i class="fa fa-twitter someicons" aria-hidden="true"></i>
+                </a></li>
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="navtext">Cheii's Packages</span><span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="yazhiPackage.php">Little One "Yazhi" Package</a></li>
-                            <li><a href="shimaPackage.php">Mother "Shima" Package</a></li>
-                            <li><a href="masaniPackage.php">Grandmother "Masani" Package</a></li> 
-                            <!--  <li role="separator" class="divider"></li>
-                                  <li><a href="#">Separated link</a></li>
-                                  <li role="separator" class="divider"></li>
-                                  <li><a href="#">One more separated link</a></li>-->
-                        </ul>
-                    </li>
-
-
-                    <li><a href="https://www.facebook.com/cheiidevshop/" target="_blank">
-                            <i class="fa fa-facebook someicons" aria-hidden="true"></i>
-                        </a></li>
-                    <li><a href="https://twitter.com/cheiisDevShop" target="_blank">
-                            <i class="fa fa-twitter someicons" aria-hidden="true"></i>
-                        </a></li>
-                </ul>
-                </div>
+            </ul>
+        </div>
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-
+</body>

@@ -51,8 +51,9 @@ header {
 }
 
 #content {
-    padding-top: 100px;
+    padding-top: 300px;
     margin-bottom: 200px;
+    text-align: center;
 }
 
 #content h1 {
@@ -78,7 +79,7 @@ header {
     color: black;
     font-weight: 500;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -117,18 +118,7 @@ header {
     padding-top: 10%;
 }
 
-#cheiiShop {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-    font-weight: 500;
-    font-size: 21px;
-}
 
-#cheiiShop h1 {
-    font-size: 50px;
-}
 
 form {
     text-align: center;

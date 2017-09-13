@@ -3,16 +3,13 @@
 
 <head>
     <?php require_once("lib/head-utils.php");?>
+    <?php require_once("navBar.php");?>
+
     <title>Cheii's Web Development</title>
-    <link rel="stylesheet" href="lib/css/services.css">
-
-    <link rel="stylesheet" href="contact.php" />
-
+    <link rel="stylesheet" type="text/css" href="/lib/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/lib/css/services.css">
     <meta name="google-site-verification" content="jmzbsSiI_fIk7J9VodL1CS3AhZjipUa6IgKBjkqjJu8" />
 </head>
-
-<body>
-
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -20,27 +17,24 @@
         js = d.createElement(s); js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
+<body>
+<br>
+<br>
 
-<?php require_once("navBar.php");?>
-
-<div id="content" class="container">...
-    <div class="row">
-        <div class="col-md-8">
-            <h1>Cheii's Web Development</h1>
-            <h2>In Navajoland</h2>
-            <p>“Let us help you tell your story.”  We respect our clients, understand their needs and wants, and listen.  Serving our clients is our highest priority.
-            </p>
-            <p>The mission of Cheii’s Web Development Shop is to help our clients communicate who they are and what they stand for through and elegantly designed, visually stunning website that is easy to navigate as well as easy to update.
-            </p>
-        </div>
-
-        <div id="photoIcons" class="col-md-2 col-md-offset-1 visible-md visible-lg">
-            <img src="/lib/images/cheiiDevShopLogo.png" alt=""/>
-        </div>
-
+<div id="content">
+    <div class="container">
+        <h1>Cheii's Web Development</h1>
+        <h2>In Navajoland</h2>
+        <p>“Let us help you tell your story.”  We respect our clients, understand their needs and wants,
+            and listen.  Serving our clients is our highest priority.</p>
+        <p>The mission of Cheii’s Web Development Shop is to help our clients communicate who they are
+            and what they stand for through and elegantly designed, visually stunning website that
+            is easy to navigate as well as easy to update.</p>
     </div>
+</div>
 
     <div class="row" id="launchButton">
         <div class="col-md-2 col-md-offset-5">
@@ -75,7 +69,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="featurette-heading">Social Media Intergration<br><span class="muted"></span></h2>
+                    <h2 class="featurette-heading">Social Media Integration<br><span class="muted"></span></h2>
                     <p class="lead">Our Social Media Department works on a variety of different levels when it comes to
                         properly maintaining clients' social media sites.  Maintaining social media sites requires a lot
                         more attention than just posting an article or a photo every once in a while, to a Facebook or Twitter page.
