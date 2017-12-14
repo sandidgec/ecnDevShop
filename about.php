@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-
+ 
 
             <div id="bg">
                 <div id="search-container">
