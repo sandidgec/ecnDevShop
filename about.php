@@ -96,11 +96,11 @@
                                 <br>
                                 <h2>
                                   <li>Multimedia Writer
-                                  <li>Junior Web Developer
+                                  <li>Web Developer
                                   <li>Graphic Designer
                                 </h2>
                                 <br>
-                                <h2> GJ is a innovative mother of her three-year-old daughter named Elizabeth.  She was born in Phoenix AZ and spent most her life in Coal Mine NM and Phoenix AZ. GJ loves web development and the business aspect of the Web Development Shop. She also enjoys cooking, baking, beading, and arts and crafts with youth.
+                                <h2> GJ is a innovative mother of her four-year-old daughter named Elizabeth.  She was born in Phoenix AZ and spent most her life in Coal Mine NM and Phoenix AZ. GJ loves web development and the business aspect of the Web Development Shop. She also enjoys cooking, baking, beading, and arts and crafts with youth.
                                 </h2>
                                 </p>
                             </div>

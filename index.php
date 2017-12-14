@@ -26,7 +26,7 @@
 
 <div id="content">
     <div class="container">
-        <h1>Cheii's Web Development</h1>
+        <h1>Cheii's Web Development Shop</h1>
         <h2>In Navajoland</h2>
         <p>“Let us help you tell your story.”  We respect our clients, understand their needs and wants,
             and listen.  Serving our clients is our highest priority.</p>
@@ -53,6 +53,7 @@
         </div>
     </div>
 </div>
+
 
 
 <!-- START THE FEATURETTES -->
