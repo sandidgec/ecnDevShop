@@ -69,7 +69,7 @@
                                   <li>Photographer
                                </h2>
                                 <br>
-                                <h2> Ryan is a driven young man who was born and raised in Fort Defiance, Arizona. He has a passion for photography, he can capture the beauty of your business and/or organization effortlessly. Ryan enjoys fishing, traveling to new places, watching sports, spending time with family.
+                                <h2> Ryan N. Sam is a driven young man who was born and raised in Fort Defiance, Arizona. He has a passion for photography, he can capture the beauty of your business and/or organization effortlessly. Ryan enjoys fishing, traveling to new places, watching sports, spending time with family.
                                 </h2>
                                 </p>
                             </div>
